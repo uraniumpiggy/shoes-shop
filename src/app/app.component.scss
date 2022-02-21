@@ -1,4 +1,5 @@
 $zIndex: 10;
+$appbarHeight: '65px';
 
 @mixin hamburger-inner-elems {
     content: '';
@@ -27,6 +28,14 @@ nav {
         background: white;
         z-index: $zIndex + 2;
 
+        .logo {
+            font-weight: 100;
+            font-size: 27px;
+            color: black;
+            letter-spacing: 0;
+            cursor: pointer;
+        }
+
         a {
             text-decoration: none;
             color: black;
@@ -50,6 +59,12 @@ nav {
                 margin-left: 60px;
                 font-size: 11px;
                 cursor: pointer;
+            }
+
+            @media screen and (max-width: 768px) {
+                .menu-item {
+                    margin-left: 30px;
+                }
             }
 
             .humburger {
@@ -165,9 +180,10 @@ nav {
         flex-direction: row;
         justify-content: space-between;
         border-top: 1px solid #e5e5e5;
-        top: 0;
+        top: $appbarHeight;
         margin: 0;
-        position: relative;
+        position: fixed;
+        width: 100vw;
         padding: 20px 0 20px;
         background-color: white;
         z-index: $zIndex;
@@ -178,6 +194,253 @@ nav {
             margin: 0 5% 0;
             padding: 15px;
             border: 1px solid #e5e5e5;
+        }
+    }
+}
+
+
+
+footer {
+    background-color: #000;
+    padding: 0 5%;
+
+    @media screen and (max-width: 768px) {
+        .footer-email {
+            display: block;
+            font-size: 18px;
+            letter-spacing: 0.5px;
+            margin: 30px 0px 0px;
+            text-align: left;
+
+            a {
+                color: #fff;
+                text-decoration: none;
+            }
+        }
+
+        .footer-header {
+            padding: 30px 0px;
+        }
+    }
+
+    @media screen and (min-width: 769px) {
+        .footer-email {
+            display: none;
+        }
+
+        .footer-header {
+            padding-top: 100px;
+            padding-bottom: 80px;
+        }
+    }
+
+    .footer-header {
+        border-bottom: 1px solid rgba($color: #fff, $alpha: .4);
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+
+        @media screen and (max-width: 768px) {
+            .footer-header-email {
+                display: none;
+            }
+        }
+
+        .footer-header-email {
+            font-size: 18px;
+            letter-spacing: 0.5px;
+            text-align: right;
+
+            a {
+                color: #fff;
+                text-decoration: none;
+            }
+        }
+
+        .footer-header-logo {
+            font-size: 36px;
+            color: white;
+            letter-spacing: 0;
+        }
+    }
+
+    .footer-sections {
+        padding-top: 80px;
+
+        @media screen and (max-width: 768px) {
+            .footer-section {
+                margin: 0 !important;
+                width: 100%;
+                text-align: left !important;
+            }
+
+            & {
+                padding-top: 30px;
+            }
+        }
+
+        .footer-section-header-wrapper {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+
+            div {
+                text-transform: uppercase;
+                color: #fff;
+            }
+
+            @media screen and (max-width: 768px) {
+                .footer-platform {
+                    display: none;
+                }
+            }
+        }
+
+        .footer-sections-wrapper {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+
+            .footer-section:last-child {
+                text-align: right;
+            }
+
+            .footer-section:first-child {
+                width: 40%;
+            }
+
+            .footer-platform-mobile {
+                display: none;
+                margin-top: 35px;
+                width: 100%;
+                text-align: left;
+                font-size: 16px;
+                color: #fff;
+                text-transform: uppercase;
+            }
+
+            @media screen and (max-width: 768px) {
+                .footer-platform-mobile {
+                    display: block;
+                }
+            }
+        }
+    }
+
+    .footer-item {
+        display: block;
+        font-size: 14px;
+        color: rgba(255, 255, 255, .4);
+        letter-spacing: 0.5px;
+        margin-top: 40px;
+        text-transform: uppercase;
+        text-decoration: none;
+
+        @media screen and (max-width: 768px) {
+            & {
+                margin-top: 25px;
+                font-size: 10px;
+            }
+        }
+    }
+
+    .footer-item:hover {
+        color: #fff;
+    }
+
+    .footer-footer {
+        margin-top: 100px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-end;
+        padding-bottom: 100px;
+        flex-wrap: wrap;
+
+        @media screen and (max-width: 768px) {
+            & {
+                flex-direction: column;
+                align-items: flex-start;
+                margin-top: 30px;
+                padding-bottom: 30px;
+            }
+
+            & div {
+                margin-top: 20px;
+                margin-bottom: 10px;
+            }
+        }
+
+        span:hover {
+            opacity: 1;
+        }
+
+        .footer-ooo {
+            font-size: 14px;
+            letter-spacing: 0.5px;
+            text-rendering: geometricPrecision;
+
+            span {
+                display: block;
+                color: #fff;
+                opacity: 0.3;
+                transition: opacity 0.3s;
+                margin-bottom: 30px !important;
+            }
+
+            .section-social {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-around;
+
+                .social-button {
+                    width: 60px;
+                    height: 60px;
+                    background: rgba(10, 186, 181, 0.10);
+                    border-radius: 5px;
+                    margin-right: 15px;
+                    position: relative;
+                    text-decoration: none;
+                    cursor: pointer;
+                }
+        
+                .social-button svg {
+                    position: relative;
+                    left: 50%;
+                    top: 50%;
+                    transform: translate(-50%, -50%);
+                    max-width: 50%;
+                }
+            }
+        }
+
+        .footer-banks {
+            opacity: 0.3;
+            transition: opacity 0.3s;
+        }
+    
+        .footer-banks:hover {
+            opacity: 1;
+        }
+    
+        .footer-companies {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            color: white !important;
+            
+            a {
+                opacity: 0.3;
+                transition: opacity 0.3s;
+            }
+    
+            a:hover {
+                opacity: 1;
+            }
         }
     }
 }

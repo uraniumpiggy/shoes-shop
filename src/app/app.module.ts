@@ -4,10 +4,12 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { AppMainPageComponent } from './app-main-page/app-main-page.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    AppMainPageComponent
   ],
   imports: [
     BrowserModule,

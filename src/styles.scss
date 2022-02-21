@@ -1,8 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
 
+@font-face {
+	font-family: 'HelveticaNeueCyr-Medium';
+	src: url('../fonts/helveticaneuecyr-medium.eot'); /* IE 9 Compatibility Mode */
+	src: url('../fonts/helveticaneuecyr-medium.eot?#iefix') format('embedded-opentype'), /* IE < 9 */
+		url('../fonts/helveticaneuecyr-medium.woff2') format('woff2'), /* Super Modern Browsers */
+		url('../fonts/helveticaneuecyr-medium.woff') format('woff'), /* Firefox >= 3.6, any other modern browser */
+		url('../fonts/helveticaneuecyr-medium.ttf') format('truetype'), /* Safari, Android, iOS */
+		url('../fonts/helveticaneuecyr-medium.svg#helveticaneuecyr-medium') format('svg'); /* Chrome < 4, Legacy iOS */
+}
+
 html,
 body {
     margin: 0;
-    padding: 0;
-    font-family: 'Roboto', serif;
+    padding: 0; 
+    font-family: 'helveticaneuecyr-medium', serif;
 }
