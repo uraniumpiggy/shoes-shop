@@ -1,0 +1,66 @@
+<div>
+    <nav>
+        <div class="header-wrapper">
+            <div class="logo">
+                <a href="#">logo</a>
+            </div>
+            <div class="header-menu">
+                <a href="#" class="menu-item">продать</a>
+                <a href="#" class="menu-item">каталог</a>
+                <a href="#" class="menu-item">профиль</a>
+                <div class="menu-item menu-img"
+                    (click)="isSearchBarOpen = !isSearchBarOpen"
+                >
+                    <img src="https://outofstock.cc/_nuxt/img/search.b797f89.svg" alt>
+                </div>
+                <div class="menu-item">
+                    <div class="humburger" (click)="toggleMenu()">
+                        <div class="humburger-inner"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div *ngIf="isMenuOpen || isSearchBarOpen"
+        @backgroundRemoveTrigger
+        class="menu__absolute"
+        [ngClass]="{
+            searchOpen: isSearchBarOpen
+        }"
+        (click)="close()"
+        ></div>
+        <menu class="menu"
+            *ngIf="isMenuOpen"
+            @menuRemoveTrigger
+        >
+            <a href="" class="menu__point"><label for="">Обувь</label></a>
+            <a href="" class="menu__point"><label for="">Одежда</label></a>
+            <a href="" class="menu__point"><label for="">Аксессуары</label></a>
+            <a href="" class="menu__point"><label for="">FAQ</label></a>
+            <a href="" class="menu__point"><label for="">Помощь</label></a>
+            <a href="" class="menu__point"><label for="">Продать</label></a>
+            <div class="menu__text">
+                Никогда не пропускайте важные события.
+                <br>
+                Подпишитесь на наши соц. сети.
+            </div> 
+            <div class="menu-social">
+                <a href="">
+                    inst
+                </a>
+                <a href="">
+                    tg
+                </a>
+                <a href="">
+                    vk
+                </a>
+            </div>            
+        </menu>
+        <div class="search-box"
+            *ngIf="isSearchBarOpen"
+            @searchBarRemoveTrigger
+        >
+            <input type="text" placeholder="Введите название модели" class="search-line">
+        </div>
+    </nav>
+    
+</div>
