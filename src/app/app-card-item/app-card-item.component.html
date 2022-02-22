@@ -1,13 +1,13 @@
 <div class="card-content">
-    <img src="https://api.outofstock.cc/media/img01_6.jpg" alt="" class="card-img">
+    <img [src]="cardData.img" alt="" class="card-img">
     <div class="card-text">
         <div>
-            <div class="card-brands">Nike</div>
-            <div class="card-name">Dunk Low Retro 2021</div>
-            <div class="card-coloring">'White Black'</div>
+            <div class="card-brands">{{ cardData.brand }}</div>
+            <div class="card-name">{{ cardData.name }}</div>
+            <div class="card-coloring">{{ cardData.coloring }}</div>
         </div>
         <div class="card-price">
-            19 286 ₽
+            {{ cardData.price }}
         </div>
     </div>
 </div>

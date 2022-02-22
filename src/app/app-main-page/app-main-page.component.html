@@ -16,54 +16,91 @@
         </div>
     </div>
     <div class="main-wrapper">
-        <div class="header-wrapper">
-            <div class="header-element">
-                Nike
+        <app-carousel
+            title="Новое"
+        ></app-carousel>
+        <app-carousel
+            title="Nike"
+        ></app-carousel>
+        <app-carousel
+            title="Yeezy"
+        ></app-carousel>
+        <app-carousel
+            title="Jordan 1"
+        ></app-carousel>
+    </div>
+
+    <div class="platform-teaser">
+        <div class="platform-teaser-header">
+            sorry, it's <span class="tiffany">ø</span>utofstock
+        </div>
+        <div class="platform-teaser-subheader">
+            Самая безопасная платформа для покупки и продажи редкой одежды, обуви и аксессуаров.
+        </div>
+        <div class="platform-teaser-line">
+            <div class="platform-teaser-line-element">
+                <img src="https://outofstock.cc/_nuxt/img/security.abb52ae.svg" alt="">
+                <span>Только оригинальная продукция</span>
+            </div>
+            <div class="platform-teaser-line-element">
+                <img src="https://outofstock.cc/_nuxt/img/web.ca226ec.svg" alt="">
+                <span>Быстрая доставка по всей России</span>
+            </div>
+            <div class="platform-teaser-line-element">
+                <img src="https://outofstock.cc/_nuxt/img/lock.d7ec30d.svg" alt="">
+                <span>Гарантии безопасности и отсутствие риска</span>
             </div>
         </div>
-        <div class="cards-carousel">
-            
-            <div class="cards-carousel__items">
-                <!-- [scrollbar-hidden]="true" -->
-                <drag-scroll
-                    
-                    [drag-scroll-y-disabled]="true"
-                    [ngClass]="{
-                        'drag-scroll': true
-                    }"
-                >
-                <a drag-scroll-item href="" class="cards-carousel__item">
-                    <app-app-card-item></app-app-card-item>
-                </a>
-                <a drag-scroll-item href="" class="cards-carousel__item">
-                    <app-app-card-item></app-app-card-item>
+    </div>
 
-                </a>
-                <a drag-scroll-item href="" class="cards-carousel__item">
-                    <app-app-card-item></app-app-card-item>
-
-                </a>
-                <a drag-scroll-item href="" class="cards-carousel__item">
-                    <app-app-card-item></app-app-card-item>
-
-                </a>
-                <a drag-scroll-item href="" class="cards-carousel__item">
-                    <app-app-card-item></app-app-card-item>
-
-                </a>
-                <a drag-scroll-item href="" class="cards-carousel__item">
-                    <app-app-card-item></app-app-card-item>
-
-                </a>
-                <a drag-scroll-item href="" class="cards-carousel__item">
-                    <app-app-card-item></app-app-card-item>
-
-                </a>
-                <a drag-scroll-item href="" class="cards-carousel__item">
-                    <app-app-card-item></app-app-card-item>
-
-                </a>
-                </drag-scroll>
+    <div class="main-questions">
+        <div class="questions-sections">
+            <a href="">Как работает площадка</a>
+            <a href="">Гарантии оригинальности</a>
+            <a href="">Ответы на часто задаваемые вопросы</a>
+            <a href="">Контактная информация</a>
+            <a href="">Доставка и возврат</a>
+            <a href="">Оплата</a>
+            <a href="">Официальные документы</a>
+        </div>
+        <div class="question-right">
+            <div class="question-header">Остались вопросы?</div>
+            <div class="questions-content">
+                <div class="question-mobile mobile">
+                    Вероятно, у нас уже есть ответ на ваш вопрос:
+                </div>
+                <a href="" class="mobile-btn">Смотреть F.A.Q.</a>
+                <div>
+                    Если у вас есть какие-либо вопросы или пожелания, вы всегда можете написать нам на почту
+                    <a href="mailto:support@outofstock.cc" style="text-decoration: underline;">support@outofstock.cc</a>
+                </div>
+                <div>или</div>
+                <div>в Телеграм или Вконтакте</div>
+                <div class="section-social">
+                    <div class="section-social">
+                        <a href="" class="social-button">
+                            <svg data-v-51ff7b34="" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 189.473 189.473" xml:space="preserve"><path data-v-51ff7b34="" fill="white" d="M152.531,179.476c-1.48,0-2.95-0.438-4.211-1.293l-47.641-32.316l-25.552,18.386c-2.004,1.441-4.587,1.804-6.914,0.972
+                                c-2.324-0.834-4.089-2.759-4.719-5.146l-12.83-48.622L4.821,93.928c-2.886-1.104-4.8-3.865-4.821-6.955
+                                c-0.021-3.09,1.855-5.877,4.727-7.02l174.312-69.36c0.791-0.336,1.628-0.53,2.472-0.582c0.302-0.018,0.605-0.018,0.906-0.001
+                                c1.748,0.104,3.465,0.816,4.805,2.13c0.139,0.136,0.271,0.275,0.396,0.42c1.11,1.268,1.72,2.814,1.835,4.389
+                                c0.028,0.396,0.026,0.797-0.009,1.198c-0.024,0.286-0.065,0.571-0.123,0.854L159.898,173.38c-0.473,2.48-2.161,4.556-4.493,5.523
+                                C154.48,179.287,153.503,179.476,152.531,179.476z M104.862,130.579l42.437,28.785L170.193,39.24l-82.687,79.566l17.156,11.638
+                                C104.731,130.487,104.797,130.533,104.862,130.579z M69.535,124.178l5.682,21.53l12.242-8.809l-16.03-10.874
+                                C70.684,125.521,70.046,124.893,69.535,124.178z M28.136,86.782l31.478,12.035c2.255,0.862,3.957,2.758,4.573,5.092l3.992,15.129
+                                c0.183-1.745,0.974-3.387,2.259-4.624L149.227,38.6L28.136,86.782z"></path></svg>
+                        </a>
+                        <a href="" class="social-button">
+                            <svg data-v-51ff7b34="" x="0px" y="0px" viewBox="0 0 14.171 14.171" xml:space="preserve"><path data-v-51ff7b34="" fill="white" d="M13.268,0H0.905C0.405,0,0,0.405,0,0.904v12.363c0,0.499,0.405,0.904,0.905,0.904h12.362
+                                c0.499,0,0.904-0.405,0.904-0.904V0.904C14.172,0.404,13.767,0,13.268,0z M11.755,8.635c0.259,0.264,0.821,0.707,0.719,1.158
+                                c-0.094,0.414-0.712,0.263-1.312,0.287c-0.685,0.029-1.091,0.044-1.503-0.287C9.465,9.636,9.351,9.45,9.165,9.242
+                                C8.996,9.054,8.783,8.717,8.493,8.73C7.972,8.756,8.135,9.482,7.95,9.977c-2.896,0.456-4.059-1.333-5.085-3.069
+                                C2.368,6.067,1.65,4.261,1.65,4.261l2.048-0.007c0,0,0.657,1.195,0.831,1.503c0.148,0.262,0.311,0.47,0.479,0.704
+                                c0.141,0.194,0.364,0.574,0.608,0.543c0.397-0.051,0.469-1.591,0.223-2.107C5.741,4.688,5.506,4.615,5.263,4.544
+                                C5.345,4.026,7.56,3.918,7.918,4.32c0.52,0.584-0.36,2.21,0.352,2.684c1-0.524,1.854-2.718,1.854-2.718l2.398,0.015
+                                c0,0-0.375,1.186-0.768,1.712c-0.229,0.308-0.989,0.994-0.959,1.503C10.819,7.919,11.437,8.311,11.755,8.635z"></path></svg>
+                        </a>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
