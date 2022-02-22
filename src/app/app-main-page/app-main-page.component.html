@@ -1,15 +1,69 @@
-<div class="main-banner">
-    <img src="https://outofstock.cc/_nuxt/img/main_bg.b8d3260.jpg">
-    <div class="main-gallery">
-        <div class="main-banner__text">
-            <div class="main-banner__title">
-                <span>Самый безопасный маркетплейс</span>
+<div class="page-wrapper">
+    <div class="main-banner">
+        <img src="https://outofstock.cc/_nuxt/img/main_bg.b8d3260.jpg">
+        <div class="main-gallery">
+            <div class="main-banner__text">
+                <div class="main-banner__title">
+                    <span>Самый безопасный маркетплейс</span>
+                </div>
+                <div class="main-banner__subtitle">
+                    <span>Оригинальная лимитированная обувь, одежда и аксессуары</span>
+                </div>
+                <div class="main-banner__button">
+                    <a href="#">смотреть каталог</a>
+                </div>
             </div>
-            <div class="main-banner__subtitle">
-                <span>Оригинальная лимитированная обувь, одежда и аксессуары</span>
+        </div>
+    </div>
+    <div class="main-wrapper">
+        <div class="header-wrapper">
+            <div class="header-element">
+                Nike
             </div>
-            <div class="main-banner__button">
-                <a href="#">смотреть каталог</a>
+        </div>
+        <div class="cards-carousel">
+            
+            <div class="cards-carousel__items">
+                <!-- [scrollbar-hidden]="true" -->
+                <drag-scroll
+                    
+                    [drag-scroll-y-disabled]="true"
+                    [ngClass]="{
+                        'drag-scroll': true
+                    }"
+                >
+                <a drag-scroll-item href="" class="cards-carousel__item">
+                    <app-app-card-item></app-app-card-item>
+                </a>
+                <a drag-scroll-item href="" class="cards-carousel__item">
+                    <app-app-card-item></app-app-card-item>
+
+                </a>
+                <a drag-scroll-item href="" class="cards-carousel__item">
+                    <app-app-card-item></app-app-card-item>
+
+                </a>
+                <a drag-scroll-item href="" class="cards-carousel__item">
+                    <app-app-card-item></app-app-card-item>
+
+                </a>
+                <a drag-scroll-item href="" class="cards-carousel__item">
+                    <app-app-card-item></app-app-card-item>
+
+                </a>
+                <a drag-scroll-item href="" class="cards-carousel__item">
+                    <app-app-card-item></app-app-card-item>
+
+                </a>
+                <a drag-scroll-item href="" class="cards-carousel__item">
+                    <app-app-card-item></app-app-card-item>
+
+                </a>
+                <a drag-scroll-item href="" class="cards-carousel__item">
+                    <app-app-card-item></app-app-card-item>
+
+                </a>
+                </drag-scroll>
             </div>
         </div>
     </div>
