@@ -54,4 +54,12 @@ export class AppComponent {
       this.isSearchBarOpen = !this.isSearchBarOpen
     }
   }
+
+  onActivate(event: any) {
+    window.scroll({ 
+      top: 0, 
+      left: 0, 
+      behavior: 'smooth' 
+    });
+  }
 }

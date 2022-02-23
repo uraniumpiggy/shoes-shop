@@ -8,7 +8,7 @@
             </div>
             <div class="header-menu">
                 <a href="#" class="menu-item">продать</a>
-                <a href="#" class="menu-item">каталог</a>
+                <a [routerLink]="['/catalog', 'shoes']" class="menu-item">каталог</a>
                 <a href="#" class="menu-item">профиль</a>
                 <div class="menu-item menu-img"
                     (click)="isSearchBarOpen = !isSearchBarOpen"
@@ -34,7 +34,7 @@
             *ngIf="isMenuOpen"
             @menuRemoveTrigger
         >
-            <a href="" class="menu__point"><label for="">Обувь</label></a>
+            <a [routerLink]="['/catalog', 'shoes']" class="menu__point" (click)="close()"><label for="">Обувь</label></a>
             <a href="" class="menu__point"><label for="">Одежда</label></a>
             <a href="" class="menu__point"><label for="">Аксессуары</label></a>
             <a href="" class="menu__point"><label for="">FAQ</label></a>
@@ -65,8 +65,7 @@
         </div>
     </nav>
 
-
-    <router-outlet></router-outlet>
+    <router-outlet (activate)="onActivate($event)"></router-outlet>
 
     <footer>
         <div class="footer-header">
@@ -87,7 +86,7 @@
             </div>
             <div class="footer-sections-wrapper">
                 <div class="footer-section">
-                    <a href="" class="footer-item">Обувь</a>
+                    <a [routerLink]="['/catalog', 'shoes']" class="footer-item">Обувь</a>
                     <a href="" class="footer-item">Одежда</a>
                     <a href="" class="footer-item">Аксессуары</a>
                 </div>
