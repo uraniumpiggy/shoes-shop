@@ -14,37 +14,9 @@
                 'drag-scroll': true
             }"
         >
-        <a drag-scroll-item href="" class="cards-carousel__item">
+        <div drag-scroll-item class="cards-carousel__item" *ngFor="let item of [1,1,1,1,1,1,1,1]">
             <app-app-card-item></app-app-card-item>
-        </a>
-        <a drag-scroll-item href="" class="cards-carousel__item">
-            <app-app-card-item></app-app-card-item>
-
-        </a>
-        <a drag-scroll-item href="" class="cards-carousel__item">
-            <app-app-card-item></app-app-card-item>
-
-        </a>
-        <a drag-scroll-item href="" class="cards-carousel__item">
-            <app-app-card-item></app-app-card-item>
-
-        </a>
-        <a drag-scroll-item href="" class="cards-carousel__item">
-            <app-app-card-item></app-app-card-item>
-
-        </a>
-        <a drag-scroll-item href="" class="cards-carousel__item">
-            <app-app-card-item></app-app-card-item>
-
-        </a>
-        <a drag-scroll-item href="" class="cards-carousel__item">
-            <app-app-card-item></app-app-card-item>
-
-        </a>
-        <a drag-scroll-item href="" class="cards-carousel__item">
-            <app-app-card-item></app-app-card-item>
-
-        </a>
+        </div>
         </drag-scroll>
     </div>
 </div>

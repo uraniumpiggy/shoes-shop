@@ -15,7 +15,6 @@ import { AppFiltersComponent } from './app-filters/app-filters.component';
     ],
     imports: [
         SharedModule,
-        CommonModule,
         AppRoutingModule,
         AppShoesModule,
     ],

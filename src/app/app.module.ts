@@ -11,18 +11,21 @@ import { AppCardItemComponent } from './app-card-item/app-card-item.component';
 import { AppCatalogPageModule } from './app-catalog-page/app-catalog-page.module';
 import { AppShoesComponent } from './app-catalog-page/app-shoes/app-shoes.component';
 import { AppShoesModule } from './app-catalog-page/app-shoes/app-shoes.module';
+import { AppModelComponent } from './app-model/app-model.component';
+import { AppCardItemModule } from './app-card-item/app-card-item.module';
 
 @NgModule({
   declarations: [
     AppComponent,
+    AppModelComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     AppMainPageModule,
-    SharedModule,
     AppCatalogPageModule,
+    AppCardItemModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

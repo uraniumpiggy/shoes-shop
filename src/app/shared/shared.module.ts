@@ -4,13 +4,13 @@ import { AppCardItemComponent } from "../app-card-item/app-card-item.component";
 
 @NgModule({
     declarations: [
-        AppCardItemComponent,
+        // AppCardItemComponent,
     ],
     imports: [
         CommonModule,
     ],
     exports: [
-        AppCardItemComponent,
+        // AppCardItemComponent,
         CommonModule,
     ]
 })
