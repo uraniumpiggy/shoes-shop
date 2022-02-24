@@ -5,6 +5,7 @@ import { SharedModule } from "../shared/shared.module";
 import { AppCatalogPageComponent } from "./app-catalog-page.component";
 import { AppShoesComponent } from "./app-shoes/app-shoes.component";
 import { AppShoesModule } from "./app-shoes/app-shoes.module";
+import { AppFiltersComponent } from './app-filters/app-filters.component';
 
 
 @NgModule({
@@ -14,7 +15,7 @@ import { AppShoesModule } from "./app-shoes/app-shoes.module";
     ],
     imports: [
         SharedModule,
-        // CommonModule,
+        CommonModule,
         AppRoutingModule,
         AppShoesModule,
     ],

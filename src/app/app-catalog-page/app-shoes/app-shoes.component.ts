@@ -10,6 +10,8 @@ export class AppShoesComponent implements OnInit {
   items: number[] = [1,1,1,1,1,1,1,1,1,11,1,1,1,1,1,1]
   isInStock: boolean = false
 
+  isMobileFiltersVisible: boolean = false
+
   constructor() { }
 
   ngOnInit(): void {
