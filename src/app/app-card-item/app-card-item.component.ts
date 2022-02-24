@@ -17,7 +17,7 @@ export interface cardItemData {
 export class AppCardItemComponent implements OnInit {
 
   @Input() cardData: cardItemData = {
-    img: '../../assets/img01.jpg', 
+    img: 'assets/img01.jpg', 
     brand: 'Nike', 
     name: 'Dunk Low Retro 2021', 
     coloring: "'White Black'", 
