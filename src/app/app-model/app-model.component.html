@@ -1,1 +1,98 @@
-<p>app-model works!</p>
+<div class="model-wrapper">
+    <div class="model-view-description">
+
+
+        <div class="model-view-scroll">
+            <div class="img-grid">
+                <div class="model-img" *ngFor="let a of [1,1,1,1]">
+                    <img src="../../assets/img01.jpg" alt="">
+                </div>
+            </div>
+        </div>
+
+
+        <div class="desc">
+            <div class="desc-info">
+                <div>
+                    <div class="desc-brand">Nike</div>
+                    <div class="desc-model">ACRONYM X BLAZER LOW 'NIGHT MAROON'</div>
+                </div>
+                <div class="desc-sku">
+                    Артикул: 1111
+                </div>
+                <div class="desc-price">
+                    <div>
+                        19 500
+                        <span>₽</span>
+                    </div>
+                </div>
+                <div class="button-buy">
+                    Купить
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="model-view-more">
+        <div>
+            <span>Подробнее</span>
+        </div>
+    </div>
+
+
+    <div class="model-view-info-summary">
+        <div class="model-view-info-content">
+            <div>Nike</div>
+            <div>Бренд</div>
+        </div>
+        <div class="model-view-info-content">
+            <div>Acronym x Blazer Low</div>
+            <div>Модель</div>
+        </div>
+        <div class="model-view-info-content">
+            <div>'Night Maroon'</div>
+            <div>Расцветка</div>
+        </div>
+        <div class="model-view-info-content">
+            <div>11/02/2022</div>
+            <div>Дата релиза</div>
+        </div>
+    </div>
+
+
+    <div class="new-items">
+        <app-carousel
+            title="Вам понравится"
+        >
+        </app-carousel>
+    </div>
+
+
+    <div class="model-view-info-links">
+        <div class="model-view-info-link">
+            <app-model-info-link
+                title="Оплата"
+                img="../../assets/card.svg"
+            ></app-model-info-link>
+        </div>
+        <div class="model-view-info-link">
+            <app-model-info-link
+                title="Доствка и возврат"
+                img="../../assets/box.svg"
+            ></app-model-info-link>
+        </div>
+        <div class="model-view-info-link">
+            <app-model-info-link
+                title="Гарантии"
+                img="../../assets/shield-tick.svg"
+            ></app-model-info-link>
+        </div>
+        <div class="model-view-info-link">
+            <app-model-info-link
+                title="Поддержка"
+                img="../../assets/support.svg"
+            ></app-model-info-link>
+        </div>
+    </div>
+</div>

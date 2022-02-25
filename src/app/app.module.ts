@@ -13,11 +13,11 @@ import { AppShoesComponent } from './app-catalog-page/app-shoes/app-shoes.compon
 import { AppShoesModule } from './app-catalog-page/app-shoes/app-shoes.module';
 import { AppModelComponent } from './app-model/app-model.component';
 import { AppCardItemModule } from './app-card-item/app-card-item.module';
+import { AppModelModule } from './app-model/app-model.module';
 
 @NgModule({
   declarations: [
     AppComponent,
-    AppModelComponent,
   ],
   imports: [
     BrowserModule,
@@ -26,6 +26,7 @@ import { AppCardItemModule } from './app-card-item/app-card-item.module';
     AppMainPageModule,
     AppCatalogPageModule,
     AppCardItemModule,
+    AppModelModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
