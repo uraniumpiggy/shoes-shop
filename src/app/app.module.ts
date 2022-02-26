@@ -16,11 +16,11 @@ import { AppCardItemModule } from './app-card-item/app-card-item.module';
 import { AppModelModule } from './app-model/app-model.module';
 import { FormsModule } from '@angular/forms';
 import { FaqPageComponent } from './faq-page/faq-page.component';
+import { FaqPageModule } from './faq-page/faq-page.module';
 
 @NgModule({
   declarations: [
     AppComponent,
-    FaqPageComponent,
   ],
   imports: [
     BrowserModule,
@@ -31,6 +31,7 @@ import { FaqPageComponent } from './faq-page/faq-page.component';
     AppCardItemModule,
     AppModelModule,
     FormsModule,
+    FaqPageModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

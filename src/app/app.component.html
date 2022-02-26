@@ -38,7 +38,7 @@
             <a href="" class="menu__point"><label for="">Одежда</label></a>
             <a href="" class="menu__point"><label for="">Аксессуары</label></a>
             <a href="" class="menu__point"><label for="">FAQ</label></a>
-            <a href="" class="menu__point"><label for="">Помощь</label></a>
+            <a [routerLink]="['faq/contacts']" class="menu__point"><label for="">Помощь</label></a>
             <a href="" class="menu__point"><label for="">Продать</label></a>
             <div class="menu__text">
                 Никогда не пропускайте важные события.
@@ -107,13 +107,13 @@
                 <div class="footer-platform-mobile">Палтформа</div>
                 <div class="footer-section">
                     <a href="" class="footer-item">Как это работает</a>
-                    <a href="" class="footer-item">Доставка и возврат</a>
+                    <a [routerLink]="['faq/delivery']" class="footer-item">Доставка и возврат</a>
                     <a href="" class="footer-item">Оплата</a>
                 </div>
                 <div class="footer-section">
                     <a href="" class="footer-item">Правила продажи</a>
                     <a href="" class="footer-item">Последние релизы</a>
-                    <a href="" class="footer-item">Контакты</a>
+                    <a [routerLink]="['faq/contacts']" class="footer-item">Контакты</a>
                 </div>
             </div>
         </div>

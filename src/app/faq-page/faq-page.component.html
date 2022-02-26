@@ -1,1 +1,42 @@
-<p>faq-page works!</p>
+<div class="faq-wrapper">
+    <div class="faq">
+        <div class="faq-menu-mobile">
+
+        </div>
+        <div class="faq-menu">
+            <a  
+                (click)="changeLink(0)"
+                [routerLink]="['contacts']"
+                [ngClass]="{active: buttonActive[0]}"
+            >Контактная информация</a>
+            <a 
+                (click)="changeLink(1)"
+                [routerLink]="['delivery']"
+                [ngClass]="{active: buttonActive[1]}"
+            >Доставка и возврат</a>
+            <a 
+                (click)="changeLink(2)"
+                [routerLink]="['answers']"
+                [ngClass]="{active: buttonActive[2]}"
+            >F. A. Q.</a>
+            <a 
+                (click)="changeLink(3)"
+                [routerLink]="['guarantee']"
+                [ngClass]="{active: buttonActive[3]}"
+            >Гарантии оригинальности</a>
+            <a 
+                (click)="changeLink(4)"
+                [routerLink]="['documents']"
+                [ngClass]="{active: buttonActive[4]}"
+            >Официальные документы</a>
+            <div class="faq-menu-footer">
+                <b>Не нашли, что искали?</b>
+                <span>Напишите нам на почту</span>
+                <a href="mailto:support@outofstock.cc">support@outofstock.cc</a>
+            </div>
+        </div>
+        <div class="faq-block">
+            <router-outlet></router-outlet>
+        </div>
+    </div>
+</div>
