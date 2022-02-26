@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-full-screen-banner',
@@ -7,9 +7,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FullScreenBannerComponent implements OnInit {
 
+  @Output() onClose: EventEmitter<boolean> = new EventEmitter()
+
+  @Input() text: string = ''
+  @Input() title: string = ''
+
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  close(): void {
+    this.onClose.emit(false)
   }
 
 }

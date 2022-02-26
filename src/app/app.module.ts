@@ -14,10 +14,13 @@ import { AppShoesModule } from './app-catalog-page/app-shoes/app-shoes.module';
 import { AppModelComponent } from './app-model/app-model.component';
 import { AppCardItemModule } from './app-card-item/app-card-item.module';
 import { AppModelModule } from './app-model/app-model.module';
+import { FormsModule } from '@angular/forms';
+import { FaqPageComponent } from './faq-page/faq-page.component';
 
 @NgModule({
   declarations: [
     AppComponent,
+    FaqPageComponent,
   ],
   imports: [
     BrowserModule,
@@ -27,6 +30,7 @@ import { AppModelModule } from './app-model/app-model.module';
     AppCatalogPageModule,
     AppCardItemModule,
     AppModelModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

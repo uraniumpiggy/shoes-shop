@@ -6,6 +6,7 @@ import { AppCarouselModule } from "../app-main-page/app-carousel/app-carousel.mo
 import { AppModelComponent } from "./app-model.component";
 import { AppModelInfoLinkComponent } from './app-model-info-link/app-model-info-link.component';
 import { FullScreenBannerComponent } from './full-screen-banner/full-screen-banner.component';
+import { FormsModule } from "@angular/forms";
 
 @NgModule({
     declarations: [
@@ -16,6 +17,7 @@ import { FullScreenBannerComponent } from './full-screen-banner/full-screen-bann
     imports: [
         CommonModule,
         AppCarouselModule,
+        FormsModule,
     ],
     bootstrap: [AppModelComponent],
     exports: [

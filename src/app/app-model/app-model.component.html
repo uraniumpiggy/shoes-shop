@@ -72,27 +72,37 @@
     <div class="model-view-info-links">
         <div class="model-view-info-link">
             <app-model-info-link
+                (click)="openAlertWindow(0)"
                 title="Оплата"
                 img="../../assets/card.svg"
             ></app-model-info-link>
         </div>
         <div class="model-view-info-link">
             <app-model-info-link
+                (click)="openAlertWindow(1)"
                 title="Доствка и возврат"
                 img="../../assets/box.svg"
             ></app-model-info-link>
         </div>
         <div class="model-view-info-link">
             <app-model-info-link
+                (click)="openAlertWindow(2)"
                 title="Гарантии"
                 img="../../assets/shield-tick.svg"
             ></app-model-info-link>
         </div>
         <div class="model-view-info-link">
             <app-model-info-link
+                (click)="openAlertWindow(3)"
                 title="Поддержка"
                 img="../../assets/support.svg"
             ></app-model-info-link>
         </div>
     </div>
 </div>
+<app-full-screen-banner
+    *ngIf="isAlertOpen"
+    [title]="texts[arrayIndex].title"
+    [text]="texts[arrayIndex].text"
+    (onClose)="closeAlertWindow($event)"
+></app-full-screen-banner>
