@@ -8,8 +8,9 @@
         height: 70vh;
 
         .faq-menu-mobile {
-            display: block;
+            display: none;
         }
+
 
         .faq-menu {
             font-size: 12px;
@@ -59,10 +60,70 @@
             }
         }
 
+        @media screen and (max-width: 768px) {
+            & {
+                flex-direction: column;
+
+                .faq-menu {
+                    display: none;
+                }
+
+                .faq-menu-mobile {
+                    width: 100%;
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    padding:  20px 5%;
+
+                    .menu-selection {
+                        padding-left: 20px;
+                        position: relative;
+
+                        select {
+                            display: block;
+                            font-size: 16px;
+                            direction: rtl;
+                            -webkit-appearance: none;
+                            border: none;
+                            background-color: transparent;
+                            position: relative;
+                            text-transform: none;
+
+                            option {
+                                display: block;
+                                text-align: left;
+                                width: auto;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
         .faq-block {
             width: 75%;
             overflow-y: scroll;
             padding: 0 5%;
+
+            @media screen and (max-width: 768px) {
+                width: 90%;
+
+                &::-webkit-scrollbar {
+                    width: 3px;
+                }
+        
+                &::-webkit-scrollbar-thumb {
+                    box-shadow: rgb(0 0 0 / 0%) 0 0 12px inset;
+                    color: #0abab5;
+                    background-color: #0abab5;
+                    border-radius: 0;
+                }
+        
+                &::-webkit-scrollbar-track-piece {
+                    background-color: transparent;
+                }
+            }
         }
+        
     }
 }

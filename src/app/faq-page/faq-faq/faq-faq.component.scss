@@ -1,0 +1,35 @@
+.faq-header {
+    font-size: 30px;
+    color: #000000;
+    letter-spacing: 0;
+    padding: 5%;
+    text-transform: uppercase;
+
+    @media screen and (max-width: 768px) {
+        & {
+            font-size: 25px;
+        }
+    }
+}
+
+.text-wrapper {
+    font-size: 14px;
+    color: #000000;
+    letter-spacing: 0.5px;
+    line-height: 20px;
+    margin-bottom: 110px;
+}
+
+.faq-section-header {
+    font-size: 13px;
+    color: #000000;
+    letter-spacing: 0;
+    margin: 30px 0;
+    font-weight: bold;
+}
+
+.faq-section-text {
+    font-size: 13px;
+    color: #000000;
+    letter-spacing: 0;
+}
