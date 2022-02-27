@@ -11,7 +11,7 @@
                 <a [routerLink]="['/catalog', 'shoes']" class="menu-item">каталог</a>
                 <a href="#" class="menu-item">профиль</a>
                 <div class="menu-item menu-img"
-                    (click)="isSearchBarOpen = !isSearchBarOpen"
+                    (click)="toggleSearchBar()"
                 >
                     <img src="assets/search.svg" alt>
                 </div>
@@ -37,7 +37,7 @@
             <a [routerLink]="['/catalog', 'shoes']" class="menu__point" (click)="close()"><label for="">Обувь</label></a>
             <a href="" class="menu__point"><label for="">Одежда</label></a>
             <a href="" class="menu__point"><label for="">Аксессуары</label></a>
-            <a href="" class="menu__point"><label for="">FAQ</label></a>
+            <a [routerLink]="['faq/answers']" class="menu__point"><label for="">FAQ</label></a>
             <a [routerLink]="['faq/contacts']" class="menu__point"><label for="">Помощь</label></a>
             <a href="" class="menu__point"><label for="">Продать</label></a>
             <div class="menu__text">
@@ -75,7 +75,7 @@
             *ngIf="isSearchBarOpen"
             @searchBarRemoveTrigger
         >
-            <input type="text" placeholder="Введите название модели" class="search-line">
+            <input #searchBar (keyup.enter)="search($event)" type="text" placeholder="Введите название модели" class="search-line">
         </div>
     </nav>
 
@@ -108,10 +108,10 @@
                 <div class="footer-section">
                     <a href="" class="footer-item">Как это работает</a>
                     <a [routerLink]="['faq/delivery']" class="footer-item">Доставка и возврат</a>
-                    <a href="" class="footer-item">Оплата</a>
+                    <a [routerLink]="['faq/contacts']" class="footer-item">Оплата</a>
                 </div>
                 <div class="footer-section">
-                    <a href="" class="footer-item">Правила продажи</a>
+                    <a [routerLink]="['faq/documents']" class="footer-item">Правила продажи</a>
                     <a href="" class="footer-item">Последние релизы</a>
                     <a [routerLink]="['faq/contacts']" class="footer-item">Контакты</a>
                 </div>

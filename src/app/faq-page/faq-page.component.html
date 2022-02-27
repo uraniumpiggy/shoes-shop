@@ -2,12 +2,16 @@
     <div class="faq">
         <div class="faq-menu-mobile">
             <div class="menu-selection">
-                <select name="mobile-menu-selector" id="selector">
-                    <option value="/faq/contacts">Контактная информация</option>
-                    <option value="/faq/delivery">Доставка и возврат</option>
-                    <option value="/faq/answers">F. A. Q.</option>
-                    <option value="/faq/guarantee">Гарантии оригинальности</option>
-                    <option value="/faq/documents">Официальные документы</option>
+                <select name="mobile-menu-selector" id="selector" (change)="selectChangeHandler($event)">
+                    <option value="/faq/contacts" [selected]="buttonActive[0]" (click)="changeLink(0)">
+                        Контактная информация
+                    </option>
+                    <option value="/faq/delivery" [selected]="buttonActive[1]" (click)="changeLink(1)">
+                        Доставка и возврат
+                    </option>
+                    <option value="/faq/answers" [selected]="buttonActive[2]" (click)="changeLink(2)">F. A. Q.</option>
+                    <option value="/faq/guarantee" [selected]="buttonActive[3]" (click)="changeLink(3)">Гарантии оригинальности</option>
+                    <option value="/faq/documents" [selected]="buttonActive[4]" (click)="changeLink(4)">Официальные документы</option>
                 </select>
             </div>
         </div>

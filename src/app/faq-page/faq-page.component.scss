@@ -1,3 +1,15 @@
+@mixin optionsMenuArrows() {
+    content: '';
+    display: block;
+    width: 10px;
+    height: 2px;
+    position: absolute;
+    background-color: #000;
+    top: 50%;
+    left: -5px;
+    transform: translateY(-50%);
+}
+
 .faq-wrapper {
     padding: 5%;
 
@@ -79,6 +91,17 @@
                         padding-left: 20px;
                         position: relative;
 
+                        &::after {
+                            @include optionsMenuArrows();
+                            transform: rotate(-45deg);
+                            left: -0px !important;
+                        }
+
+                        &::before {
+                            @include optionsMenuArrows();
+                            transform: rotate(45deg);
+                        }
+
                         select {
                             display: block;
                             font-size: 16px;
@@ -88,10 +111,11 @@
                             background-color: transparent;
                             position: relative;
                             text-transform: none;
+                            text-align: left;
+
 
                             option {
                                 display: block;
-                                text-align: left;
                                 width: auto;
                             }
                         }
@@ -105,22 +129,24 @@
             overflow-y: scroll;
             padding: 0 5%;
 
-            @media screen and (max-width: 768px) {
-                width: 90%;
+            // &::-webkit-scrollbar {
+            //     width: 3px;
+            // } 
+    
+            // &::-webkit-scrollbar-thumb {
+            //     box-shadow: rgb(0 0 0 / 0%) 0 0 12px inset;
+            //     color: #0abab5;
+            //     background-color: #0abab5;
+            //     border-radius: 0;
+            // }
+    
+            // &::-webkit-scrollbar-track-piece {
+            //     background-color: transparent;
+            // }
 
-                &::-webkit-scrollbar {
-                    width: 3px;
-                }
-        
-                &::-webkit-scrollbar-thumb {
-                    box-shadow: rgb(0 0 0 / 0%) 0 0 12px inset;
-                    color: #0abab5;
-                    background-color: #0abab5;
-                    border-radius: 0;
-                }
-        
-                &::-webkit-scrollbar-track-piece {
-                    background-color: transparent;
+            @media screen and (max-width: 768px) {
+                & {
+                    width: 90%;
                 }
             }
         }

@@ -17,6 +17,28 @@ export class FaqPageComponent implements OnInit {
     this.buttonActive[index] = true
   }
 
+  selectChangeHandler(event: any) {
+    const url: string = event.target.value
+
+    this.buttonActive = [false, false, false, false, false]
+
+    if (url === '/faq/contacts') {
+      this.buttonActive[0] = true
+    } else if (url === '/faq/delivery') {
+      this.buttonActive[1] = true
+    } else if (url === '/faq/answers') {
+      this.buttonActive[2] = true
+    } else if (url === '/faq/guarantee') {
+      this.buttonActive[3] = true
+    } else if (url === '/faq/documents') {
+      this.buttonActive[4] = true
+    } else {
+      console.log("Url error in faqPageComponent")
+    }
+
+    this.route.navigate([url])
+  }
+
   ngOnInit(): void {
     this.buttonActive = [false, false, false, false, false]
     if (this.route.url === '/faq/contacts') {

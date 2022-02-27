@@ -1,5 +1,5 @@
 import { animate, style, transition, trigger } from '@angular/animations';
-import { Component } from '@angular/core';
+import { ChangeDetectorRef, Component, ElementRef, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -38,6 +38,22 @@ import { Component } from '@angular/core';
 export class AppComponent {
   isMenuOpen: boolean = false
   isSearchBarOpen: boolean = false
+
+  @ViewChild('searchBar') inputRef!: ElementRef
+
+  constructor(private changeDetector : ChangeDetectorRef) {}
+
+  toggleSearchBar() {
+    this.isSearchBarOpen = !this.isSearchBarOpen
+    this.changeDetector.detectChanges()
+    if (this.isSearchBarOpen) {
+      this.inputRef.nativeElement.focus()
+    }
+  }
+
+  search(event: any) {
+    console.log(event.target.value)
+  }
 
   close() {
     if (this.isSearchBarOpen) {
