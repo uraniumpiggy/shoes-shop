@@ -1,13 +1,14 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { Model } from '../services/models.service';
 
-export interface cardItemData {
-  img: string,
-  brand: string,
-  name: string,
-  coloring: string,
-  price: string,
-  id: number
-}
+// export interface cardItemData {
+//   img: string,
+//   brand: string,
+//   name: string,
+//   coloring: string,
+//   price: string,
+//   id: number
+// }
 
 @Component({
   selector: 'app-app-card-item',
@@ -16,18 +17,20 @@ export interface cardItemData {
 })
 export class AppCardItemComponent implements OnInit {
 
-  @Input() cardData: cardItemData = {
-    img: 'assets/img01.jpg', 
+  @Input() cardData: Model = {
+    imgs: ['assets/img01.jpg'], 
     brand: 'Nike', 
-    name: 'Dunk Low Retro 2021', 
-    coloring: "'White Black'", 
-    price: '19 286 ₽', 
-    id: 1
+    model: 'Dunk Low Retro 2021', 
+    colors: "'White Black'", 
+    id: 1,
+    releaseDate: '11/02/2022',
+    sizePrice: {"US 10": '19 256'}
   }
-
+  
   constructor() { }
 
   ngOnInit(): void {
+    console.log(Object.keys(this.cardData.sizePrice)[0])
   }
 
 }

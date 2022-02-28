@@ -1,15 +1,16 @@
 <div class="card-content"
     [routerLink]="['/model', cardData.id]"
 >
-    <img [src]="cardData.img" alt="" class="card-img">
+    <img [src]="cardData.imgs[0]" alt="" class="card-img">
     <div class="card-text">
         <div>
             <div class="card-brands">{{ cardData.brand }}</div>
-            <div class="card-name">{{ cardData.name }}</div>
-            <div class="card-coloring">{{ cardData.coloring }}</div>
+            <div class="card-name">{{ cardData.model }}</div>
+            <div class="card-coloring">{{ cardData.colors }}</div>
         </div>
         <div class="card-price">
-            {{ cardData.price }}
+            <!-- {{ cardData.sizePrice }} -->
+            19 256
         </div>
     </div>
 </div>

@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { cardItemData } from 'src/app/app-card-item/app-card-item.component';
+import { Model, ModelsService } from 'src/app/services/models.service';
 
 @Component({
   selector: 'app-carousel',
@@ -9,7 +9,7 @@ import { cardItemData } from 'src/app/app-card-item/app-card-item.component';
 export class AppCarouselComponent implements OnInit {
 
   @Input() title: string = ''
-  @Input() cardsData: cardItemData[] = [{img: '', brand: '', name: '', coloring: '', price: '', id: 0}]
+  @Input() cardsData: Model[] | undefined  = undefined
 
   constructor() { }
 

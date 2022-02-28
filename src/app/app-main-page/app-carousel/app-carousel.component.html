@@ -12,8 +12,10 @@
                 'drag-scroll': true
             }"
         >
-        <div drag-scroll-item class="cards-carousel__item" *ngFor="let item of [1,1,1,1,1,1,1,1]">
-            <app-app-card-item></app-app-card-item>
+        <div drag-scroll-item class="cards-carousel__item" *ngFor="let item of cardsData">
+            <app-app-card-item
+                [cardData]="item"
+            ></app-app-card-item>
         </div>
         </drag-scroll>
     </div>
