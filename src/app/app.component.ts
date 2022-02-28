@@ -32,42 +32,75 @@ import { ChangeDetectorRef, Component, ElementRef, ViewChild } from '@angular/co
       transition(':leave', [
         animate('200ms', style({ transform : 'translateY(-100%)' }))
       ])
+    ]),
+    trigger('searchGridRemoveTrigger', [
+      transition(':enter', [
+        style({ opacity: 0 }),
+        animate('200ms ease-out')
+      ]),
+      transition(':leave', [
+        animate('200ms', style({ opacity: 0 }))
+      ])
     ])
   ]
 })
 export class AppComponent {
   isMenuOpen: boolean = false
   isSearchBarOpen: boolean = false
+  isSearchGridOpen: boolean = false
+  searchText: string = ''
 
   @ViewChild('searchBar') inputRef!: ElementRef
 
   constructor(private changeDetector : ChangeDetectorRef) {}
 
   toggleSearchBar() {
-    this.isSearchBarOpen = !this.isSearchBarOpen
-    this.changeDetector.detectChanges()
-    if (this.isSearchBarOpen) {
-      this.inputRef.nativeElement.focus()
+    if (!this.isSearchGridOpen) {
+      this.isSearchBarOpen = !this.isSearchBarOpen
+      this.changeDetector.detectChanges()
+      if (this.isSearchBarOpen) {
+        this.inputRef.nativeElement.focus()
+      }
+    } else {
+      this.hideSearchGrid()
     }
   }
+ 
+  onSearchChanges(event: any) {
+    const text: string = event.target.value
+    if (text.trim()) {
+      this.isSearchGridOpen = true
+      this.onActivate(undefined)
+    } else {
+      this.isSearchGridOpen = false
+    } 
+  }
 
-  search(event: any) {
-    console.log(event.target.value)
+  hideSearchGrid() {
+    if (this.isSearchGridOpen) {
+      this.isSearchGridOpen = false
+      this.isSearchBarOpen = false
+      this.searchText = ''
+    }
   }
 
   close() {
-    if (this.isSearchBarOpen) {
-      this.isSearchBarOpen = !this.isSearchBarOpen
-    }
     if(this.isMenuOpen) {
-      this.isMenuOpen = !this.isMenuOpen
+      this.isMenuOpen = false
+    }
+    if (!this.isSearchGridOpen) {
+      if (this.isSearchBarOpen) {
+        this.isSearchBarOpen = false
+      }
     }
   }
 
   toggleMenu() {
     this.isMenuOpen = !this.isMenuOpen
-    if (this.isSearchBarOpen) {
-      this.isSearchBarOpen = !this.isSearchBarOpen
+    if (!this.isSearchGridOpen) {
+      if (this.isSearchBarOpen) {
+        this.isSearchBarOpen = false
+      }
     }
   }
 

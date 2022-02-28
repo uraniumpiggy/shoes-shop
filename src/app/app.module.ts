@@ -17,10 +17,12 @@ import { AppModelModule } from './app-model/app-model.module';
 import { FormsModule } from '@angular/forms';
 import { FaqPageComponent } from './faq-page/faq-page.component';
 import { FaqPageModule } from './faq-page/faq-page.module';
+import { SearchGridComponent } from './search-grid/search-grid.component';
 
 @NgModule({
   declarations: [
     AppComponent,
+    SearchGridComponent,
   ],
   imports: [
     BrowserModule,

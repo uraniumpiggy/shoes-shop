@@ -102,6 +102,10 @@ nav {
         &.searchOpen {
             z-index: 5;
         }
+
+        &.gridShows {
+            z-index: 50 !important;
+        }
     }
 
     .menu {
@@ -207,11 +211,15 @@ nav {
         top: $appbarHeight;
         margin: 0;
         position: fixed;
-        width: 100vw;
+        width: 100%;
         padding: 20px 0 20px;
         background-color: white;
         z-index: $zIndex;
         transition: top .3s;
+        
+        &.relative {
+            position: relative !important;
+        }
     
         .search-line {
             flex-grow: 1;
@@ -227,6 +235,7 @@ nav {
 footer {
     background-color: #000;
     padding: 0 5%;
+    position: relative;
 
     @media screen and (max-width: 768px) {
         .footer-email {

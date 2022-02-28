@@ -1,14 +1,14 @@
 <div>
     <nav>
         <div class="header-wrapper">
-            <div class="logo">
+            <div class="logo" (click)="hideSearchGrid()">
                 <a routerLink="">
                     <span class="tiffany">ø</span>utofstock
                 </a>
             </div>
             <div class="header-menu">
                 <a href="#" class="menu-item">продать</a>
-                <a [routerLink]="['/catalog', 'shoes']" class="menu-item">каталог</a>
+                <a (click)="hideSearchGrid()" [routerLink]="['/catalog', 'shoes']" class="menu-item">каталог</a>
                 <a href="#" class="menu-item">профиль</a>
                 <div class="menu-item menu-img"
                     (click)="toggleSearchBar()"
@@ -22,24 +22,26 @@
                 </div>
             </div>
         </div>
-        <div *ngIf="isMenuOpen || isSearchBarOpen"
+        <div *ngIf="isMenuOpen || (isSearchBarOpen && !isSearchGridOpen)"
         @backgroundRemoveTrigger
         class="menu__absolute"
         [ngClass]="{
-            searchOpen: isSearchBarOpen
+            searchOpen: isSearchBarOpen,
+            gridShows: isSearchGridOpen
         }"
         (click)="close()"
         ></div>
-        <menu class="menu"
+        <menu 
+            class="menu"
             *ngIf="isMenuOpen"
             @menuRemoveTrigger
         >
-            <a [routerLink]="['/catalog', 'shoes']" class="menu__point" (click)="close()"><label for="">Обувь</label></a>
-            <a href="" class="menu__point"><label for="">Одежда</label></a>
-            <a href="" class="menu__point"><label for="">Аксессуары</label></a>
-            <a [routerLink]="['faq/answers']" class="menu__point"><label for="">FAQ</label></a>
-            <a [routerLink]="['faq/contacts']" class="menu__point"><label for="">Помощь</label></a>
-            <a href="" class="menu__point"><label for="">Продать</label></a>
+            <a [routerLink]="['/catalog', 'shoes']" (click)="hideSearchGrid()" class="menu__point" (click)="close()"><label for="">Обувь</label></a>
+            <a href="" (click)="hideSearchGrid()" class="menu__point"><label for="">Одежда</label></a>
+            <a href="" (click)="hideSearchGrid()" class="menu__point"><label for="">Аксессуары</label></a>
+            <a [routerLink]="['faq/answers']" (click)="hideSearchGrid()" class="menu__point"><label for="">FAQ</label></a>
+            <a [routerLink]="['faq/contacts']" (click)="hideSearchGrid()" class="menu__point"><label for="">Помощь</label></a>
+            <a href="" (click)="hideSearchGrid()" class="menu__point"><label for="">Продать</label></a>
             <div class="menu__text">
                 Никогда не пропускайте важные события.
                 <br>
@@ -74,12 +76,30 @@
         <div class="search-box"
             *ngIf="isSearchBarOpen"
             @searchBarRemoveTrigger
+            [ngClass]="{
+                relative: isSearchGridOpen  
+            }"
         >
-            <input #searchBar (keyup.enter)="search($event)" type="text" placeholder="Введите название модели" class="search-line">
+            <input 
+                #searchBar 
+                (input)="onSearchChanges($event)"
+                type="text" 
+                placeholder="Введите название модели" 
+                class="search-line"
+                [(ngModel)]="searchText"
+            >
         </div>
     </nav>
 
-    <router-outlet (activate)="onActivate($event)"></router-outlet>
+    <app-search-grid 
+        *ngIf="isSearchGridOpen else router"
+        @searchGridRemoveTrigger
+    >
+        <app-app-card-item *ngFor="let a of [1,1,1,1,1,1,1,1,1]"></app-app-card-item>
+    </app-search-grid>
+    <ng-template #router>
+        <router-outlet (activate)="onActivate($event)"></router-outlet>
+    </ng-template>
 
     <footer>
         <div class="footer-header">
@@ -100,20 +120,20 @@
             </div>
             <div class="footer-sections-wrapper">
                 <div class="footer-section">
-                    <a [routerLink]="['/catalog', 'shoes']" class="footer-item">Обувь</a>
-                    <a href="" class="footer-item">Одежда</a>
-                    <a href="" class="footer-item">Аксессуары</a>
+                    <a (click)="hideSearchGrid()" [routerLink]="['/catalog', 'shoes']" class="footer-item">Обувь</a>
+                    <a (click)="hideSearchGrid()" href="" class="footer-item">Одежда</a>
+                    <a (click)="hideSearchGrid()" href="" class="footer-item">Аксессуары</a>
                 </div>
                 <div class="footer-platform-mobile">Палтформа</div>
                 <div class="footer-section">
-                    <a href="" class="footer-item">Как это работает</a>
-                    <a [routerLink]="['faq/delivery']" class="footer-item">Доставка и возврат</a>
-                    <a [routerLink]="['faq/contacts']" class="footer-item">Оплата</a>
+                    <a (click)="hideSearchGrid()" href="" class="footer-item">Как это работает</a>
+                    <a (click)="hideSearchGrid()" [routerLink]="['faq/delivery']" class="footer-item">Доставка и возврат</a>
+                    <a (click)="hideSearchGrid()" [routerLink]="['faq/contacts']" class="footer-item">Оплата</a>
                 </div>
                 <div class="footer-section">
-                    <a [routerLink]="['faq/documents']" class="footer-item">Правила продажи</a>
-                    <a href="" class="footer-item">Последние релизы</a>
-                    <a [routerLink]="['faq/contacts']" class="footer-item">Контакты</a>
+                    <a (click)="hideSearchGrid()" [routerLink]="['faq/documents']" class="footer-item">Правила продажи</a>
+                    <a (click)="hideSearchGrid()" href="" class="footer-item">Последние релизы</a>
+                    <a (click)="hideSearchGrid()" [routerLink]="['faq/contacts']" class="footer-item">Контакты</a>
                 </div>
             </div>
         </div>
