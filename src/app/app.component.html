@@ -37,8 +37,8 @@
             @menuRemoveTrigger
         >
             <a [routerLink]="['/catalog', 'shoes']" (click)="hideSearchGrid()" class="menu__point" (click)="close()"><label for="">Обувь</label></a>
-            <a href="" (click)="hideSearchGrid()" class="menu__point"><label for="">Одежда</label></a>
-            <a href="" (click)="hideSearchGrid()" class="menu__point"><label for="">Аксессуары</label></a>
+            <a [routerLink]="['/catalog', 'clothes']" (click)="hideSearchGrid()" class="menu__point"><label for="">Одежда</label></a>
+            <a [routerLink]="['/catalog', 'accessories']" (click)="hideSearchGrid()" class="menu__point"><label for="">Аксессуары</label></a>
             <a [routerLink]="['faq/answers']" (click)="hideSearchGrid()" class="menu__point"><label for="">FAQ</label></a>
             <a [routerLink]="['faq/contacts']" (click)="hideSearchGrid()" class="menu__point"><label for="">Помощь</label></a>
             <a href="" (click)="hideSearchGrid()" class="menu__point"><label for="">Продать</label></a>
@@ -95,7 +95,10 @@
         *ngIf="isSearchGridOpen else router"
         @searchGridRemoveTrigger
     >
-        <app-app-card-item *ngFor="let a of [1,1,1,1,1,1,1,1,1]"></app-app-card-item>
+        <app-app-card-item
+            *ngFor="let a of [1,1,1,1,1,1,1,1,1]"
+            (click)="hideSearchGrid()"    
+        ></app-app-card-item>
     </app-search-grid>
     <ng-template #router>
         <router-outlet (activate)="onActivate($event)"></router-outlet>

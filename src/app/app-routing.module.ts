@@ -1,7 +1,9 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AccessoriesComponent } from './app-catalog-page/accessories/accessories.component';
 import { AppCatalogPageComponent } from './app-catalog-page/app-catalog-page.component';
 import { AppShoesComponent } from './app-catalog-page/app-shoes/app-shoes.component';
+import { ClothesComponent } from './app-catalog-page/clothes/clothes.component';
 import { AppMainPageComponent } from './app-main-page/app-main-page.component';
 import { AppModelComponent } from './app-model/app-model.component';
 import { FaqContactsComponent } from './faq-page/faq-contacts/faq-contacts.component';
@@ -14,7 +16,9 @@ import { FaqPageComponent } from './faq-page/faq-page.component';
 const routes: Routes = [
   {path: '', component: AppMainPageComponent},
   {path: 'catalog', component: AppCatalogPageComponent, children: [
-    {path: 'shoes', component: AppShoesComponent},  
+    {path: 'shoes', component: AppShoesComponent},
+    {path: 'clothes', component: ClothesComponent},
+    {path: 'accessories', component: AccessoriesComponent},  
   ]},
   {path: 'model/:id', component: AppModelComponent},
   {path: 'faq', component: FaqPageComponent, children: [

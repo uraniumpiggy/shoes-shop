@@ -1,7 +1,6 @@
 <div class="sections-selector">
-    <div>Обувь</div>
-    <div>Одежда</div>
-    <div>Аксессуары</div>
+    <div [routerLink]="['/catalog', 'shoes']">Обувь</div>
+    <div [routerLink]="['/catalog', 'clothes']">Одежда</div>
+    <div [routerLink]="['/catalog', 'accessories']">Аксессуары</div>
 </div>
-<!-- <app-app-card-item></app-app-card-item> -->
 <router-outlet></router-outlet>

@@ -6,11 +6,15 @@ import { AppCatalogPageComponent } from "./app-catalog-page.component";
 import { AppShoesComponent } from "./app-shoes/app-shoes.component";
 import { AppShoesModule } from "./app-shoes/app-shoes.module";
 import { AppFiltersComponent } from './app-filters/app-filters.component';
+import { ClothesComponent } from './clothes/clothes.component';
+import { AccessoriesComponent } from './accessories/accessories.component';
 
 
 @NgModule({
     declarations: [
         AppCatalogPageComponent,
+        ClothesComponent,
+        AccessoriesComponent,
         // AppShoesComponent,
     ],
     imports: [
