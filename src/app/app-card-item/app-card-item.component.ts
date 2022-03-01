@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Model } from '../services/models.service';
+import { Model, SizePrice } from '../services/models.service';
 
 // export interface cardItemData {
 //   img: string,
@@ -26,11 +26,13 @@ export class AppCardItemComponent implements OnInit {
     releaseDate: '11/02/2022',
     sizePrice: {"US 10": '19 256'}
   }
-  
+  price: string | undefined = ''
+
+
   constructor() { }
 
   ngOnInit(): void {
-    console.log(Object.keys(this.cardData.sizePrice)[0])
+    this.price = this.cardData.sizePrice[Object.keys(this.cardData.sizePrice)[0] as keyof SizePrice]
   }
 
 }

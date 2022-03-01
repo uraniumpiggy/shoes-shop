@@ -4,8 +4,8 @@
 
         <div class="model-view-scroll">
             <div class="img-grid">
-                <div class="model-img" *ngFor="let a of [1,1,1,1]">
-                    <img src="../../assets/img01.jpg" alt="">
+                <div class="model-img" *ngFor="let img of modelData?.imgs">
+                    <img [src]="img" alt="">
                 </div>
             </div>
         </div>
@@ -14,11 +14,12 @@
         <div class="desc">
             <div class="desc-info">
                 <div>
-                    <div class="desc-brand">Nike</div>
-                    <div class="desc-model">ACRONYM X BLAZER LOW 'NIGHT MAROON'</div>
+                    <div class="desc-brand">{{ modelData?.brand }}</div>
+                    <div class="desc-model">{{ modelData?.model }}</div>
                 </div>
                 <div class="desc-sku">
-                    Артикул: 1111
+                    Артикул
+                    {{ modelData?.id }}
                 </div>
                 <div class="desc-price">
                     <div>
@@ -43,19 +44,19 @@
 
     <div class="model-view-info-summary">
         <div class="model-view-info-content">
-            <div>Nike</div>
+            <div>{{ modelData?.brand }}</div>
             <div>Бренд</div>
         </div>
         <div class="model-view-info-content">
-            <div>Acronym x Blazer Low</div>
+            <div>{{ modelData?.model }}</div>
             <div>Модель</div>
         </div>
         <div class="model-view-info-content">
-            <div>'Night Maroon'</div>
+            <div>{{ modelData?.colors }}</div>
             <div>Расцветка</div>
         </div>
         <div class="model-view-info-content">
-            <div>11/02/2022</div>
+            <div>{{ modelData?.releaseDate }}</div>
             <div>Дата релиза</div>
         </div>
     </div>
@@ -64,6 +65,7 @@
     <div class="new-items">
         <app-carousel
             title="Вам понравится"
+            [cardsData]="youMayBeInterestedData"
         >
         </app-carousel>
     </div>

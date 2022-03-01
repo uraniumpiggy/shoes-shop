@@ -7,10 +7,18 @@ import { Model, ModelsService } from '../services/models.service';
   styleUrls: ['./app-main-page.component.scss']
 })
 export class AppMainPageComponent implements OnInit {
-  modelsData: Model[] | undefined = undefined 
+  modelsDataNew: Model[] | undefined = undefined 
+  modelsDataNike: Model[] | undefined = undefined 
+  modelsDataYeezy: Model[] | undefined = undefined 
+  modelsDataJordan: Model[] | undefined = undefined 
+
 
   constructor(private modelServise: ModelsService) { 
-    this.modelsData = modelServise.models
+    this.modelsDataNew = modelServise.getModels('', 8)
+    this.modelsDataNike = modelServise.getModels('Nike', 8)
+    this.modelsDataYeezy = modelServise.getModels('Yeezy', 8)
+    this.modelsDataJordan = modelServise.getModels('Jordan 1', 8)
+
   }
 
   ngOnInit(): void {

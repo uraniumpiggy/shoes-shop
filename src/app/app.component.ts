@@ -1,5 +1,6 @@
 import { animate, style, transition, trigger } from '@angular/animations';
 import { ChangeDetectorRef, Component, ElementRef, ViewChild } from '@angular/core';
+import { Model, ModelsService } from './services/models.service';
 
 @Component({
   selector: 'app-root',
@@ -49,10 +50,11 @@ export class AppComponent {
   isSearchBarOpen: boolean = false
   isSearchGridOpen: boolean = false
   searchText: string = ''
+  searchItems: Model[] = []
 
   @ViewChild('searchBar') inputRef!: ElementRef
 
-  constructor(private changeDetector : ChangeDetectorRef) {}
+  constructor(private changeDetector : ChangeDetectorRef, private modelsService: ModelsService) {}
 
   toggleSearchBar() {
     if (!this.isSearchGridOpen) {
@@ -71,6 +73,7 @@ export class AppComponent {
     if (text.trim()) {
       this.isSearchGridOpen = true
       this.onActivate(undefined)
+      this.searchItems = this.modelsService.getModels(text, 50)
     } else {
       this.isSearchGridOpen = false
     } 

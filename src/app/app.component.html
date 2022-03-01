@@ -96,8 +96,9 @@
         @searchGridRemoveTrigger
     >
         <app-app-card-item
-            *ngFor="let a of [1,1,1,1,1,1,1,1,1]"
-            (click)="hideSearchGrid()"    
+            *ngFor="let item of searchItems"
+            (click)="hideSearchGrid()"
+            [cardData]="item"    
         ></app-app-card-item>
     </app-search-grid>
     <ng-template #router>

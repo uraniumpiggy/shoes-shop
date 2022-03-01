@@ -7,6 +7,7 @@ import { AppModelComponent } from "./app-model.component";
 import { AppModelInfoLinkComponent } from './app-model-info-link/app-model-info-link.component';
 import { FullScreenBannerComponent } from './full-screen-banner/full-screen-banner.component';
 import { FormsModule } from "@angular/forms";
+import { AppRoutingModule } from "../app-routing.module";
 
 @NgModule({
     declarations: [
@@ -18,6 +19,7 @@ import { FormsModule } from "@angular/forms";
         CommonModule,
         AppCarouselModule,
         FormsModule,
+        AppRoutingModule,
     ],
     bootstrap: [AppModelComponent],
     exports: [

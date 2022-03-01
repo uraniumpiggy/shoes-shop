@@ -12,7 +12,10 @@
       [ngStyle]="{'display': isMobileFiltersVisible ? 'block' : 'none'}"
     ></app-filters>
     <div class="catalog-grid">
-        <app-app-card-item *ngFor="let item of items"></app-app-card-item>
+        <app-app-card-item 
+          *ngFor="let item of items"
+          [cardData]="item"
+        ></app-app-card-item>
     </div>
 </div>
 <div class="fullpage-window"

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Model, ModelsService } from 'src/app/services/models.service';
 
 @Component({
   selector: 'app-app-shoes',
@@ -7,14 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AppShoesComponent implements OnInit {
 
-  items: number[] = [1,1,1,1,1,1,1,1,1,11,1,1,1,1,1,1]
+  items: Model[] = []
   isInStock: boolean = false
 
   isMobileFiltersVisible: boolean = false
 
-  constructor() { }
+  constructor(private modelsService: ModelsService) { }
 
   ngOnInit(): void {
+    this.items = this.modelsService.models
   }
 
 }
