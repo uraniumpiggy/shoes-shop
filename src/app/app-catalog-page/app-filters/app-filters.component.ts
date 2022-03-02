@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { SizePrice } from 'src/app/services/models.service';
 
 @Component({
   selector: 'app-filters',

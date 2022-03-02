@@ -104,7 +104,10 @@
 </div>
 <app-full-screen-banner
     *ngIf="isAlertOpen"
-    [title]="texts[arrayIndex].title"
-    [text]="texts[arrayIndex].text"
     (onClose)="closeAlertWindow($event)"
-></app-full-screen-banner>
+>
+    <app-faq-contacts *ngIf="arrayIndex === 0"></app-faq-contacts>
+    <app-faq-delivery *ngIf="arrayIndex === 1"></app-faq-delivery>
+    <app-faq-guarantee *ngIf="arrayIndex === 2"></app-faq-guarantee>
+    <app-faq-contacts *ngIf="arrayIndex === 3"></app-faq-contacts>
+</app-full-screen-banner>

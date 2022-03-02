@@ -125,12 +125,12 @@
             <div class="footer-sections-wrapper">
                 <div class="footer-section">
                     <a (click)="hideSearchGrid()" [routerLink]="['/catalog', 'shoes']" class="footer-item">Обувь</a>
-                    <a (click)="hideSearchGrid()" href="" class="footer-item">Одежда</a>
-                    <a (click)="hideSearchGrid()" href="" class="footer-item">Аксессуары</a>
+                    <a (click)="hideSearchGrid()" [routerLink]="['/catalog', 'clothes']" class="footer-item">Одежда</a>
+                    <a (click)="hideSearchGrid()" [routerLink]="['/catalog', 'accessories']" class="footer-item">Аксессуары</a>
                 </div>
                 <div class="footer-platform-mobile">Палтформа</div>
                 <div class="footer-section">
-                    <a (click)="hideSearchGrid()" href="" class="footer-item">Как это работает</a>
+                    <a (click)="hideSearchGrid()" [routerLink]="['faq/answers']" class="footer-item">Как это работает</a>
                     <a (click)="hideSearchGrid()" [routerLink]="['faq/delivery']" class="footer-item">Доставка и возврат</a>
                     <a (click)="hideSearchGrid()" [routerLink]="['faq/contacts']" class="footer-item">Оплата</a>
                 </div>

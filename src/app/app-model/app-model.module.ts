@@ -8,6 +8,13 @@ import { AppModelInfoLinkComponent } from './app-model-info-link/app-model-info-
 import { FullScreenBannerComponent } from './full-screen-banner/full-screen-banner.component';
 import { FormsModule } from "@angular/forms";
 import { AppRoutingModule } from "../app-routing.module";
+import { RouterModule } from "@angular/router";
+import { FaqContactsComponent } from "../faq-page/faq-contacts/faq-contacts.component";
+import { FaqContactsModule } from "../faq-page/faq-contacts/faq-contacts.module";
+import { FaqDeliveryModule } from "../faq-page/faq-delivery/faq-delivery.module";
+import { FaqDocumentsModule } from "../faq-page/faq-documents/faq-documents.module";
+import { FaqFaqModule } from "../faq-page/faq-faq/faq-faq.module";
+import { FaqGuaranteeModule } from "../faq-page/faq-guarantee/faq-guarantee.module";
 
 @NgModule({
     declarations: [
@@ -19,7 +26,12 @@ import { AppRoutingModule } from "../app-routing.module";
         CommonModule,
         AppCarouselModule,
         FormsModule,
-        AppRoutingModule,
+        RouterModule,
+        FaqContactsModule,
+        FaqDeliveryModule,
+        FaqDocumentsModule,
+        FaqFaqModule,
+        FaqGuaranteeModule,
     ],
     bootstrap: [AppModelComponent],
     exports: [

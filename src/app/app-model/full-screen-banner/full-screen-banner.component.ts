@@ -9,9 +9,6 @@ export class FullScreenBannerComponent implements OnInit {
 
   @Output() onClose: EventEmitter<boolean> = new EventEmitter()
 
-  @Input() text: string = ''
-  @Input() title: string = ''
-
   constructor() { }
 
   ngOnInit(): void {

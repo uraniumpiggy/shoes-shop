@@ -29,7 +29,7 @@
             [cardsData]="modelsDataYeezy"
         ></app-carousel>
         <app-carousel
-            title="Jordan 1"
+            title=" Jordan 1 "
             [cardsData]="modelsDataJordan"
         ></app-carousel>
     </div>
@@ -59,13 +59,13 @@
 
     <div class="main-questions">
         <div class="questions-sections">
-            <a [routerLink]="['/faq']">Как работает площадка</a>
+            <a [routerLink]="['faq']">Как работает площадка</a>
             <a href="">Гарантии оригинальности</a>
-            <a href="">Ответы на часто задаваемые вопросы</a>
+            <a [routerLink]="['faq/answers']">Ответы на часто задаваемые вопросы</a>
             <a [routerLink]="['faq/contacts']">Контактная информация</a>
-            <a href="">Доставка и возврат</a>
-            <a href="">Оплата</a>
-            <a href="">Официальные документы</a>
+            <a [routerLink]="['faq/delivery']">Доставка и возврат</a>
+            <a [routerLink]="['faq/contacts']">Оплата</a>
+            <a [routerLink]="['faq/documents']">Официальные документы</a>
         </div>
         <div class="question-right">
             <div class="question-header">Остались вопросы?</div>
@@ -73,7 +73,7 @@
                 <div class="question-mobile mobile">
                     Вероятно, у нас уже есть ответ на ваш вопрос:
                 </div>
-                <a href="" class="mobile-btn">Смотреть F.A.Q.</a>
+                <a [routerLink]="['faq']" class="mobile-btn">Смотреть F.A.Q.</a>
                 <div>
                     Если у вас есть какие-либо вопросы или пожелания, вы всегда можете написать нам на почту
                     <a href="mailto:support@outofstock.cc" style="text-decoration: underline;">support@outofstock.cc</a>

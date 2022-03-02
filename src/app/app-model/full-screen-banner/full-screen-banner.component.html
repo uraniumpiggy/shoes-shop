@@ -1,9 +1,9 @@
 <div class="full-screen-banner">
     <div class="text-wrapper">
-        <div class="title">
-            <span>{{ title }}</span>
+        <div class="header">
             <svg (click)="close()" data-v-4fb10053="" width="12px" height="12px" viewBox="0 0 12 12" style="cursor: pointer;"><g data-v-4fb10053="" id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g data-v-4fb10053="" id="Artboard" transform="translate(-314.000000, -279.000000)" fill="#000000" fill-rule="nonzero"><g data-v-4fb10053="" id="Group" transform="translate(313.000000, 278.000000)"><polygon data-v-4fb10053="" id="Rectangle" transform="translate(7.000000, 7.000000) rotate(45.000000) translate(-7.000000, -7.000000) " points="-7.95807864e-13 6.25555556 14 6.25555556 14 7.74444444 -7.95807864e-13 7.74444444"></polygon> <polygon data-v-4fb10053="" id="Rectangle" transform="translate(7.000000, 7.000000) scale(-1, 1) rotate(45.000000) translate(-7.000000, -7.000000) " points="-7.95807864e-13 6.25555556 14 6.25555556 14 7.74444444 -7.95807864e-13 7.74444444"></polygon></g></g></g></svg>
         </div>
-        <div class="text" [innerHTML]="text"></div>
+        <!-- <div class="text" [innerHTML]="text"></div> -->
+        <ng-content></ng-content>
     </div>
 </div>
