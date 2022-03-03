@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { LanguagesService, PagesText } from '../services/languages.service';
 
 @Component({
   selector: 'app-app-catalog-page',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AppCatalogPageComponent implements OnInit {
 
-  constructor() { }
+  constructor(public langs: LanguagesService) { }
 
   ngOnInit(): void {
   }

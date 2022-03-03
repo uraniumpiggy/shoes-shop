@@ -1,5 +1,6 @@
 import { animate, style, transition, trigger } from '@angular/animations';
 import { ChangeDetectorRef, Component, ElementRef, Renderer2, ViewChild } from '@angular/core';
+import { LanguagesService, PagesText } from './services/languages.service';
 import { Model, ModelsService } from './services/models.service';
 
 @Component({
@@ -53,11 +54,17 @@ export class AppComponent {
   searchText: string = ''
   searchItems: Model[] = []
 
+  pageText: PagesText | undefined = undefined 
+
   @ViewChild('searchBar') inputRef!: ElementRef
   @ViewChild('translateList') translateList!: ElementRef
   @ViewChild('translateButton') translateButton!: ElementRef
 
-  constructor(private changeDetector : ChangeDetectorRef, private modelsService: ModelsService, private renderer: Renderer2) {
+  constructor(private changeDetector : ChangeDetectorRef, 
+              private modelsService: ModelsService, 
+              private renderer: Renderer2, 
+              private langs: LanguagesService
+              ) {
     this.renderer.listen('window', 'click', (e: Event) => {
       if (this.isTranslateOpen) {
         if (e.target !== this.translateList.nativeElement && e.target !== this.translateButton.nativeElement) {
@@ -65,6 +72,8 @@ export class AppComponent {
         }
       }
     })
+
+    this.pageText = this.langs.pagesWrapper
   }
 
   toggleSearchBar() {
@@ -128,5 +137,10 @@ export class AppComponent {
 
   toggleTranslateMenu() {
     this.isTranslateOpen = !this.isTranslateOpen
+  }
+
+  translateToUS() {
+    this.langs.translateToUS()
+    this.pageText = this.langs.pagesWrapper
   }
 }

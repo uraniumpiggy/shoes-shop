@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { LanguagesService } from '../services/languages.service';
 import { Model, ModelsService } from '../services/models.service';
 
 interface alertText {
@@ -20,7 +21,7 @@ export class AppModelComponent implements OnInit {
   isAlertOpen: boolean = false
   arrayIndex: number = 0
 
-  constructor(private modelsService: ModelsService, private router: Router) { }
+  constructor(private modelsService: ModelsService, private router: Router, public langs: LanguagesService) { }
 
   ngOnInit(): void {
     this.router.routeReuseStrategy.shouldReuseRoute = () => false;

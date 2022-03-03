@@ -1,6 +1,6 @@
 <div class="sections-selector">
-    <div [routerLink]="['/catalog', 'shoes']">Обувь</div>
-    <div [routerLink]="['/catalog', 'clothes']">Одежда</div>
-    <div [routerLink]="['/catalog', 'accessories']">Аксессуары</div>
+    <div [routerLink]="['/catalog', 'shoes']">{{ langs.pagesWrapper?.shoues }}</div>
+    <div [routerLink]="['/catalog', 'clothes']">{{ langs.pagesWrapper?.clothes }}</div>
+    <div [routerLink]="['/catalog', 'accessories']">{{ langs.pagesWrapper?.accessories }}</div>
 </div>
 <router-outlet></router-outlet>

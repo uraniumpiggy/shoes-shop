@@ -18,7 +18,7 @@
                     <div class="desc-model">{{ modelData?.model }}</div>
                 </div>
                 <div class="desc-sku">
-                    Артикул
+                    {{ langs.pagesWrapper.modelVendorCode }}
                     {{ modelData?.id }}
                 </div>
                 <div class="desc-price">
@@ -28,7 +28,7 @@
                     </div>
                 </div>
                 <div class="button-buy">
-                    Купить
+                    {{ langs.pagesWrapper.modelPayButton }}
                 </div>
             </div>
         </div>
@@ -45,26 +45,26 @@
     <div class="model-view-info-summary">
         <div class="model-view-info-content">
             <div>{{ modelData?.brand }}</div>
-            <div>Бренд</div>
+            <div>{{ langs.pagesWrapper.modelBrand }}</div>
         </div>
         <div class="model-view-info-content">
             <div>{{ modelData?.model }}</div>
-            <div>Модель</div>
+            <div>{{ langs.pagesWrapper.modelModel }}</div>
         </div>
         <div class="model-view-info-content">
             <div>{{ modelData?.colors }}</div>
-            <div>Расцветка</div>
+            <div>{{ langs.pagesWrapper.modelColoring }}</div>
         </div>
         <div class="model-view-info-content">
             <div>{{ modelData?.releaseDate }}</div>
-            <div>Дата релиза</div>
+            <div>{{ langs.pagesWrapper.modelReliaseDate }}</div>
         </div>
     </div>
 
 
     <div class="new-items">
         <app-carousel
-            title="Вам понравится"
+            [title]="langs.pagesWrapper.modelYouWillLike"
             [cardsData]="youMayBeInterestedData"
         >
         </app-carousel>
@@ -75,28 +75,28 @@
         <div class="model-view-info-link">
             <app-model-info-link
                 (click)="openAlertWindow(0)"
-                title="Оплата"
+                [title]="langs.pagesWrapper.pay"
                 img="../../assets/card.svg"
             ></app-model-info-link>
         </div>
         <div class="model-view-info-link">
             <app-model-info-link
                 (click)="openAlertWindow(1)"
-                title="Доствка и возврат"
+                [title]="langs.pagesWrapper.deliveryAndReturns"
                 img="../../assets/box.svg"
             ></app-model-info-link>
         </div>
         <div class="model-view-info-link">
             <app-model-info-link
                 (click)="openAlertWindow(2)"
-                title="Гарантии"
+                [title]="langs.pagesWrapper.guarantees"
                 img="../../assets/shield-tick.svg"
             ></app-model-info-link>
         </div>
         <div class="model-view-info-link">
             <app-model-info-link
                 (click)="openAlertWindow(3)"
-                title="Поддержка"
+                [title]="langs.pagesWrapper.support"
                 img="../../assets/support.svg"
             ></app-model-info-link>
         </div>

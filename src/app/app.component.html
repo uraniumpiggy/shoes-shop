@@ -2,15 +2,15 @@
     <nav>
         <div class="header-wrapper">
             <div class="logo" (click)="hideSearchGrid()">
-                <a routerLink="">
+                <a [routerLink]="['/']">
                     <span class="tiffany">ø</span>utofstock
                 </a>
             </div>
             <div class="header-menu">
-                <a (click)="hideSearchGrid()" [routerLink]="['/catalog', 'shoes']" class="menu-item">каталог</a>
-                <a href="#" class="menu-item">отзывы</a>
-                <a [routerLink]="['faq', 'guarantee']" class="menu-item">гарантии</a>
-                <a [routerLink]="['faq', 'contacts']" class="menu-item">контакты</a>
+                <a (click)="hideSearchGrid()" [routerLink]="['/catalog', 'shoes']" class="menu-item">{{ pageText?.catalog }}</a>
+                <a href="#" class="menu-item">{{ pageText?.reviews }}</a>
+                <a [routerLink]="['faq', 'guarantee']" class="menu-item">{{ pageText?.guarantees }}</a>
+                <a [routerLink]="['faq', 'contacts']" class="menu-item">{{ pageText?.contacts }}</a>
                 <div class="menu-item">
                     <img src="assets/translate.svg" alt (click)="toggleTranslateMenu()" #translateButton>
                     <div 
@@ -18,21 +18,23 @@
                         *ngIf="isTranslateOpen"
                         #translateList
                     >
-                        <div class="languages-list-item">
+                        <div class="languages-list-item"
+                            (click)="translateToUS()"
+                        >
                             <img src="assets/usa.png" alt>    
-                            Английский
+                            English
                         </div>
                         <div class="languages-list-item">
                             <img src="../assets/holland.png" alt>
-                            Голландский
+                            Nederlands
                         </div>
                         <div class="languages-list-item">
                             <img src="../assets/france.png" alt>
-                            Французский
+                            français
                         </div>
                         <div class="languages-list-item">
                             <img src="../assets/Italy.png" alt>
-                            Итальянский
+                            italiano
                         </div>
                         <div class="languages-list-item">
                             <img src="../assets/rf.png" alt>
@@ -66,16 +68,16 @@
             *ngIf="isMenuOpen"
             @menuRemoveTrigger
         >
-            <a [routerLink]="['/catalog', 'shoes']" (click)="hideSearchGrid()" class="menu__point" (click)="close()"><label for="">Обувь</label></a>
-            <a [routerLink]="['/catalog', 'clothes']" (click)="hideSearchGrid()" class="menu__point" (click)="close()"><label for="">Одежда</label></a>
-            <a [routerLink]="['/catalog', 'accessories']" (click)="hideSearchGrid()" class="menu__point" (click)="close()"><label for="">Аксессуары</label></a>
-            <a href="#" (click)="hideSearchGrid()" class="menu__point"><label for="">Отзывы</label></a>
-            <a [routerLink]="['faq', 'guarantee']" (click)="hideSearchGrid()" class="menu__point"><label for="">Гарантии</label></a>
-            <a [routerLink]="['faq', 'contacts']" (click)="hideSearchGrid()" class="menu__point"><label for="">Контакты</label></a>
+            <a [routerLink]="['/catalog', 'shoes']" (click)="hideSearchGrid()" class="menu__point" (click)="close()"><label for="">{{ pageText?.shoues }}</label></a>
+            <a [routerLink]="['/catalog', 'clothes']" (click)="hideSearchGrid()" class="menu__point" (click)="close()"><label for="">{{ pageText?.clothes }}</label></a>
+            <a [routerLink]="['/catalog', 'accessories']" (click)="hideSearchGrid()" class="menu__point" (click)="close()"><label for="">{{ pageText?.accessories }}</label></a>
+            <a href="#" (click)="hideSearchGrid()" class="menu__point"><label for="">{{ pageText?.reviews }}</label></a>
+            <a [routerLink]="['faq', 'guarantee']" (click)="hideSearchGrid()" class="menu__point"><label for="">{{ pageText?.guarantees }}</label></a>
+            <a [routerLink]="['faq', 'contacts']" (click)="hideSearchGrid()" class="menu__point"><label for="">{{ pageText?.contacts }}</label></a>
             <div class="menu__text">
-                Никогда не пропускайте важные события.
+                {{ pageText?.menuText1 }}
                 <br>
-                Подпишитесь на наши соц. сети.
+                {{ pageText?.menuText2 }}
             </div> 
             <div class="menu-social">
                 <div class="section-social">
@@ -114,7 +116,7 @@
                 #searchBar 
                 (input)="onSearchChanges($event)"
                 type="text" 
-                placeholder="Введите название модели" 
+                [placeholder]="pageText?.searchPlaceholder" 
                 class="search-line"
                 [(ngModel)]="searchText"
             >
@@ -149,31 +151,31 @@
         </div>
         <div class="footer-sections">
             <div class="footer-section-header-wrapper">
-                <div>Каталог</div>
-                <div class="footer-platform">Палтформа</div>
+                <div>{{ pageText?.catalog }}</div>
+                <div class="footer-platform">{{ pageText?.platform }}</div>
             </div>
             <div class="footer-sections-wrapper">
                 <div class="footer-section">
-                    <a (click)="hideSearchGrid()" [routerLink]="['/catalog', 'shoes']" class="footer-item">Обувь</a>
-                    <a (click)="hideSearchGrid()" [routerLink]="['/catalog', 'clothes']" class="footer-item">Одежда</a>
-                    <a (click)="hideSearchGrid()" [routerLink]="['/catalog', 'accessories']" class="footer-item">Аксессуары</a>
+                    <a (click)="hideSearchGrid()" [routerLink]="['/catalog', 'shoes']" class="footer-item">{{ pageText?.shoues }}</a>
+                    <a (click)="hideSearchGrid()" [routerLink]="['/catalog', 'clothes']" class="footer-item">{{ pageText?.clothes }}</a>
+                    <a (click)="hideSearchGrid()" [routerLink]="['/catalog', 'accessories']" class="footer-item">{{ pageText?.accessories }}</a>
                 </div>
-                <div class="footer-platform-mobile">Палтформа</div>
+                <div class="footer-platform-mobile">{{ pageText?.platform }}</div>
                 <div class="footer-section">
-                    <a (click)="hideSearchGrid()" [routerLink]="['faq/answers']" class="footer-item">Как это работает</a>
-                    <a (click)="hideSearchGrid()" [routerLink]="['faq/delivery']" class="footer-item">Доставка и возврат</a>
-                    <a (click)="hideSearchGrid()" [routerLink]="['faq/contacts']" class="footer-item">Оплата</a>
+                    <a (click)="hideSearchGrid()" [routerLink]="['faq/answers']" class="footer-item">{{ pageText?.howItWorks }}</a>
+                    <a (click)="hideSearchGrid()" [routerLink]="['faq/delivery']" class="footer-item">{{ pageText?.deliveryAndReturns }}</a>
+                    <a (click)="hideSearchGrid()" [routerLink]="['faq/contacts']" class="footer-item">{{ pageText?.pay }}</a>
                 </div>
                 <div class="footer-section">
-                    <a (click)="hideSearchGrid()" [routerLink]="['faq/documents']" class="footer-item">Правила продажи</a>
-                    <a (click)="hideSearchGrid()" href="" class="footer-item">Последние релизы</a>
-                    <a (click)="hideSearchGrid()" [routerLink]="['faq/contacts']" class="footer-item">Контакты</a>
+                    <a (click)="hideSearchGrid()" [routerLink]="['faq/documents']" class="footer-item">{{ pageText?.saleRules }}</a>
+                    <a (click)="hideSearchGrid()" href="" class="footer-item">{{ pageText?.latestReleases }}</a>
+                    <a (click)="hideSearchGrid()" [routerLink]="['faq/contacts']" class="footer-item">{{ pageText?.contacts }}</a>
                 </div>
             </div>
         </div>
         <div class="footer-footer">
             <div class="footer-ooo">
-                <span>2018-2022 // "АУТОФСТОК"</span>
+                <span>2018-2022 // "RESELL POINT"</span>
                 <div class="section-social">
                     <a href="" class="social-button">
                         <svg data-v-51ff7b34="" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 189.473 189.473" xml:space="preserve"><path data-v-51ff7b34="" fill="white" d="M152.531,179.476c-1.48,0-2.95-0.438-4.211-1.293l-47.641-32.316l-25.552,18.386c-2.004,1.441-4.587,1.804-6.914,0.972
