@@ -7,9 +7,39 @@
                 </a>
             </div>
             <div class="header-menu">
-                <a href="#" class="menu-item">продать</a>
                 <a (click)="hideSearchGrid()" [routerLink]="['/catalog', 'shoes']" class="menu-item">каталог</a>
-                <a href="#" class="menu-item">профиль</a>
+                <a href="#" class="menu-item">отзывы</a>
+                <a [routerLink]="['faq', 'guarantee']" class="menu-item">гарантии</a>
+                <a [routerLink]="['faq', 'contacts']" class="menu-item">контакты</a>
+                <div class="menu-item">
+                    <img src="assets/translate.svg" alt (click)="toggleTranslateMenu()" #translateButton>
+                    <div 
+                        class="languages-list"
+                        *ngIf="isTranslateOpen"
+                        #translateList
+                    >
+                        <div class="languages-list-item">
+                            <img src="assets/usa.png" alt>    
+                            Английский
+                        </div>
+                        <div class="languages-list-item">
+                            <img src="../assets/holland.png" alt>
+                            Голландский
+                        </div>
+                        <div class="languages-list-item">
+                            <img src="../assets/france.png" alt>
+                            Французский
+                        </div>
+                        <div class="languages-list-item">
+                            <img src="../assets/Italy.png" alt>
+                            Итальянский
+                        </div>
+                        <div class="languages-list-item">
+                            <img src="../assets/rf.png" alt>
+                            Русский
+                        </div>
+                    </div>
+                </div>
                 <div class="menu-item menu-img"
                     (click)="toggleSearchBar()"
                 >
@@ -37,11 +67,11 @@
             @menuRemoveTrigger
         >
             <a [routerLink]="['/catalog', 'shoes']" (click)="hideSearchGrid()" class="menu__point" (click)="close()"><label for="">Обувь</label></a>
-            <a [routerLink]="['/catalog', 'clothes']" (click)="hideSearchGrid()" class="menu__point"><label for="">Одежда</label></a>
-            <a [routerLink]="['/catalog', 'accessories']" (click)="hideSearchGrid()" class="menu__point"><label for="">Аксессуары</label></a>
-            <a [routerLink]="['faq/answers']" (click)="hideSearchGrid()" class="menu__point"><label for="">FAQ</label></a>
-            <a [routerLink]="['faq/contacts']" (click)="hideSearchGrid()" class="menu__point"><label for="">Помощь</label></a>
-            <a href="" (click)="hideSearchGrid()" class="menu__point"><label for="">Продать</label></a>
+            <a [routerLink]="['/catalog', 'clothes']" (click)="hideSearchGrid()" class="menu__point" (click)="close()"><label for="">Одежда</label></a>
+            <a [routerLink]="['/catalog', 'accessories']" (click)="hideSearchGrid()" class="menu__point" (click)="close()"><label for="">Аксессуары</label></a>
+            <a href="#" (click)="hideSearchGrid()" class="menu__point"><label for="">Отзывы</label></a>
+            <a [routerLink]="['faq', 'guarantee']" (click)="hideSearchGrid()" class="menu__point"><label for="">Гарантии</label></a>
+            <a [routerLink]="['faq', 'contacts']" (click)="hideSearchGrid()" class="menu__point"><label for="">Контакты</label></a>
             <div class="menu__text">
                 Никогда не пропускайте важные события.
                 <br>
@@ -108,7 +138,7 @@
     <footer>
         <div class="footer-header">
             <div class="footer-header-logo">
-                <span class="tiffany">ø</span>utofstock
+                resell point
             </div>
             <div class="footer-header-email">
                 <a href="mailto:some.mail@gmail.com">some.mail@gmail.com</a>

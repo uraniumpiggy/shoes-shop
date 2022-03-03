@@ -1,5 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import { Model, ModelsService } from 'src/app/services/models.service';
+import { Model, ModelsService, SizePrice } from 'src/app/services/models.service';
+
+export interface filterSettings {
+  text: string,
+  sizes: string[]
+}
 
 @Component({
   selector: 'app-app-shoes',
@@ -19,4 +24,31 @@ export class AppShoesComponent implements OnInit {
     this.items = this.modelsService.models
   }
 
+
+  upadateGrid(filterData: filterSettings) {
+    let newItems: Model[] = []
+    if (filterData.text === '') {
+      newItems = this.modelsService.models
+    } else {
+      newItems = this.modelsService.getModels(filterData.text, 100000)
+    }
+
+    if (filterData.sizes.length !== 0) {
+      let newItemsFiltered: Model[] = [] 
+      for (let item of newItems) {
+        for (const value of filterData.sizes) {
+          if (item.sizePrice[value as keyof SizePrice] !== undefined) {
+            newItemsFiltered.push(item)
+            break
+          }
+        }
+      }
+      this.items = newItemsFiltered
+    } else {
+      this.items = newItems
+    }
+
+    this.isMobileFiltersVisible = false
+
+  }
 }

@@ -1,5 +1,5 @@
 import { animate, style, transition, trigger } from '@angular/animations';
-import { ChangeDetectorRef, Component, ElementRef, ViewChild } from '@angular/core';
+import { ChangeDetectorRef, Component, ElementRef, Renderer2, ViewChild } from '@angular/core';
 import { Model, ModelsService } from './services/models.service';
 
 @Component({
@@ -49,12 +49,23 @@ export class AppComponent {
   isMenuOpen: boolean = false
   isSearchBarOpen: boolean = false
   isSearchGridOpen: boolean = false
+  isTranslateOpen: boolean = false
   searchText: string = ''
   searchItems: Model[] = []
 
   @ViewChild('searchBar') inputRef!: ElementRef
+  @ViewChild('translateList') translateList!: ElementRef
+  @ViewChild('translateButton') translateButton!: ElementRef
 
-  constructor(private changeDetector : ChangeDetectorRef, private modelsService: ModelsService) {}
+  constructor(private changeDetector : ChangeDetectorRef, private modelsService: ModelsService, private renderer: Renderer2) {
+    this.renderer.listen('window', 'click', (e: Event) => {
+      if (this.isTranslateOpen) {
+        if (e.target !== this.translateList.nativeElement && e.target !== this.translateButton.nativeElement) {
+          this.isTranslateOpen = false
+        }
+      }
+    })
+  }
 
   toggleSearchBar() {
     if (!this.isSearchGridOpen) {
@@ -113,5 +124,9 @@ export class AppComponent {
       left: 0, 
       behavior: 'smooth' 
     });
+  }
+
+  toggleTranslateMenu() {
+    this.isTranslateOpen = !this.isTranslateOpen
   }
 }

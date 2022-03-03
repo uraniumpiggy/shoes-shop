@@ -3,13 +3,12 @@
     (click)="isMobileFiltersVisible = !isMobileFiltersVisible"
   >
     <img src="assets/settings.svg" alt="Settings">
-    <!-- <span>Скрыть фильтры</span> 
-    <img src="/_nuxt/img/arrow_up.cfcd5d4.svg" alt="Hide" class="filters-switch__icon"> -->
   </div>
 </div>
 <div class="filters-wrapper">
     <app-filters class="filter-desktop"
       [ngStyle]="{'display': isMobileFiltersVisible ? 'block' : 'none'}"
+      (onSearch)="upadateGrid($event)"
     ></app-filters>
     <div class="catalog-grid">
         <app-app-card-item 
@@ -27,5 +26,5 @@
       (click)="isMobileFiltersVisible = !isMobileFiltersVisible"
     >Скрыть фильтры X</span>
   </div>
-  <app-filters class="filter-mobile"></app-filters>
+  <app-filters (onSearch)="upadateGrid($event)" class="filter-mobile"></app-filters>
 </div>
