@@ -4,14 +4,14 @@
             <div class="menu-selection">
                 <select name="mobile-menu-selector" id="selector" (change)="selectChangeHandler($event)">
                     <option value="/faq/contacts" [selected]="buttonActive[0]" (click)="changeLink(0)">
-                        Контактная информация
+                        {{ langs.pagesWrapper.mainContacts }}
                     </option>
                     <option value="/faq/delivery" [selected]="buttonActive[1]" (click)="changeLink(1)">
-                        Доставка и возврат
+                        {{ langs.pagesWrapper.deliveryAndReturns }}
                     </option>
-                    <option value="/faq/answers" [selected]="buttonActive[2]" (click)="changeLink(2)">F. A. Q.</option>
-                    <option value="/faq/guarantee" [selected]="buttonActive[3]" (click)="changeLink(3)">Гарантии оригинальности</option>
-                    <option value="/faq/documents" [selected]="buttonActive[4]" (click)="changeLink(4)">Официальные документы</option>
+                    <option value="/faq/answers" [selected]="buttonActive[2]" (click)="changeLink(2)">{{ langs.pagesWrapper.faqTitle }}</option>
+                    <option value="/faq/guarantee" [selected]="buttonActive[3]" (click)="changeLink(3)">{{ langs.pagesWrapper.mainGuarantee }}</option>
+                    <option value="/faq/documents" [selected]="buttonActive[4]" (click)="changeLink(4)">{{ langs.pagesWrapper.mainDocuments }}</option>
                 </select>
             </div>
         </div>
@@ -20,30 +20,30 @@
                 (click)="changeLink(0)"
                 [routerLink]="['contacts']"
                 [ngClass]="{active: buttonActive[0]}"
-            >Контактная информация</a>
+            >{{ langs.pagesWrapper.mainContacts }}</a>
             <a 
                 (click)="changeLink(1)"
                 [routerLink]="['delivery']"
                 [ngClass]="{active: buttonActive[1]}"
-            >Доставка и возврат</a>
+            >{{ langs.pagesWrapper.deliveryAndReturns }}</a>
             <a 
                 (click)="changeLink(2)"
                 [routerLink]="['answers']"
                 [ngClass]="{active: buttonActive[2]}"
-            >F. A. Q.</a>
+            >{{ langs.pagesWrapper.faqTitle }}</a>
             <a 
                 (click)="changeLink(3)"
                 [routerLink]="['guarantee']"
                 [ngClass]="{active: buttonActive[3]}"
-            >Гарантии оригинальности</a>
+            >{{ langs.pagesWrapper.mainGuarantee }}</a>
             <a 
                 (click)="changeLink(4)"
                 [routerLink]="['documents']"
                 [ngClass]="{active: buttonActive[4]}"
-            >Официальные документы</a>
+            >{{ langs.pagesWrapper.mainDocuments }}</a>
             <div class="faq-menu-footer">
-                <b>Не нашли, что искали?</b>
-                <span>Напишите нам на почту</span>
+                <b>{{ langs.pagesWrapper.faqNotFindAns }}</b>
+                <span>{{ langs.pagesWrapper.faqContactViaEmail }}</span>
                 <a href="mailto:support@outofstock.cc">support@outofstock.cc</a>
             </div>
         </div>

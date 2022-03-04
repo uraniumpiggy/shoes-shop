@@ -4,20 +4,20 @@
         <div class="main-gallery">
             <div class="main-banner__text">
                 <div class="main-banner__title">
-                    <span>Самый безопасный маркетплейс</span>
+                    <span>{{ langs.pagesWrapper.mainTitle }}</span>
                 </div>
                 <div class="main-banner__subtitle">
-                    <span>Оригинальная лимитированная обувь, одежда и аксессуары</span>
+                    <span>{{ langs.pagesWrapper.mainSubtitle }}</span>
                 </div>
                 <div class="main-banner__button">
-                    <a [routerLink]="['/catalog', 'shoes']">смотреть каталог</a>
+                    <a [routerLink]="['/catalog', 'shoes']">{{ langs.pagesWrapper.mainCatalogButton }}</a>
                 </div>
             </div>
         </div>
     </div>
     <div class="main-wrapper">
         <app-carousel
-            title="Новое"
+            [title]="langs.pagesWrapper.mainNewCarouselTitle"
             [cardsData]="modelsDataNew"
         ></app-carousel>
         <app-carousel
@@ -39,47 +39,47 @@
             sorry, it's <span class="tiffany">ø</span>utofstock
         </div>
         <div class="platform-teaser-subheader">
-            Самая безопасная платформа для покупки и продажи редкой одежды, обуви и аксессуаров.
+            {{ langs.pagesWrapper.mainTeaserTitle }}
         </div>
         <div class="platform-teaser-line">
             <div class="platform-teaser-line-element">
                 <img src="assets/security.svg" alt="">
-                <span>Только оригинальная продукция</span>
+                <span>{{ langs.pagesWrapper.mainTesserLine1 }}</span>
             </div>
             <div class="platform-teaser-line-element">
                 <img src="assets/web.svg" alt="">
-                <span>Быстрая доставка по всей России</span>
+                <span>{{ langs.pagesWrapper.mainTesserLine2 }}</span>
             </div>
             <div class="platform-teaser-line-element">
                 <img src="assets/lock.svg" alt="">
-                <span>Гарантии безопасности и отсутствие риска</span>
+                <span>{{ langs.pagesWrapper.mainTesserLine3 }}</span>
             </div>
         </div>
     </div>
 
     <div class="main-questions">
         <div class="questions-sections">
-            <a [routerLink]="['faq']">Как работает площадка</a>
-            <a href="">Гарантии оригинальности</a>
-            <a [routerLink]="['faq/answers']">Ответы на часто задаваемые вопросы</a>
-            <a [routerLink]="['faq/contacts']">Контактная информация</a>
-            <a [routerLink]="['faq/delivery']">Доставка и возврат</a>
-            <a [routerLink]="['faq/contacts']">Оплата</a>
-            <a [routerLink]="['faq/documents']">Официальные документы</a>
+            <a [routerLink]="['faq/contacts']">{{ langs.pagesWrapper.mainHowItWorks }}</a>
+            <a [routerLink]="['faq/guarantee']">{{ langs.pagesWrapper.mainGuarantee }}</a>
+            <a [routerLink]="['faq/answers']">{{ langs.pagesWrapper.mainAnswers }}</a>
+            <a [routerLink]="['faq/contacts']">{{ langs.pagesWrapper.mainContacts }}</a>
+            <a [routerLink]="['faq/delivery']">{{ langs.pagesWrapper.deliveryAndReturns }}</a>
+            <a [routerLink]="['faq/contacts']">{{ langs.pagesWrapper.pay }}</a>
+            <a [routerLink]="['faq/documents']">{{ langs.pagesWrapper.mainDocuments }}</a>
         </div>
         <div class="question-right">
-            <div class="question-header">Остались вопросы?</div>
+            <div class="question-header">{{ langs.pagesWrapper.mainHaveAQuestion }}</div>
             <div class="questions-content">
                 <div class="question-mobile mobile">
-                    Вероятно, у нас уже есть ответ на ваш вопрос:
+                    {{ langs.pagesWrapper.mainMobileWeHaveAns }}
                 </div>
-                <a [routerLink]="['faq']" class="mobile-btn">Смотреть F.A.Q.</a>
+                <a [routerLink]="['faq']" class="mobile-btn">{{ langs.pagesWrapper.mainMobileFAQ }}</a>
                 <div>
-                    Если у вас есть какие-либо вопросы или пожелания, вы всегда можете написать нам на почту
+                    {{ langs.pagesWrapper.mainMail }}
                     <a href="mailto:support@outofstock.cc" style="text-decoration: underline;">support@outofstock.cc</a>
                 </div>
-                <div>или</div>
-                <div>в Телеграм или Вконтакте</div>
+                <div>{{ langs.pagesWrapper.mainOr }}</div>
+                <div>{{ langs.pagesWrapper.mainSocialMedia }}</div>
                 <div class="section-social">
                     <div class="section-social">
                         <a href="" class="social-button">

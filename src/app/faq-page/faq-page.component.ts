@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NavigationEnd, NavigationStart, Router } from '@angular/router';
+import { LanguagesService } from '../services/languages.service';
 
 @Component({
   selector: 'app-faq-page',
@@ -10,7 +11,7 @@ export class FaqPageComponent implements OnInit {
 
   buttonActive: boolean[] = [false, false, false, false, false]
 
-  constructor(private route: Router) {  }
+  constructor(private route: Router, public langs: LanguagesService) {  }
 
   changeLink(index: number) {
     this.buttonActive = [false, false, false, false, false]
