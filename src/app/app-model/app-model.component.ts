@@ -3,11 +3,6 @@ import { Router } from '@angular/router';
 import { LanguagesService } from '../services/languages.service';
 import { Model, ModelsService } from '../services/models.service';
 
-interface alertText {
-  title: string,
-  text: string,
-}
-
 @Component({
   selector: 'app-model',
   templateUrl: './app-model.component.html',
@@ -19,6 +14,7 @@ export class AppModelComponent implements OnInit {
   youMayBeInterestedData: Model[] = []
 
   isAlertOpen: boolean = false
+  isSizesOpen: boolean = false
   arrayIndex: number = 0
 
   constructor(private modelsService: ModelsService, private router: Router, public langs: LanguagesService) { }
@@ -33,13 +29,19 @@ export class AppModelComponent implements OnInit {
     }
   }
 
+  openSizesAlert() {
+    this.isAlertOpen = true
+    this.isSizesOpen = true
+  }
+
   openAlertWindow(index: number) {
       this.arrayIndex = index
       this.isAlertOpen = true
   }
 
   closeAlertWindow(close: boolean) {
-     this.isAlertOpen = close 
+     this.isAlertOpen = close
+     this.isSizesOpen = false 
   }
 
 }

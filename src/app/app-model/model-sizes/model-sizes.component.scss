@@ -1,0 +1,55 @@
+.sizes-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+
+    .title {
+        font-size: 30px;
+        color: #000000;
+        letter-spacing: 0;
+        padding: 5%;
+        text-transform: uppercase;
+    }
+
+    .sizesGrid {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 10px;
+
+        .size-grid-item {
+            padding: 5%;
+            display: flex; 
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-around;
+            height: 50px;
+            color: #fff;
+            background-color: #0abab5;
+
+            .size-grid-item-price {
+                font-size: 13px;
+                text-align: center;
+            }
+        }
+    }
+
+    .contacts-button {
+        width: 50%;
+        margin: 0 auto;
+        a {
+            display: block;
+            font-size: 12px;
+            letter-spacing: 0;
+            text-align: center;
+            border: 1px solid #0ABAB5;
+            border-radius: 3px;
+            transition: all 0.3s;
+            background-color: #0ABAB5;
+            color: white;
+            margin-top: 20px;
+            padding: 0.8rem 1.5rem;
+            text-decoration: none;
+        }
+    }
+}

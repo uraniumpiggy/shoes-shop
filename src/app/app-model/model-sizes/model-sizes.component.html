@@ -1,0 +1,22 @@
+<div class="sizes-wrapper">
+    <div class="size-price-section">
+        <div class="title">
+            Доступные размеры
+        </div>
+        <div class="sizesGrid">
+            <div class="size-grid-item" *ngFor="let size of sizesToView">
+                <div class="size-grid-item-title"> {{ size }} </div>
+                <div class="size-grid-item-price">
+                    <div *ngIf="sizes[size] === '' else price">Цена не указана</div>
+                    <ng-template #price>
+                        <div>{{ sizes[size] }}</div>
+                    </ng-template>
+                </div>
+            </div>
+        </div>    
+    </div>
+    
+    <div class="contacts-button">
+        <a [routerLink]="['/faq/contacts']">Продольжить</a>
+    </div>
+</div>

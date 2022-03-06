@@ -27,17 +27,18 @@
                         <span>₽</span>
                     </div>
                 </div>
-                <div class="button-buy">
+                <div class="button-buy"
+                    (click)="openSizesAlert()"
+                >
                     {{ langs.pagesWrapper.modelPayButton }}
                 </div>
             </div>
         </div>
     </div>
 
-
     <div class="model-view-more">
         <div>
-            <span>Подробнее</span>
+            <span>{{ langs.pagesWrapper.learnMore }}</span>
         </div>
     </div>
 
@@ -103,11 +104,12 @@
     </div>
 </div>
 <app-full-screen-banner
-    *ngIf="isAlertOpen"
+    *ngIf="isAlertOpen" 
     (onClose)="closeAlertWindow($event)"
 >
-    <app-faq-contacts *ngIf="arrayIndex === 0"></app-faq-contacts>
-    <app-faq-delivery *ngIf="arrayIndex === 1"></app-faq-delivery>
-    <app-faq-guarantee *ngIf="arrayIndex === 2"></app-faq-guarantee>
-    <app-faq-contacts *ngIf="arrayIndex === 3"></app-faq-contacts>
+    <app-faq-contacts *ngIf="arrayIndex === 0 && !isSizesOpen"></app-faq-contacts>
+    <app-faq-delivery *ngIf="arrayIndex === 1 && !isSizesOpen"></app-faq-delivery>
+    <app-faq-guarantee *ngIf="arrayIndex === 2 && !isSizesOpen"></app-faq-guarantee>
+    <app-faq-contacts *ngIf="arrayIndex === 3 && !isSizesOpen"></app-faq-contacts>
+    <app-model-sizes *ngIf="isSizesOpen" [sizes]="modelData?.sizePrice"></app-model-sizes>
 </app-full-screen-banner>
