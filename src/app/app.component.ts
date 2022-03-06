@@ -73,13 +73,18 @@ export class AppComponent implements OnInit {
       }
     })
 
-    this.pageText = this.langs.pagesWrapper
   }
 
   ngOnInit(): void {
-      let userLang: string = navigator.language
-      // console.log(userLang)
-
+      let userLang: string = (navigator.language).toLowerCase()
+      switch (userLang) {
+        case "ru-ru":
+          this.langs.translateToRU()
+          break
+        default:
+          break
+      }
+      this.pageText = this.langs.pagesWrapper
   }
 
   toggleSearchBar() {
@@ -147,6 +152,11 @@ export class AppComponent implements OnInit {
 
   translateToUS() {
     this.langs.translateToUS()
+    this.pageText = this.langs.pagesWrapper
+  }
+
+  translateToRU() {
+    this.langs.translateToRU()
     this.pageText = this.langs.pagesWrapper
   }
 }

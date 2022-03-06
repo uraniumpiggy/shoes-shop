@@ -129,21 +129,6 @@
             overflow-y: scroll;
             padding: 0 5%;
 
-            // &::-webkit-scrollbar {
-            //     width: 3px;
-            // } 
-    
-            // &::-webkit-scrollbar-thumb {
-            //     box-shadow: rgb(0 0 0 / 0%) 0 0 12px inset;
-            //     color: #0abab5;
-            //     background-color: #0abab5;
-            //     border-radius: 0;
-            // }
-    
-            // &::-webkit-scrollbar-track-piece {
-            //     background-color: transparent;
-            // }
-
             @media screen and (max-width: 768px) {
                 & {
                     width: 90%;

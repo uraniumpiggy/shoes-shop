@@ -1,7 +1,8 @@
 <div class="catalog-ap">
   <div class="filters-switch"
     (click)="isMobileFiltersVisible = !isMobileFiltersVisible"
-  >
+  > 
+    <span>{{ langs.pagesWrapper.filtersLabel }}</span>
     <img src="assets/settings.svg" alt="Settings">
   </div>
 </div>
@@ -21,10 +22,10 @@
   [ngStyle]="{'display': isMobileFiltersVisible ? 'block' : 'none'}"
 >
   <div class="section-selector">
-    <span>Фильтры</span>
+    <span>{{ langs.pagesWrapper.filtersLabel }}</span>
     <span
       (click)="isMobileFiltersVisible = !isMobileFiltersVisible"
-    >Скрыть фильтры X</span>
+    >{{ langs.pagesWrapper.hideFilters }} X</span>
   </div>
   <app-filters (onSearch)="upadateGrid($event)" class="filter-mobile"></app-filters>
 </div>

@@ -7,10 +7,10 @@
                 </a>
             </div>
             <div class="header-menu">
-                <a (click)="hideSearchGrid()" [routerLink]="['/catalog', 'shoes']" class="menu-item">{{ pageText?.catalog }}</a>
+                <a (click)="hideSearchGrid()" [routerLink]="['/catalog', 'shoes']" [routerLinkActive]="['link-active']" class="menu-item">{{ pageText?.catalog }}</a>
                 <a href="/" class="menu-item">{{ pageText?.reviews }}</a>
-                <a [routerLink]="['/faq', 'guarantee']" class="menu-item">{{ pageText?.guarantees }}</a>
-                <a [routerLink]="['/faq', 'contacts']" class="menu-item">{{ pageText?.contacts }}</a>
+                <a [routerLink]="['/faq', 'guarantee']" [routerLinkActive]="['link-active']" class="menu-item">{{ pageText?.guarantees }}</a>
+                <a [routerLink]="['/faq', 'contacts']" [routerLinkActive]="['link-active']" class="menu-item">{{ pageText?.contacts }}</a>
                 <div class="menu-item">
                     <img src="assets/translate.svg" alt (click)="toggleTranslateMenu()" #translateButton>
                     <div 
@@ -36,7 +36,9 @@
                             <img src="assets/Italy.png" alt>
                             italiano
                         </div>
-                        <div class="languages-list-item">
+                        <div class="languages-list-item"
+                            (click)="translateToRU()"
+                        >
                             <img src="assets/rf.png" alt>
                             Русский
                         </div>

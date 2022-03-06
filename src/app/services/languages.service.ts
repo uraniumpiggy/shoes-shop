@@ -74,6 +74,14 @@ export interface PagesText {
     p7: string,
     p8: string,
     p9: string,
+
+    filtersLabel: string,
+    hideFilters: string,
+    resetFilters: string,
+    filterSize: string,
+    filterModels: string,
+    filterShowRes: string,
+    filtersSearch: string,
 }
 
 
@@ -82,89 +90,193 @@ export interface PagesText {
 })
 export class LanguagesService {
     pagesWrapper: PagesText = {
-        catalog: 'Каталог',
-        reviews: 'Отзывы',
-        guarantees: 'Гарантии',
-        contacts: 'Контакты',
-        shoues: 'Обувь',
-        clothes: 'Одежда',
-        accessories: 'Аксессуары',
-        menuText1: 'Никогда не пропускайте важные события.',
-        menuText2: 'Подпишитесь на наши соц. сети.',
-        searchPlaceholder: 'Введите название модели',
-        platform: 'Платформа',
-        howItWorks: 'Как это работает',
-        pay: 'Оплата',
-        saleRules: 'Правила продажи',
-        latestReleases: 'Последние релизы',
-        deliveryAndReturns: 'Доставка и возврат',
-        support: 'Поддержка',
+        catalog: 'Catalogue',
+        reviews: 'Reviews',
+        guarantees: 'Guarantees',
+        contacts: 'Contacts',
+        shoues: 'Shoes',
+        clothes: 'Clothes',
+        accessories: 'Accessories',
+        menuText1: 'Never miss an important event.',
+        menuText2: 'Follow our social media networks.',
+        searchPlaceholder: 'Enter model name',
+        platform: 'Platform',
+        howItWorks: 'How it works',
+        pay: 'Payment',
+        saleRules: 'Sale rules',
+        latestReleases: 'Latest releases',
+        deliveryAndReturns: 'Delivery and returns',
+        support: 'Support',
 
-        emptyCatalogText: 'Упс, тут пока что ничего нет.',
-        modelVendorCode: 'Артикул',
-        modelModel: 'Модель',
-        modelBrand: 'Бренд',
-        modelColoring: 'Расцветка',
-        modelReliaseDate: 'Дата релиза',
-        modelPayButton: 'Купить',
-        modelYouWillLike: 'Вам понравится',
-        learnMore: 'Подробнее',
+        emptyCatalogText: 'Oops, nothing here yet.',
+        modelVendorCode: 'Vendor code',
+        modelModel: 'Model',
+        modelBrand: 'Brand',
+        modelColoring: 'Coloring',
+        modelReliaseDate: 'Release Date',
+        modelPayButton: 'Buy',
+        modelYouWillLike: 'You will like it',
+        learnMore: 'Learn more',
 
-        mainTitle: 'Самый безопасный маркетплейс',
-        mainSubtitle: 'Оригинальная лимитированная обувь, одежда и аксессуары',
-        mainCatalogButton: 'Смотреть каталог',
-        mainNewCarouselTitle: 'Новое',
-        mainTeaserTitle: 'Самая безопасная платформа для покупки и продажи редкой одежды, обуви и аксессуаров.',
-        mainTesserLine1: 'Только оригинальная продукция',
-        mainTesserLine2: 'Быстрая доставка по всей России',
-        mainTesserLine3: 'Гарантии безопасности и отсутствие риска',
-        mainHaveAQuestion: 'Остались вопросы?',
+        mainTitle: 'Most secure marketplace',
+        mainSubtitle: 'Original limited edition shoes, clothes and accessories',
+        mainCatalogButton: 'View catalog',
+        mainNewCarouselTitle: 'New',
+        mainTeaserTitle: 'The safest platform to buy and sell rare clothes, shoes and accessories.',
+        mainTesserLine1: 'Only original products',
+        mainTesserLine2: 'Fast delivery throughout Russia',
+        mainTesserLine3: 'Safety and risk free',
+        mainHaveAQuestion: 'Any questions?',
 
-        mainHowItWorks: 'Как работает площадка',
-        mainGuarantee: 'Гарантии оригинальности',
-        mainAnswers: 'Ответы на часто задаваемые вопросы',
-        mainContacts: 'Контактная информация',
-        mainDocuments: 'Официальные документы',
-
-        mainMobileWeHaveAns: 'Вероятно, у нас уже есть ответ на ваш вопрос:',
-        mainMobileFAQ: 'Смотреть F.A.Q.',
-        mainMail: 'Если у вас есть какие-либо вопросы или пожелания, вы всегда можете написать нам на почту',
-        mainOr: 'или',
-        mainSocialMedia: 'в Телеграм или Вконтакте',
+        mainHowItWorks: 'How the site works',
+        mainGuarantee: 'Originality Guarantees',
+        mainAnswers: 'Answers to frequently asked questions',
+        mainContacts: 'Contact Information',
+        mainDocuments: 'Official Documents',
+        mainMobileWeHaveAns: 'We probably already have the answer to your question:',
+        mainMobileFAQ: 'View F.A.Q.',
+        mainMail: 'If you have any questions or requests, you can always email us',
+        mainOr: 'or',
+        mainSocialMedia: 'in Telegram or Vkontakte',
         faqTitle: 'F. A. Q.',
-        faqNotFindAns: 'Не нашли, что искали?',
-        faqContactViaEmail: 'Напишите нам на почту',
+        faqNotFindAns: "Didn't find what you were looking for?",
+        faqContactViaEmail: 'Email us',
 
-        faqDocTitle: 'Оферта',
-        faqDocLink1: 'Агентский договор',
-        faqDocLink2: 'Лицензионный договор',
-        faqDocLink3: 'Правила продажи',
-        faqDocLink4: 'Политика обработки персональных данных',
+        faqDocTitle: 'Offer',
+        faqDocLink1: 'Agency Agreement',
+        faqDocLink2: 'License Agreement',
+        faqDocLink3: 'Sale Rules',
+        faqDocLink4: 'Personal data processing policy',
 
-        faqDocGuaranteeP1: `Все вещи, купленные на resell point, являются оригинальными и новыми. Каждая вещь проходит через наш офис, где
-        проверяется двумя независимыми командами на подлинность и отсутствие признаков ношения. После успешного
-        прохождения всех проверок, мы крепим на каждую вещь специальную пломбу “resell point verified”, которая
-        является гарантией оригинальности товара.`,
-        faqDocGuaranteeP2: `Все вещи проверяются настоящими профессионалами – командой `,
-        faqDocGuaranteeP3: `. Мы очень кропотливо подходим к своей
-        работе, чтобы вы могли быть уверены, что приобретаете подлинную продукцию.`,
-        faqDocGuaranteeP4: `В случае, если вы считаете, что получили поддельный товар, пожалуйста, незамедлительно свяжитесь с нами. Мы
-        рассматриваем каждое обращение в индивидуальном порядке, если на товаре присутствует пломба “resell point
-        verified”. Если вы сомневаетесь в подлинности полученного товара, вы можете отправить его к нам назад на
-        перепроверку с пояснением, что именно по вашему мнению указывает на неоригинальность товара. В случае, если
-        повторная проверка покажет, что товар действительно поддельный – мы вернем вам стоимость покупки в полном
-        объеме, а также возместим все расходы на пересылку товара для перепроверки.`,
+        faqDocGuaranteeP1: `All items purchased from resell point are original and new. Every item passes through our office, where
+        tested by two independent teams for authenticity and no signs of wear. After a successful
+        passing all checks, we attach a special “resell point verified” seal to each item, which
+        is a guarantee of the originality of the goods.`,
+        faqDocGuaranteeP2: `All things are checked by true professionals - the team `,
+        faqDocGuaranteeP3: `. We are very meticulous about our
+        work so that you can be sure you are purchasing a genuine product.`,
+        faqDocGuaranteeP4: `If you think you have received a counterfeit product, please contact us immediately. We
+        we consider each appeal individually, if the product has a “resell point” seal
+        verified". If you doubt the authenticity of the received goods, you can send it back to us at
+        double-checking with an explanation of what exactly, in your opinion, indicates the non-original goods. If
+        a second check will show that the product is really fake - we will refund your purchase price in full
+        volume, as well as reimburse all costs for sending the goods for re-checking.`,
 
-        aboutReseller: '«Здравствуйте,я занимаюсь обувью и одеждой уже на протяжении уже более 3 лет и я рад вас приветствовать на сайте моего магазина.Именно здесь вы можете найти оригинальную обувь по отличной цене,с экспресс доставкой по всему миру.Вы можете обратиться по любым вопросам использовав наши контакты указанные на нашем сайте,также у нас есть отдельная категория ответов на вопросы(FAQ)»',
-        p1: 'Мы всегда на связи! Готовы ответить на ваши вопросы ежедневно с 11:00 до 22:00 (время московское).',
-        p2: 'Наша почта: support@outofstock.cc',
-        p3: 'Прием посылок: 5-ый Донской проезд 15с9, Москва. Время работы 14:00 - 18:00 ежедневно. Предварительно позвоните или напишите нам.',
-        p4: 'Полное наименование организации: Общество с ограниченной ответственностью “АУТОФСТОК” / “OUTOFSTOCK” LLC',
-        p5: 'Адрес ПВЗ СДЭК: г. Москва, Ул. Озерная, 2к1 (Код ПВЗ: MSK362)',
-        p6: 'ОГРН: 1187847211892',
-        p7: 'ИНН: 7811702966',
-        p8: 'КПП: 781101001',
-        p9: 'Юридический адрес: г. Санкт-Петербург, ул. Бехтерева, д.2, Помещение Ж-04. Телефон +7 (495) 006-92-39'
+        aboutReseller: "Hi, I've been in the shoes and apparel business for over 3 years and I'm glad to welcome you to my store website. This is where you can find original shoes at a great price, with express delivery worldwide. You can contact any questions using our contacts listed on our website, we also have a separate category of answers to questions (FAQ) ",
+        p1: "We're always in touch! We are ready to answer your questions daily from 11:00 to 22:00 (Moscow time).",
+        p2: 'Our mail: support@outofstock.cc',
+        p3: 'Reception of parcels: 5th Donskoy proezd 15с9, Moscow. Opening hours 14:00 - 18:00 daily. Please call or email us in advance.',
+        p4: 'Full name of the organization: Limited Liability Company “AUTOFSTOCK” / “OUTOFSTOCK” LLC',
+        p5: 'Address of PVZ SDEK: Moscow, st. Ozernaya, 2k1 (PVZ code: MSK362)',
+        p6: 'BIN: 1187847211892',
+        p7: 'TIN: 7811702966',
+        p8: 'checkpoint: 781101001',
+        p9: "Legal address: St. Petersburg, st. Bekhtereva, d.2, Room Zh-04. Phone +7 (495) 006-92-39",
+        filtersLabel: "Filters",
+        hideFilters: "Hide filters",
+        resetFilters: 'Reset filters',
+        filterSize: 'Size',
+        filterModels: 'Models',
+        filterShowRes: 'Show results',
+        filtersSearch: 'Search',
+    }  
+
+    translateToRU() {
+        const newText: PagesText = {
+            catalog: 'Каталог',
+            reviews: 'Отзывы',
+            guarantees: 'Гарантии',
+            contacts: 'Контакты',
+            shoues: 'Обувь',
+            clothes: 'Одежда',
+            accessories: 'Аксессуары',
+            menuText1: 'Никогда не пропускайте важные события.',
+            menuText2: 'Подпишитесь на наши соц. сети.',
+            searchPlaceholder: 'Введите название модели',
+            platform: 'Платформа',
+            howItWorks: 'Как это работает',
+            pay: 'Оплата',
+            saleRules: 'Правила продажи',
+            latestReleases: 'Последние релизы',
+            deliveryAndReturns: 'Доставка и возврат',
+            support: 'Поддержка',
+    
+            emptyCatalogText: 'Упс, тут пока что ничего нет.',
+            modelVendorCode: 'Артикул',
+            modelModel: 'Модель',
+            modelBrand: 'Бренд',
+            modelColoring: 'Расцветка',
+            modelReliaseDate: 'Дата релиза',
+            modelPayButton: 'Купить',
+            modelYouWillLike: 'Вам понравится',
+            learnMore: 'Подробнее',
+    
+            mainTitle: 'Самый безопасный маркетплейс',
+            mainSubtitle: 'Оригинальная лимитированная обувь, одежда и аксессуары',
+            mainCatalogButton: 'Смотреть каталог',
+            mainNewCarouselTitle: 'Новое',
+            mainTeaserTitle: 'Самая безопасная платформа для покупки и продажи редкой одежды, обуви и аксессуаров.',
+            mainTesserLine1: 'Только оригинальная продукция',
+            mainTesserLine2: 'Быстрая доставка по всей России',
+            mainTesserLine3: 'Гарантии безопасности и отсутствие риска',
+            mainHaveAQuestion: 'Остались вопросы?',
+    
+            mainHowItWorks: 'Как работает площадка',
+            mainGuarantee: 'Гарантии оригинальности',
+            mainAnswers: 'Ответы на часто задаваемые вопросы',
+            mainContacts: 'Контактная информация',
+            mainDocuments: 'Официальные документы',
+    
+            mainMobileWeHaveAns: 'Вероятно, у нас уже есть ответ на ваш вопрос:',
+            mainMobileFAQ: 'Смотреть F.A.Q.',
+            mainMail: 'Если у вас есть какие-либо вопросы или пожелания, вы всегда можете написать нам на почту',
+            mainOr: 'или',
+            mainSocialMedia: 'в Телеграм или Вконтакте',
+            faqTitle: 'F. A. Q.',
+            faqNotFindAns: 'Не нашли, что искали?',
+            faqContactViaEmail: 'Напишите нам на почту',
+    
+            faqDocTitle: 'Оферта',
+            faqDocLink1: 'Агентский договор',
+            faqDocLink2: 'Лицензионный договор',
+            faqDocLink3: 'Правила продажи',
+            faqDocLink4: 'Политика обработки персональных данных',
+    
+            faqDocGuaranteeP1: `Все вещи, купленные на resell point, являются оригинальными и новыми. Каждая вещь проходит через наш офис, где
+            проверяется двумя независимыми командами на подлинность и отсутствие признаков ношения. После успешного
+            прохождения всех проверок, мы крепим на каждую вещь специальную пломбу “resell point verified”, которая
+            является гарантией оригинальности товара.`,
+            faqDocGuaranteeP2: `Все вещи проверяются настоящими профессионалами – командой `,
+            faqDocGuaranteeP3: `. Мы очень кропотливо подходим к своей
+            работе, чтобы вы могли быть уверены, что приобретаете подлинную продукцию.`,
+            faqDocGuaranteeP4: `В случае, если вы считаете, что получили поддельный товар, пожалуйста, незамедлительно свяжитесь с нами. Мы
+            рассматриваем каждое обращение в индивидуальном порядке, если на товаре присутствует пломба “resell point
+            verified”. Если вы сомневаетесь в подлинности полученного товара, вы можете отправить его к нам назад на
+            перепроверку с пояснением, что именно по вашему мнению указывает на неоригинальность товара. В случае, если
+            повторная проверка покажет, что товар действительно поддельный – мы вернем вам стоимость покупки в полном
+            объеме, а также возместим все расходы на пересылку товара для перепроверки.`,
+    
+            aboutReseller: '«Здравствуйте,я занимаюсь обувью и одеждой уже на протяжении уже более 3 лет и я рад вас приветствовать на сайте моего магазина.Именно здесь вы можете найти оригинальную обувь по отличной цене,с экспресс доставкой по всему миру.Вы можете обратиться по любым вопросам использовав наши контакты указанные на нашем сайте,также у нас есть отдельная категория ответов на вопросы(FAQ)»',
+            p1: 'Мы всегда на связи! Готовы ответить на ваши вопросы ежедневно с 11:00 до 22:00 (время московское).',
+            p2: 'Наша почта: support@outofstock.cc',
+            p3: 'Прием посылок: 5-ый Донской проезд 15с9, Москва. Время работы 14:00 - 18:00 ежедневно. Предварительно позвоните или напишите нам.',
+            p4: 'Полное наименование организации: Общество с ограниченной ответственностью “АУТОФСТОК” / “OUTOFSTOCK” LLC',
+            p5: 'Адрес ПВЗ СДЭК: г. Москва, Ул. Озерная, 2к1 (Код ПВЗ: MSK362)',
+            p6: 'ОГРН: 1187847211892',
+            p7: 'ИНН: 7811702966',
+            p8: 'КПП: 781101001',
+            p9: 'Юридический адрес: г. Санкт-Петербург, ул. Бехтерева, д.2, Помещение Ж-04. Телефон +7 (495) 006-92-39',
+
+            filtersLabel: "Фильтры",
+            hideFilters: "Скрыть фильтры",
+            resetFilters: 'Сбросить фильтры',
+            filterSize: 'Размер',
+            filterModels: 'Модели',
+            filterShowRes: 'Показать результаты',
+            filtersSearch: 'Поиск',
+        }
+
+        this.pagesWrapper = newText
     }
 
     translateToUS() {
@@ -250,11 +362,16 @@ export class LanguagesService {
             p6: 'BIN: 1187847211892',
             p7: 'TIN: 7811702966',
             p8: 'checkpoint: 781101001',
-            p9: "Legal address: St. Petersburg, st. Bekhtereva, d.2, Room Zh-04. Phone +7 (495) 006-92-39"
+            p9: "Legal address: St. Petersburg, st. Bekhtereva, d.2, Room Zh-04. Phone +7 (495) 006-92-39",
+            filtersLabel: "Filters",
+            hideFilters: "Hide filters",
+            resetFilters: 'Reset filters',
+            filterSize: 'Size',
+            filterModels: 'Models',
+            filterShowRes: 'Show results',
+            filtersSearch: 'Search',
         }
 
         this.pagesWrapper = newText
-        console.log(this.pagesWrapper)
-
     }
 }

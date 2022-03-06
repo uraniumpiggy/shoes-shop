@@ -3,14 +3,14 @@
         <div class="filter-button"
             (click)="resetFilters()"
         >
-            Сбросить фильтры
+            {{ langs.pagesWrapper.resetFilters }}
         </div>
-        <span>
+        <!-- <span>
             Показывать только товары, которые есть в наличии
-        </span> 
+        </span>  -->
     </div>
     <div class="filter-size">
-        <div class="filter-size-title">Размер</div>
+        <div class="filter-size-title">{{ langs.pagesWrapper.filterSize }}</div>
         <div class="filter-size-grid">
           
           <div 
@@ -24,14 +24,14 @@
         </div>
     </div>
     <div class="filter-search">
-      <div class="filter-search-title">Модели</div>
-      <input type="text" [(ngModel)]="searchString" placeholder="Поиск">
+      <div class="filter-search-title">{{ langs.pagesWrapper.filterModels }}</div>
+      <input type="text" [(ngModel)]="searchString" [placeholder]="langs.pagesWrapper.filtersSearch">
     </div>
     <div>
       <div class="filter-button-results"
             (click)="searchItems()"
         >
-            Показать результаты
+        {{ langs.pagesWrapper.filterShowRes }}
         </div>
     </div>
 </div>

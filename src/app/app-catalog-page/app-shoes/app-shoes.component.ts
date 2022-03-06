@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { LanguagesService } from 'src/app/services/languages.service';
 import { Model, ModelsService, SizePrice } from 'src/app/services/models.service';
 
 export interface filterSettings {
@@ -18,7 +19,7 @@ export class AppShoesComponent implements OnInit {
 
   isMobileFiltersVisible: boolean = false
 
-  constructor(private modelsService: ModelsService) { }
+  constructor(private modelsService: ModelsService, public langs: LanguagesService) { }
 
   ngOnInit(): void {
     this.items = this.modelsService.models

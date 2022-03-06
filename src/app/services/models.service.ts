@@ -172,8 +172,8 @@ export class ModelsService {
       colors: "'Bordeaux'",
       releaseDate: '20/11/2021',
       sizePrice: {
-        "US 11.5": '10000 Э',
-        "US 12": '10000 Э'
+        "US 9": '',
+        "US 10": ''
       },
       imgs: ['./assets/img10_1.jpeg','./assets/img10_2.jpeg','./assets/img10_3.jpeg','./assets/img10_4.jpeg']
     },
@@ -207,10 +207,7 @@ export class ModelsService {
       colors: "'Light Smoke Grey'",
       releaseDate: '15/09/2021',
       sizePrice: {
-        "US 15.5": '10000 Э',
-        "US 20": '10000 Э',
-        "US 21": '',
-        "US 22": '5000 Э'
+        "US 10": ''
       },
       imgs: ['./assets/img13_1.jpeg','./assets/img13_2.jpeg','./assets/img13_3.jpeg','./assets/img13_4.jpeg','./assets/img13_5.jpeg']
     },
@@ -258,12 +255,7 @@ export class ModelsService {
       colors: "'Animal Pack - Cheetah'",
       releaseDate: '22/06/2021',
       sizePrice: {
-        "US 13.5": '10000 Э',
-        "US 12": '10000 Э',
-        "US 13": '',
-        "US 12.5": '5000 Э',
-        "US 3.5": '10000 Э',
-        "US 4": '10000 Э',
+        "US 11": ''
       },
       imgs: ['./assets/img17_1.jpeg','./assets/img17_2.jpeg','./assets/img17_3.jpeg','./assets/img17_4.jpeg','./assets/img17_5.jpeg']
     },
@@ -286,8 +278,9 @@ export class ModelsService {
       colors: "'Dark Iris'",
       releaseDate: '30/04/2021',
       sizePrice: {
-        "US 11.5": '10000 Э',
-        "US 12": '10000 Э'
+        "US 7": '',
+        "US 9": '',
+        "US 10.5": '',
       },
       imgs: ['./assets/img19_1.jpeg','./assets/img19_2.jpeg','./assets/img19_3.jpeg','./assets/img19_4.jpeg','./assets/img19_5.jpeg']
     },
@@ -357,10 +350,7 @@ export class ModelsService {
       colors: "'Medium Curry'",
       releaseDate: '29/01/2021',
       sizePrice: {
-        "US 13.5": '10000 Э',
-        "US 12": '10000 Э',
-        "US 13": '',
-        "US 12.5": '5000 Э'
+        "US 10": ''
       },
       imgs: ['./assets/img25_1.jpeg','./assets/img25_2.jpeg','./assets/img25_3.jpeg','./assets/img25_4.jpeg','./assets/img25_5.jpeg']
     },
@@ -394,8 +384,7 @@ export class ModelsService {
       colors: "'Villain Red'",
       releaseDate: '22/12/2020',
       sizePrice: {
-        "US 11.5": '10000 Э',
-        "US 12": '10000 Э'
+        "US 10.5": ''
       },
       imgs: ['./assets/img28_1.png']
     },
@@ -428,10 +417,7 @@ export class ModelsService {
       colors: "'Sashiko'",
       releaseDate: '01/08/2020',
       sizePrice: {
-        "US 15.5": '10000 Э',
-        "US 20": '10000 Э',
-        "US 21": '',
-        "US 22": '5000 Э'
+        "US 10": ''
       },
       imgs: ['./assets/img31_1.jfif']
     },
@@ -464,10 +450,8 @@ export class ModelsService {
       colors: "'Silver Toe'",
       releaseDate: '20/02/2021',
       sizePrice: {
-        "US 13.5": '10000 Э',
-        "US 12": '10000 Э',
-        "US 13": '',
-        "US 12.5": '5000 Э'
+        "US 10": '',
+        "US 10.5": '',
       },
       imgs: ['./assets/img34_1.jpeg','./assets/img34_2.jpeg','./assets/img34_3.jpeg','./assets/img34_4.jpeg','./assets/img34_5.jpeg']
     },

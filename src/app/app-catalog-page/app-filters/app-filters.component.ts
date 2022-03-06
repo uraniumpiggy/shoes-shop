@@ -1,4 +1,5 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { LanguagesService } from 'src/app/services/languages.service';
 import { ModelsService, SizePrice } from 'src/app/services/models.service';
 import { filterSettings } from '../app-shoes/app-shoes.component';
 
@@ -13,7 +14,7 @@ export class AppFiltersComponent implements OnInit {
   searchString: string = ''
   @Output() onSearch = new EventEmitter<filterSettings>()
 
-  constructor(private modelService: ModelsService) {
+  constructor(private modelService: ModelsService, public langs: LanguagesService) {
     this.sizesArray = this.modelService.sizesArray.slice(0, 28) 
     for (let size of this.sizesArray) {
       this.sizeActiveMap.set(size, false)
