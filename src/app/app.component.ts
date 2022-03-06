@@ -1,5 +1,5 @@
 import { animate, style, transition, trigger } from '@angular/animations';
-import { ChangeDetectorRef, Component, ElementRef, Renderer2, ViewChild } from '@angular/core';
+import { ChangeDetectorRef, Component, ElementRef, OnInit, Renderer2, ViewChild } from '@angular/core';
 import { LanguagesService, PagesText } from './services/languages.service';
 import { Model, ModelsService } from './services/models.service';
 
@@ -46,7 +46,7 @@ import { Model, ModelsService } from './services/models.service';
     ])
   ]
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   isMenuOpen: boolean = false
   isSearchBarOpen: boolean = false
   isSearchGridOpen: boolean = false
@@ -74,6 +74,12 @@ export class AppComponent {
     })
 
     this.pageText = this.langs.pagesWrapper
+  }
+
+  ngOnInit(): void {
+      let userLang: string = navigator.language
+      // console.log(userLang)
+
   }
 
   toggleSearchBar() {

@@ -63,6 +63,17 @@ export interface PagesText {
     faqDocGuaranteeP2: string,
     faqDocGuaranteeP3: string,
     faqDocGuaranteeP4: string,
+    // contacts
+    aboutReseller: string,
+    p1: string,
+    p2: string,
+    p3: string,
+    p4: string,
+    p5: string,
+    p6: string,
+    p7: string,
+    p8: string,
+    p9: string,
 }
 
 
@@ -143,6 +154,17 @@ export class LanguagesService {
         перепроверку с пояснением, что именно по вашему мнению указывает на неоригинальность товара. В случае, если
         повторная проверка покажет, что товар действительно поддельный – мы вернем вам стоимость покупки в полном
         объеме, а также возместим все расходы на пересылку товара для перепроверки.`,
+
+        aboutReseller: '«Здравствуйте,я занимаюсь обувью и одеждой уже на протяжении уже более 3 лет и я рад вас приветствовать на сайте моего магазина.Именно здесь вы можете найти оригинальную обувь по отличной цене,с экспресс доставкой по всему миру.Вы можете обратиться по любым вопросам использовав наши контакты указанные на нашем сайте,также у нас есть отдельная категория ответов на вопросы(FAQ)»',
+        p1: 'Мы всегда на связи! Готовы ответить на ваши вопросы ежедневно с 11:00 до 22:00 (время московское).',
+        p2: 'Наша почта: support@outofstock.cc',
+        p3: 'Прием посылок: 5-ый Донской проезд 15с9, Москва. Время работы 14:00 - 18:00 ежедневно. Предварительно позвоните или напишите нам.',
+        p4: 'Полное наименование организации: Общество с ограниченной ответственностью “АУТОФСТОК” / “OUTOFSTOCK” LLC',
+        p5: 'Адрес ПВЗ СДЭК: г. Москва, Ул. Озерная, 2к1 (Код ПВЗ: MSK362)',
+        p6: 'ОГРН: 1187847211892',
+        p7: 'ИНН: 7811702966',
+        p8: 'КПП: 781101001',
+        p9: 'Юридический адрес: г. Санкт-Петербург, ул. Бехтерева, д.2, Помещение Ж-04. Телефон +7 (495) 006-92-39'
     }
 
     translateToUS() {
@@ -218,6 +240,17 @@ export class LanguagesService {
             double-checking with an explanation of what exactly, in your opinion, indicates the non-original goods. If
             a second check will show that the product is really fake - we will refund your purchase price in full
             volume, as well as reimburse all costs for sending the goods for re-checking.`,
+
+            aboutReseller: "Hi, I've been in the shoes and apparel business for over 3 years and I'm glad to welcome you to my store website. This is where you can find original shoes at a great price, with express delivery worldwide. You can contact any questions using our contacts listed on our website, we also have a separate category of answers to questions (FAQ) ",
+            p1: "We're always in touch! We are ready to answer your questions daily from 11:00 to 22:00 (Moscow time).",
+            p2: 'Our mail: support@outofstock.cc',
+            p3: 'Reception of parcels: 5th Donskoy proezd 15с9, Moscow. Opening hours 14:00 - 18:00 daily. Please call or email us in advance.',
+            p4: 'Full name of the organization: Limited Liability Company “AUTOFSTOCK” / “OUTOFSTOCK” LLC',
+            p5: 'Address of PVZ SDEK: Moscow, st. Ozernaya, 2k1 (PVZ code: MSK362)',
+            p6: 'BIN: 1187847211892',
+            p7: 'TIN: 7811702966',
+            p8: 'checkpoint: 781101001',
+            p9: "Legal address: St. Petersburg, st. Bekhtereva, d.2, Room Zh-04. Phone +7 (495) 006-92-39"
         }
 
         this.pagesWrapper = newText

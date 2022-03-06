@@ -67,7 +67,7 @@ export class ModelsService {
         "US 9.5": '',
         "US 10": '',
       },
-      imgs: ['assets/img1_1.jpg','assets/img1_2.jpg','assets/img1_3.jpg','assets/img1_4.jpg']
+      imgs: ['./assets/img1_1.jpg','./assets/img1_2.jpg','./assets/img1_3.jpg','./assets/img1_4.jpg']
     },
     {
       id: 2,
@@ -79,7 +79,7 @@ export class ModelsService {
         "US 6": '',
         "US 10": '',
       },
-      imgs: ['assets/img2_1.webp']
+      imgs: ['./assets/img2_1.webp']
     },
     {
       id: 3,
@@ -92,7 +92,7 @@ export class ModelsService {
         "US 9": '',
         "US 9.5": '',
       },
-      imgs: ['assets/img3_1.webp']
+      imgs: ['./assets/img3_1.webp']
     },
     {
       id: 4,
@@ -103,7 +103,7 @@ export class ModelsService {
       sizePrice: {
         "US 12": ''
       },
-      imgs: ['assets/img4_1.png']
+      imgs: ['./assets/img4_1.png']
     },
     {
       id: 5,
@@ -115,7 +115,7 @@ export class ModelsService {
         "US 9.5": '',
         "US 11": '',
       },
-      imgs: ['assets/img5_1.png']
+      imgs: ['./assets/img5_1.png']
     },
     {
       id: 6,
@@ -126,7 +126,7 @@ export class ModelsService {
       sizePrice: {
         "US 9.5": '',
       },
-      imgs: ['assets/img6_1.jpeg','assets/img6_2.jpeg','assets/img6_3.jpeg','assets/img6_4.jpeg']
+      imgs: ['./assets/img6_1.jpeg','./assets/img6_2.jpeg','./assets/img6_3.jpeg','./assets/img6_4.jpeg']
     },
     {
       id: 7,
@@ -139,7 +139,7 @@ export class ModelsService {
         "US 10": '',
         "US 11": '',
       },
-      imgs: ['assets/img7_1.jpeg','assets/img7_2.jpeg','assets/img7_3.jpeg','assets/img7_4.jpeg']
+      imgs: ['./assets/img7_1.jpeg','./assets/img7_2.jpeg','./assets/img7_3.jpeg','./assets/img7_4.jpeg']
     },
     {
       id: 8,
@@ -152,7 +152,7 @@ export class ModelsService {
         "US 9.5": '',
         "US 10": '',
       },
-      imgs: ['assets/img8_1.jpeg','assets/img8_2.jpeg','assets/img8_3.jpeg','assets/img8_4.jpeg']
+      imgs: ['./assets/img8_1.jpeg','./assets/img8_2.jpeg','./assets/img8_3.jpeg','./assets/img8_4.jpeg']
     },
     {
       id: 9,
@@ -163,7 +163,7 @@ export class ModelsService {
       sizePrice: {
         "US 10": ''
       },
-      imgs: ['assets/img9_1.jpeg','assets/img9_2.jpeg','assets/img9_3.jpeg','assets/img9_4.jpeg']
+      imgs: ['./assets/img9_1.jpeg','./assets/img9_2.jpeg','./assets/img9_3.jpeg','./assets/img9_4.jpeg']
     },
     {
       id: 10,
@@ -175,7 +175,7 @@ export class ModelsService {
         "US 11.5": '10000 Э',
         "US 12": '10000 Э'
       },
-      imgs: ['assets/img10_1.jpeg','assets/img10_2.jpeg','assets/img10_3.jpeg','assets/img10_4.jpeg']
+      imgs: ['./assets/img10_1.jpeg','./assets/img10_2.jpeg','./assets/img10_3.jpeg','./assets/img10_4.jpeg']
     },
     {
       id: 11,
@@ -187,7 +187,7 @@ export class ModelsService {
         "US 8": '',
         "US 11": '',
       },
-      imgs: ['assets/img11_1.jpeg','assets/img11_2.jpeg','assets/img11_3.jpeg','assets/img11_4.jpeg','assets/img11_5.jpeg']
+      imgs: ['./assets/img11_1.jpeg','./assets/img11_2.jpeg','./assets/img11_3.jpeg','./assets/img11_4.jpeg','./assets/img11_5.jpeg']
     },
     {
       id: 12,
@@ -198,7 +198,7 @@ export class ModelsService {
       sizePrice: {
         "US 8.5": '',
       },
-      imgs: ['assets/img12_1.jpeg','assets/img12_2.jpeg','assets/img12_3.jpeg','assets/img12_4.jpeg','assets/img12_5.jpeg']
+      imgs: ['./assets/img12_1.jpeg','./assets/img12_2.jpeg','./assets/img12_3.jpeg','./assets/img12_4.jpeg','./assets/img12_5.jpeg']
     },
     {
       id: 13,
@@ -212,7 +212,7 @@ export class ModelsService {
         "US 21": '',
         "US 22": '5000 Э'
       },
-      imgs: ['assets/img13_1.jpeg','assets/img13_2.jpeg','assets/img13_3.jpeg','assets/img13_4.jpeg','assets/img13_5.jpeg']
+      imgs: ['./assets/img13_1.jpeg','./assets/img13_2.jpeg','./assets/img13_3.jpeg','./assets/img13_4.jpeg','./assets/img13_5.jpeg']
     },
     {
       id: 14,
@@ -224,7 +224,7 @@ export class ModelsService {
         "US 8": '',
         "US 11": '',
       },
-      imgs: ['assets/img14_1.jpg','assets/img14_2.jpg','assets/img14_3.jpg','assets/img14_4.jpg','assets/img14_5.jpg']
+      imgs: ['./assets/img14_1.jpg','./assets/img14_2.jpg','./assets/img14_3.jpg','./assets/img14_4.jpg','./assets/img14_5.jpg']
     },
     {
       id: 15,
@@ -237,7 +237,7 @@ export class ModelsService {
         "US 11": '',
         "US 12": '',
       },
-      imgs: ['assets/img15_1.jpeg','assets/img15_2.jpeg','assets/img15_3.jpeg','assets/img15_4.jpeg','assets/img15_5.jpeg']
+      imgs: ['./assets/img15_1.jpeg','./assets/img15_2.jpeg','./assets/img15_3.jpeg','./assets/img15_4.jpeg','./assets/img15_5.jpeg']
     },
     {
       id: 16,
@@ -249,7 +249,7 @@ export class ModelsService {
         "US 9.5": '',
         "US 10.5": '',
       },
-      imgs: ['assets/img16_1.png']
+      imgs: ['./assets/img16_1.png']
     },
     {
       id: 17,
@@ -265,7 +265,7 @@ export class ModelsService {
         "US 3.5": '10000 Э',
         "US 4": '10000 Э',
       },
-      imgs: ['assets/img17_1.jpeg','assets/img17_2.jpeg','assets/img17_3.jpeg','assets/img17_4.jpeg','assets/img17_5.jpeg']
+      imgs: ['./assets/img17_1.jpeg','./assets/img17_2.jpeg','./assets/img17_3.jpeg','./assets/img17_4.jpeg','./assets/img17_5.jpeg']
     },
     {
       id: 18,
@@ -277,7 +277,7 @@ export class ModelsService {
         "US 7": '',
         "US 11": '',
       },
-      imgs: ['assets/img18_1.jpeg','assets/img18_2.jpeg','assets/img18_3.jpeg','assets/img18_4.jpeg','assets/img18_5.jpeg']
+      imgs: ['./assets/img18_1.jpeg','./assets/img18_2.jpeg','./assets/img18_3.jpeg','./assets/img18_4.jpeg','./assets/img18_5.jpeg']
     },
     {
       id: 19,
@@ -289,7 +289,7 @@ export class ModelsService {
         "US 11.5": '10000 Э',
         "US 12": '10000 Э'
       },
-      imgs: ['assets/img19_1.jpeg','assets/img19_2.jpeg','assets/img19_3.jpeg','assets/img19_4.jpeg','assets/img19_5.jpeg']
+      imgs: ['./assets/img19_1.jpeg','./assets/img19_2.jpeg','./assets/img19_3.jpeg','./assets/img19_4.jpeg','./assets/img19_5.jpeg']
     },
     {
       id: 20,
@@ -301,7 +301,7 @@ export class ModelsService {
         "US 9.5": '',
         "US 10.5": '',
       },
-      imgs: ['assets/img20_1.jpeg','assets/img20_2.jpeg','assets/img20_3.jpeg','assets/img20_4.jpeg','assets/img20_5.jpeg']
+      imgs: ['./assets/img20_1.jpeg','./assets/img20_2.jpeg','./assets/img20_3.jpeg','./assets/img20_4.jpeg','./assets/img20_5.jpeg']
     },
     {
       id: 21,
@@ -312,7 +312,7 @@ export class ModelsService {
       sizePrice: {
         "US 12": '',
       },
-      imgs: ['assets/img21_1.jpeg','assets/img21_2.jpeg','assets/img21_3.jpeg','assets/img21_4.jpeg','assets/img21_5.jpeg']
+      imgs: ['./assets/img21_1.jpeg','./assets/img21_2.jpeg','./assets/img21_3.jpeg','./assets/img21_4.jpeg','./assets/img21_5.jpeg']
     },
     {
       id: 22,
@@ -323,7 +323,7 @@ export class ModelsService {
       sizePrice: {
         "US 9": '',
       },
-      imgs: ['assets/img22_1.png']
+      imgs: ['./assets/img22_1.png']
     },
     {
       id: 23,
@@ -334,7 +334,7 @@ export class ModelsService {
       sizePrice: {
         "US 8": ''
       },
-      imgs: ['assets/img23_1.jpeg','assets/img23_2.jpeg','assets/img23_3.jpeg','assets/img23_4.jpeg','assets/img23_5.jpeg']
+      imgs: ['./assets/img23_1.jpeg','./assets/img23_2.jpeg','./assets/img23_3.jpeg','./assets/img23_4.jpeg','./assets/img23_5.jpeg']
     },
     {
       id: 24,
@@ -348,7 +348,7 @@ export class ModelsService {
         "US 10": '',
         "US 10.5": '',
       },
-      imgs: ['assets/img24_1.jpeg','assets/img24_2.jpeg','assets/img24_3.jpeg','assets/img24_4.jpeg','assets/img24_5.jpeg']
+      imgs: ['./assets/img24_1.jpeg','./assets/img24_2.jpeg','./assets/img24_3.jpeg','./assets/img24_4.jpeg','./assets/img24_5.jpeg']
     },
     {
       id: 25,
@@ -362,7 +362,7 @@ export class ModelsService {
         "US 13": '',
         "US 12.5": '5000 Э'
       },
-      imgs: ['assets/img25_1.jpeg','assets/img25_2.jpeg','assets/img25_3.jpeg','assets/img25_4.jpeg','assets/img25_5.jpeg']
+      imgs: ['./assets/img25_1.jpeg','./assets/img25_2.jpeg','./assets/img25_3.jpeg','./assets/img25_4.jpeg','./assets/img25_5.jpeg']
     },
     {
       id: 26,
@@ -373,7 +373,7 @@ export class ModelsService {
       sizePrice: {
         "US 11": '',
       },
-      imgs: ['assets/img26_1.jpeg','assets/img26_2.jpeg','assets/img26_3.jpeg','assets/img26_4.jpeg','assets/img26_5.jpeg']
+      imgs: ['./assets/img26_1.jpeg','./assets/img26_2.jpeg','./assets/img26_3.jpeg','./assets/img26_4.jpeg','./assets/img26_5.jpeg']
     },
     {
       id: 27,
@@ -385,7 +385,7 @@ export class ModelsService {
         "US 10": '',
         "US 9": '',
       },
-      imgs: ['assets/img27_1.jpeg','assets/img27_2.jpeg','assets/img27_3.jpeg','assets/img27_4.jpeg','assets/img27_5.jpeg']
+      imgs: ['./assets/img27_1.jpeg','./assets/img27_2.jpeg','./assets/img27_3.jpeg','./assets/img27_4.jpeg','./assets/img27_5.jpeg']
     },
     {
       id: 28,
@@ -397,7 +397,7 @@ export class ModelsService {
         "US 11.5": '10000 Э',
         "US 12": '10000 Э'
       },
-      imgs: ['assets/img28_1.png']
+      imgs: ['./assets/img28_1.png']
     },
     {
       id: 29,
@@ -408,7 +408,7 @@ export class ModelsService {
       sizePrice: {
         "US 10.5": '',
       },
-      imgs: ['assets/img29_1.jpeg','assets/img29_2.jpeg','assets/img29_3.jpeg','assets/img29_4.jpeg','assets/img29_5.jpeg']
+      imgs: ['./assets/img29_1.jpeg','./assets/img29_2.jpeg','./assets/img29_3.jpeg','./assets/img29_4.jpeg','./assets/img29_5.jpeg']
     },
     {
       id: 30,
@@ -419,7 +419,7 @@ export class ModelsService {
       sizePrice: {
         "US 8": ''
       },
-      imgs: ['assets/img30_1.jpeg','assets/img30_2.jpeg','assets/img30_3.jpeg','assets/img30_4.jpeg','assets/img30_5.jpeg']
+      imgs: ['./assets/img30_1.jpeg','./assets/img30_2.jpeg','./assets/img30_3.jpeg','./assets/img30_4.jpeg','./assets/img30_5.jpeg']
     },
     {
       id: 31,
@@ -433,7 +433,7 @@ export class ModelsService {
         "US 21": '',
         "US 22": '5000 Э'
       },
-      imgs: ['assets/img31_1.jfif']
+      imgs: ['./assets/img31_1.jfif']
     },
     {
       id: 32,
@@ -444,7 +444,7 @@ export class ModelsService {
       sizePrice: {
         "US 10": ''
       },
-      imgs: ['assets/img32_1.jpeg','assets/img32_2.jpeg','assets/img32_3.jpeg','assets/img32_4.jpeg','assets/img32_5.jpeg']
+      imgs: ['./assets/img32_1.jpeg','./assets/img32_2.jpeg','./assets/img32_3.jpeg','./assets/img32_4.jpeg','./assets/img32_5.jpeg']
     },
     {
       id: 33,
@@ -455,7 +455,7 @@ export class ModelsService {
       sizePrice: {
         "US 12.5": ''
       },
-      imgs: ['assets/img33_1.jpeg','assets/img33_2.jpeg','assets/img33_3.jpeg','assets/img33_4.jpeg','assets/img33_5.jpeg']
+      imgs: ['./assets/img33_1.jpeg','./assets/img33_2.jpeg','./assets/img33_3.jpeg','./assets/img33_4.jpeg','./assets/img33_5.jpeg']
     },
     {
       id: 34,
@@ -469,7 +469,7 @@ export class ModelsService {
         "US 13": '',
         "US 12.5": '5000 Э'
       },
-      imgs: ['assets/img34_1.jpeg','assets/img34_2.jpeg','assets/img34_3.jpeg','assets/img34_4.jpeg','assets/img34_5.jpeg']
+      imgs: ['./assets/img34_1.jpeg','./assets/img34_2.jpeg','./assets/img34_3.jpeg','./assets/img34_4.jpeg','./assets/img34_5.jpeg']
     },
     
   ]
