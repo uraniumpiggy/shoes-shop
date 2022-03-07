@@ -15,8 +15,6 @@ export interface PagesText {
     platform: string,
     howItWorks: string,
     pay: string, 
-    saleRules: string,
-    latestReleases: string,
     deliveryAndReturns: string,
     support: string,
 
@@ -91,6 +89,22 @@ export interface PagesText {
     delAndReturns6: string,
     delAndReturns7: string,
     delAndReturns8: string,
+
+    faqAnsHeader1: string,
+    faqAns1p1: string,
+    faqAns1p2: string,
+    faqAns1p3: string,
+    faqAns1p4: string,
+    faqAns1p5: string,
+    faqAns1p6: string,
+    faqAnsHeader2: string,
+    faqAns2p1: string,
+    faqAnsHeader3: string,
+    faqAns3p1: string,
+    faqAnsHeader4: string,
+    faqAns4p1: string,
+    faqAnsHeader5: string,
+    faqAns5p1: string,
 }
 
 
@@ -112,8 +126,6 @@ export class LanguagesService {
         platform: 'Platform',
         howItWorks: 'How it works',
         pay: 'Payment',
-        saleRules: 'Sale rules',
-        latestReleases: 'Latest releases',
         deliveryAndReturns: 'Delivery and returns',
         support: 'Support',
 
@@ -197,6 +209,22 @@ export class LanguagesService {
         delAndReturns6: "Delivery time is calculated individually and depends on your country, check with the site administration.",
         delAndReturns7: "Shipping is worldwide, with some exceptions.",
         delAndReturns8: "ResellPoint is solely responsible for your order and its safety.",
+
+        faqAnsHeader1: "1. Where should I ship my item after purchase confirmation?",
+        faqAns1p1: "The package must be sent by CDEK courier service to the pickup point at:",
+        faqAns1p2: "Moscow, Gagarinsky district st., 2k1 (PVZ code: MSK362) +7 (495) 006-92-39",
+        faqAns1p3: "If you live in another country, please contact the site administration and follow their instructions.",
+        faqAns1p4: "Also, you can bring the item to the office on your own to our office at the address: Moscow, Varshavskoye shosse 1с1. Business center “W PLAZA”, red brick building. You can leave the item at any time at the reception of the business center. Please , put a sheet with your e-mail and lot number in the box.",
+        faqAns1p5: "If you're shipping sneakers, please remember to take care of the packaging so that the box doesn't get damaged in transit.",
+        faqAns1p6: "If you are in Moscow, you can bring the sneakers to our office in person. To do this, write to us at support@resellpoint.cc with the note 'I want to personally deliver the sneakers.' In a reply email, we will send you the address and time in which we can accept your goods.",
+        faqAnsHeader2: "2. I think they sent me a fake, what should I do?",
+        faqAns2p1: "If you are sure that the item you bought on the platform is non-original, you can write to us at support@resellpoint.cc and send the sneakers back to our office. We maintain a database with photos of all sneakers sold, and after Once we are sure it is the exact shoe we sent you, we will re-evaluate it for originality.",
+        faqAnsHeader3: "3. What regions do you ship to?",
+        faqAns3p1: "Shipping is worldwide with no restrictions.",
+        faqAnsHeader4: "4. Will there be an app for phones?",
+        faqAns4p1: "Yes, work on the application is already underway, but at the moment the service is only available in the site format at https://resellpoint.cc/",
+        faqAnsHeader5: "5. How long will the delivery take?",
+        faqAns5p1: "Check with the administrator for the number of delivery days",
     }  
 
     translateToRU() {
@@ -214,8 +242,6 @@ export class LanguagesService {
             platform: 'Платформа',
             howItWorks: 'Как это работает',
             pay: 'Оплата',
-            saleRules: 'Правила продажи',
-            latestReleases: 'Последние релизы',
             deliveryAndReturns: 'Доставка и возврат',
             support: 'Поддержка',
     
@@ -301,6 +327,22 @@ export class LanguagesService {
             delAndReturns6: "Расчёт сроков доставки происходит индивидуально и зависит от вашей страны, уточняйте у администрации сайта.",
             delAndReturns7: "Доставка осуществляется по всему миру, с некоторыми исключениями.",
             delAndReturns8: "Компания ResellPoint несёт полную ответственность за ваш заказ и его сохранность.",
+
+            faqAnsHeader1: "1. Куда мне нужно отправить мою вещь после подтверждения покупки?",
+            faqAns1p1: "Посылку необходимо отправить курьерской службой СДЭК в пункт выдачи по адресу:",
+            faqAns1p2: "г. Москва, Ул. Гагаринский р-н, 2к1 (Код ПВЗ: MSK362) +7 (495) 006-92-39",
+            faqAns1p3: "Если вы проживаете в другой стране,то обращайтесь к администрации сайта и действуйте по их указаниям.",
+            faqAns1p4: "Также вы можете привезти вещь в офис самостоятельно в наш офис по адресу: г. Москва, Варшавское шоссе 1с1. Бизнес-центр “W PLAZA”, красное кирпичное здание. Вещь можно оставить в любое время на ресепшн бизнес-центра. Пожалуйста, вложите в коробку лист с Вашим e-mail и номером лота.",
+            faqAns1p5: "Если отправляете кроссовки, не забудьте, пожалуйста, позаботиться об упаковке, чтобы коробка не повредилась в процессе транспортировки.",
+            faqAns1p6: "Если вы находитесь в Москве, вы можете принести кроссовки лично к нам в офис. Для этого напишите нам на почту support@resellpoint.cc с пометкой «Хочу передать кроссовки лично». В ответном письме мы отправим вам адрес и время, в которое мы сможем принять ваш товар.",
+            faqAnsHeader2: "2. Я считаю, что мне прислали фейк, что делать?",
+            faqAns2p1: "В случае если вы уверены, что купленная вами на платформе вещь пришла неоригинальная, вы можете написать нам об этом на почту support@resellpoint.cc и отправить кроссовки обратно в наш офис. Мы ведем базу с фотографиями всех проданных кроссовок, и после того, как убедимся, что это именно те кроссовки, которые мы вам выслали, мы проведем повторную экспертизу на оригинальность. Если кроссовки действительно окажутся неоригинальными, мы возместим вам полную стоимость кроссовок и все затраты на доставку.",
+            faqAnsHeader3: "3. В какие регионы вы осуществляете доставку?",
+            faqAns3p1: "Доставка осуществляется по всему миру без ограничений.",
+            faqAnsHeader4: "4. Будет ли приложение для телефонов?",
+            faqAns4p1: "Да, работа над приложением уже ведется, однако на данный момент сервис доступен только в формате сайта по адресу https://resellpoint.cc/",
+            faqAnsHeader5: "5. Сколько будет длиться доставка?",
+            faqAns5p1: "Количество дней доставки уточняйте у администратора",
         }
 
         this.pagesWrapper = newText
@@ -321,8 +363,6 @@ export class LanguagesService {
             platform: 'Platform',
             howItWorks: 'How it works',
             pay: 'Payment',
-            saleRules: 'Sale rules',
-            latestReleases: 'Latest releases',
             deliveryAndReturns: 'Delivery and returns',
             support: 'Support',
 
@@ -406,6 +446,22 @@ export class LanguagesService {
             delAndReturns6: "Delivery time is calculated individually and depends on your country, check with the site administration.",
             delAndReturns7: "Shipping is worldwide, with some exceptions.",
             delAndReturns8: "ResellPoint is solely responsible for your order and its safety.",
+
+            faqAnsHeader1: "1. Where should I ship my item after purchase confirmation?",
+            faqAns1p1: "The package must be sent by CDEK courier service to the pickup point at:",
+            faqAns1p2: "Moscow, Gagarinsky district st., 2k1 (PVZ code: MSK362) +7 (495) 006-92-39",
+            faqAns1p3: "If you live in another country, please contact the site administration and follow their instructions.",
+            faqAns1p4: "Also, you can bring the item to the office on your own to our office at the address: Moscow, Varshavskoye shosse 1с1. Business center “W PLAZA”, red brick building. You can leave the item at any time at the reception of the business center. Please , put a sheet with your e-mail and lot number in the box.",
+            faqAns1p5: "If you're shipping sneakers, please remember to take care of the packaging so that the box doesn't get damaged in transit.",
+            faqAns1p6: "If you are in Moscow, you can bring the sneakers to our office in person. To do this, write to us at support@resellpoint.cc with the note 'I want to personally deliver the sneakers.' In a reply email, we will send you the address and time in which we can accept your goods.",
+            faqAnsHeader2: "2. I think they sent me a fake, what should I do?",
+            faqAns2p1: "If you are sure that the item you bought on the platform is non-original, you can write to us at support@resellpoint.cc and send the sneakers back to our office. We maintain a database with photos of all sneakers sold, and after Once we are sure it is the exact shoe we sent you, we will re-evaluate it for originality.",
+            faqAnsHeader3: "3. What regions do you ship to?",
+            faqAns3p1: "Shipping is worldwide with no restrictions.",
+            faqAnsHeader4: "4. Will there be an app for phones?",
+            faqAns4p1: "Yes, work on the application is already underway, but at the moment the service is only available in the site format at https://resellpoint.cc/",
+            faqAnsHeader5: "5. How long will the delivery take?",
+            faqAns5p1: "Check with the administrator for the number of delivery days",
         }
 
         this.pagesWrapper = newText
