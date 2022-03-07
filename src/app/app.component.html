@@ -7,7 +7,7 @@
                 </a>
             </div>
             <div class="header-menu">
-                <a (click)="hideSearchGrid()" [routerLink]="['/catalog', 'shoes']" [routerLinkActive]="['link-active']" class="menu-item">{{ pageText?.catalog }}</a>
+                <a (click)="hideSearchGrid()" [routerLink]="['/catalog']" [routerLinkActive]="['link-active']" class="menu-item">{{ pageText?.catalog }}</a>
                 <a href="/" class="menu-item">{{ pageText?.reviews }}</a>
                 <a [routerLink]="['/faq', 'guarantee']" [routerLinkActive]="['link-active']" class="menu-item">{{ pageText?.guarantees }}</a>
                 <a [routerLink]="['/faq', 'contacts']" [routerLinkActive]="['link-active']" class="menu-item">{{ pageText?.contacts }}</a>

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { LanguagesService, PagesText } from '../services/languages.service';
 
 @Component({
@@ -8,9 +9,10 @@ import { LanguagesService, PagesText } from '../services/languages.service';
 })
 export class AppCatalogPageComponent implements OnInit {
 
-  constructor(public langs: LanguagesService) { }
+  constructor(public langs: LanguagesService, private router: Router) { }
 
   ngOnInit(): void {
+    this.router.navigateByUrl('/catalog/shoes');
   }
 
 }
