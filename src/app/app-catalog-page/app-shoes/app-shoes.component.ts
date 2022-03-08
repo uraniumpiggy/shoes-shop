@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
 import { LanguagesService } from 'src/app/services/languages.service';
 import { Model, ModelsService, SizePrice } from 'src/app/services/models.service';
 
@@ -13,11 +13,20 @@ export interface filterSettings {
   styleUrls: ['./app-shoes.component.scss']
 })
 export class AppShoesComponent implements OnInit {
+  @HostListener('window:resize', ['$event'])
+  onresize(event: any) {
+    console.log(event.target.innerWidth)
+    if (event.target.innerWidth > 768) {
+      this.isMobileFiltersVisible = true
+    } else {
+      this.isMobileFiltersVisible = false
+    }
+  }
 
   items: Model[] = []
   isInStock: boolean = false
 
-  isMobileFiltersVisible: boolean = false
+  isMobileFiltersVisible: boolean = window.innerWidth > 768 ? true : false
 
   constructor(private modelsService: ModelsService, public langs: LanguagesService) { }
 

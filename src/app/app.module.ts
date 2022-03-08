@@ -12,11 +12,13 @@ import { FormsModule } from '@angular/forms';
 import { FaqPageModule } from './faq-page/faq-page.module';
 import { SearchGridComponent } from './search-grid/search-grid.component';
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
+import { ReviewsComponent } from './reviews/reviews.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     SearchGridComponent,
+    ReviewsComponent,
   ],
   imports: [
     BrowserModule,

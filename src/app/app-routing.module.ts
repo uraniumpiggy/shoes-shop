@@ -12,6 +12,7 @@ import { FaqDocumentsComponent } from './faq-page/faq-documents/faq-documents.co
 import { FaqFaqComponent } from './faq-page/faq-faq/faq-faq.component';
 import { FaqGuaranteeComponent } from './faq-page/faq-guarantee/faq-guarantee.component';
 import { FaqPageComponent } from './faq-page/faq-page.component';
+import { ReviewsComponent } from './reviews/reviews.component';
 
 const routes: Routes = [
   {path: '', component: AppMainPageComponent},
@@ -28,6 +29,7 @@ const routes: Routes = [
     {path: 'guarantee', component: FaqGuaranteeComponent},
     {path: 'documents', component: FaqDocumentsComponent},
   ]},
+  {path: 'reviews', component: ReviewsComponent},
   {path: '**', component: AppMainPageComponent} // 404
 ];
 

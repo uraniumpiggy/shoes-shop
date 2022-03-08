@@ -8,7 +8,7 @@
             </div>
             <div class="header-menu">
                 <a (click)="hideSearchGrid()" [routerLink]="['/catalog']" [routerLinkActive]="['link-active']" class="menu-item">{{ pageText?.catalog }}</a>
-                <a href="/" class="menu-item">{{ pageText?.reviews }}</a>
+                <a [routerLink]="['reviews']" [routerLinkActive]="['link-active']" class="menu-item">{{ pageText?.reviews }}</a>
                 <a [routerLink]="['/faq', 'guarantee']" [routerLinkActive]="['link-active']" class="menu-item">{{ pageText?.guarantees }}</a>
                 <a [routerLink]="['/faq', 'contacts']" [routerLinkActive]="['link-active']" class="menu-item">{{ pageText?.contacts }}</a>
                 <div class="menu-item">
@@ -73,9 +73,9 @@
             <a [routerLink]="['/catalog', 'shoes']" (click)="hideSearchGrid()" class="menu__point" (click)="close()"><label for="">{{ pageText?.shoues }}</label></a>
             <a [routerLink]="['/catalog', 'clothes']" (click)="hideSearchGrid()" class="menu__point" (click)="close()"><label for="">{{ pageText?.clothes }}</label></a>
             <a [routerLink]="['/catalog', 'accessories']" (click)="hideSearchGrid()" class="menu__point" (click)="close()"><label for="">{{ pageText?.accessories }}</label></a>
-            <a href="#" (click)="hideSearchGrid()" class="menu__point"><label for="">{{ pageText?.reviews }}</label></a>
-            <a [routerLink]="['faq', 'guarantee']" (click)="hideSearchGrid()" class="menu__point"><label for="">{{ pageText?.guarantees }}</label></a>
-            <a [routerLink]="['faq', 'contacts']" (click)="hideSearchGrid()" class="menu__point"><label for="">{{ pageText?.contacts }}</label></a>
+            <a [routerLink]="['reviews']" (click)="hideSearchGrid()" class="menu__point" (click)="close()"><label for="">{{ pageText?.reviews }}</label></a>
+            <a [routerLink]="['faq', 'guarantee']" (click)="hideSearchGrid()" class="menu__point" (click)="close()"><label for="">{{ pageText?.guarantees }}</label></a>
+            <a [routerLink]="['faq', 'contacts']" (click)="hideSearchGrid()" class="menu__point" (click)="close()"><label for="">{{ pageText?.contacts }}</label></a>
             <div class="menu__text">
                 {{ pageText?.menuText1 }}
                 <br>
@@ -142,7 +142,7 @@
     <footer>
         <div class="footer-header">
             <div class="footer-header-logo">
-                resell point
+                Resell Point
             </div>
             <div class="footer-header-email">
                 <a href="mailto:some.mail@gmail.com">some.mail@gmail.com</a>
@@ -169,7 +169,7 @@
                     <a (click)="hideSearchGrid()" [routerLink]="['faq/contacts']" class="footer-item">{{ pageText?.pay }}</a>
                 </div>
                 <div class="footer-section">
-                    <a (click)="hideSearchGrid()" [routerLink]="['/']" class="footer-item">{{ pageText?.reviews }}</a>
+                    <a (click)="hideSearchGrid()" [routerLink]="['reviews']" class="footer-item">{{ pageText?.reviews }}</a>
                     <a (click)="hideSearchGrid()" [routerLink]="['faq/guarantees']" class="footer-item">{{ pageText?.guarantees }}</a>
                     <a (click)="hideSearchGrid()" [routerLink]="['faq/contacts']" class="footer-item">{{ pageText?.contacts }}</a>
                 </div>

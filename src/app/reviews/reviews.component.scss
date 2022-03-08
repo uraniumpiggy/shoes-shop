@@ -1,0 +1,54 @@
+@mixin flexWidth($width, $gap) {
+    flex: calc($width - $gap);
+    max-width: calc($width - $gap);
+}
+
+.reviews-wrapper {
+    padding: 3%;
+
+    .header {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        padding: 3%;
+
+        .header-text {
+            font-size: 24px;
+
+            @media screen and (max-width: 768px) {
+                font-size: 20px;
+            }
+        }
+
+    }
+
+    .row {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 0 4px;
+    }
+      
+    .column {
+        @include flexWidth(25%, 8px);
+        padding: 0 4px;
+
+        @media screen and (max-width: 900px) {
+            & {
+                @include flexWidth(50%, 8px);
+            }
+        }
+
+        @media screen and (max-width: 768px) {
+            & {
+                @include flexWidth(100%, 8px);
+            }
+        }
+    }
+      
+    .column img {
+        margin-top: 8px;
+        vertical-align: middle;
+        width: 100%;
+        margin-bottom: 8px;
+    }
+}
