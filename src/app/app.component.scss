@@ -229,6 +229,34 @@ nav {
             display: flex;
             flex-direction: row;
 
+            .links-grid {
+                width: 100%;
+                font-size: 14px;
+        
+                .row {
+                    margin: 10px 0;
+                    display: grid;
+                    grid-template-columns: 1fr;
+                    gap: 5px;
+        
+                    div {
+                        display: flex;
+                        justify-content: flex-start;
+                        align-items: center;
+                        flex: 50%;
+                    }
+        
+                    img {
+                        width: 35px;
+                        height: 35px;
+                        // background: rgba(0, 0, 0, 0.2);
+                        // border-radius: 5px;
+                        // padding: 5px;
+                        margin-right: 20px;
+                    }
+                }
+            }
+
             .section-social {
                 display: flex;
                 flex-direction: row;
@@ -236,6 +264,7 @@ nav {
 
                 .social-button {
                     width: 50px;
+                    // color: #fff;
                     height: 50px;
                     background: rgba(0, 0, 0, 0.20);
                     border-radius: 5px;

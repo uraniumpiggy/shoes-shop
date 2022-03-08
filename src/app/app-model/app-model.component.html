@@ -22,10 +22,10 @@
                     {{ modelData?.id }}
                 </div>
                 <div class="desc-price">
-                    <div>
-                        19 500
-                        <span>₽</span>
-                    </div>
+                    <div *ngIf="price === '' else priceBlock">{{ langs.pagesWrapper.sizeHeaderAdmin }}</div>
+                    <ng-template #priceBlock>
+                        <div>{{ price }}</div>
+                    </ng-template>
                 </div>
                 <div class="button-buy"
                     (click)="openSizesAlert()"

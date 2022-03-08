@@ -1,13 +1,13 @@
 <div class="sizes-wrapper">
     <div class="size-price-section">
         <div class="title">
-            Доступные размеры
+            {{ langs.pagesWrapper.sizeHeader }}
         </div>
         <div class="sizesGrid">
             <div class="size-grid-item" *ngFor="let size of sizesToView">
                 <div class="size-grid-item-title"> {{ size }} </div>
                 <div class="size-grid-item-price">
-                    <div *ngIf="sizes[size] === '' else price">Цена не указана</div>
+                    <div *ngIf="sizes[size] === '' else price">{{ langs.pagesWrapper.sizeHeaderAdmin }}</div>
                     <ng-template #price>
                         <div>{{ sizes[size] }}</div>
                     </ng-template>
@@ -15,8 +15,16 @@
             </div>
         </div>    
     </div>
-    
-    <div class="contacts-button">
-        <a [routerLink]="['/faq/contacts']">Продольжить</a>
+
+    <div>
+        <div class="header">
+            {{ langs.pagesWrapper.avaluableSizes }}
+        </div>
+        
+        <div class="contacts-button">
+            <a href="https://www.instagram.com/mokiseller/">
+                {{ langs.pagesWrapper.modelPayButton }}
+            </a>
+        </div>
     </div>
 </div>

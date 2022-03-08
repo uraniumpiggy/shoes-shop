@@ -2,7 +2,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 100%;
+    height: 90%;
 
     .title {
         font-size: 30px;
@@ -23,23 +23,39 @@
             flex-direction: column;
             align-items: center;
             justify-content: space-around;
-            height: 50px;
+            height: auto;
             color: #fff;
             background-color: #0abab5;
 
             .size-grid-item-price {
                 font-size: 13px;
                 text-align: center;
+
+                @media screen and (max-width: 900px) {
+                    & {
+                        font-size: 11px;
+                    }
+                }
             }
         }
     }
 
+    .header {
+        padding: 5%;
+        margin-top: 50px;
+    }
+
     .contacts-button {
-        width: 50%;
-        margin: 0 auto;
+        // margin: 0 auto;
+        display: flex;
+        justify-content: center;
+
         a {
             display: block;
-            font-size: 12px;
+            width: 33%;
+            // height: 60px;
+            padding: 1em 2em;
+            font-size: 14px;
             letter-spacing: 0;
             text-align: center;
             border: 1px solid #0ABAB5;
@@ -48,7 +64,6 @@
             background-color: #0ABAB5;
             color: white;
             margin-top: 20px;
-            padding: 0.8rem 1.5rem;
             text-decoration: none;
         }
     }

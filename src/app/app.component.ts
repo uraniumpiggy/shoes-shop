@@ -159,4 +159,19 @@ export class AppComponent implements OnInit {
     this.langs.translateToRU()
     this.pageText = this.langs.pagesWrapper
   }
+
+  translateToNL() {
+    this.langs.translateToNL()
+    this.pageText = this.langs.pagesWrapper
+  }
+
+  translateToFR() {
+    this.langs.translateToFR()
+    this.pageText = this.langs.pagesWrapper
+  }
+
+  translateToIT() {
+    this.langs.translateToFR()
+    this.pageText = this.langs.pagesWrapper
+  }
 }

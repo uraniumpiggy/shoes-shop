@@ -22,6 +22,15 @@
 
     }
 
+    .reviews-text {
+        padding: 0 8px;
+        font-size: 14px;
+
+        a {
+            color: #0abab5;
+        }
+    }
+
     .row {
         display: flex;
         flex-wrap: wrap;

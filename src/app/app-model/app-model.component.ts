@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { LanguagesService } from '../services/languages.service';
-import { Model, ModelsService } from '../services/models.service';
+import { Model, ModelsService, SizePrice } from '../services/models.service';
 
 @Component({
   selector: 'app-model',
@@ -12,6 +12,7 @@ export class AppModelComponent implements OnInit {
 
   modelData: Model | undefined = undefined
   youMayBeInterestedData: Model[] = []
+  price: string | undefined = undefined
 
   isAlertOpen: boolean = false
   isSizesOpen: boolean = false
@@ -26,6 +27,10 @@ export class AppModelComponent implements OnInit {
     this.modelData = this.modelsService.getModelById(id)
     if (this.modelData !== undefined) {
       this.youMayBeInterestedData = this.modelsService.getModels(this.modelData.brand, 8)
+      for (let key in this.modelData.sizePrice) {
+        this.price = this.modelData?.sizePrice[key as keyof SizePrice]
+        break
+      }
     }
   }
 
