@@ -77,13 +77,17 @@ export class AppComponent implements OnInit {
 
   ngOnInit(): void {
       let userLang: string = (navigator.language).toLowerCase()
-      switch (userLang) {
-        case "ru-ru":
-          this.langs.translateToRU()
-          break
-        default:
-          break
+
+      if (userLang.includes("ru")) {
+        this.langs.translateToRU()
+      } else if (userLang.includes("fr")) {
+        this.translateToFR()
+      } else if (userLang.includes("nl")) {
+        this.translateToNL()
+      } else if (userLang.includes("it")) {
+        this.translateToIT()
       }
+
       this.pageText = this.langs.pagesWrapper
   }
 
