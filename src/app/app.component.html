@@ -82,6 +82,7 @@
             <a [routerLink]="['reviews']" (click)="hideSearchGrid()" class="menu__point" (click)="close()"><label for="">{{ pageText?.reviews }}</label></a>
             <a [routerLink]="['faq', 'guarantee']" (click)="hideSearchGrid()" class="menu__point" (click)="close()"><label for="">{{ pageText?.guarantees }}</label></a>
             <a [routerLink]="['faq', 'contacts']" (click)="hideSearchGrid()" class="menu__point" (click)="close()"><label for="">{{ pageText?.contacts }}</label></a>
+            <a [routerLink]="['faq', 'contacts']" (click)="hideSearchGrid()" class="menu__point" (click)="close()"><label for="">{{ pageText?.faqMenuTitle }}</label></a>
             <div class="menu__text">
                 {{ pageText?.menuText1 }}
                 <br>
@@ -165,7 +166,7 @@
                 <div class="footer-section">
                     <a (click)="hideSearchGrid()" [routerLink]="['faq/answers']" class="footer-item">{{ pageText?.howItWorks }}</a>
                     <a (click)="hideSearchGrid()" [routerLink]="['faq/delivery']" class="footer-item">{{ pageText?.deliveryAndReturns }}</a>
-                    <a (click)="hideSearchGrid()" [routerLink]="['faq/contacts']" class="footer-item">{{ pageText?.pay }}</a>
+                    <a (click)="hideSearchGrid()" [routerLink]="['faq/payment']" class="footer-item">{{ pageText?.pay }}</a>
                 </div>
                 <div class="footer-section">
                     <a (click)="hideSearchGrid()" [routerLink]="['reviews']" class="footer-item">{{ pageText?.reviews }}</a>

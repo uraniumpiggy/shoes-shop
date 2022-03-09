@@ -1,45 +1,29 @@
 <div class="faq-wrapper">
     <div class="faq">
-        <div class="faq-menu-mobile">
-            <div class="menu-selection">
-                <select name="mobile-menu-selector" id="selector" (change)="selectChangeHandler($event)">
-                    <option value="/faq/contacts" [selected]="buttonActive[0]" (click)="changeLink(0)">
-                        {{ langs.pagesWrapper.mainContacts }}
-                    </option>
-                    <option value="/faq/delivery" [selected]="buttonActive[1]" (click)="changeLink(1)">
-                        {{ langs.pagesWrapper.deliveryAndReturns }}
-                    </option>
-                    <option value="/faq/answers" [selected]="buttonActive[2]" (click)="changeLink(2)">{{ langs.pagesWrapper.faqTitle }}</option>
-                    <option value="/faq/guarantee" [selected]="buttonActive[3]" (click)="changeLink(3)">{{ langs.pagesWrapper.mainGuarantee }}</option>
-                    <option value="/faq/documents" [selected]="buttonActive[4]" (click)="changeLink(4)">{{ langs.pagesWrapper.mainDocuments }}</option>
-                </select>
-            </div>
-        </div>
         <div class="faq-menu">
             <a  
-                (click)="changeLink(0)"
                 [routerLink]="['contacts']"
-                [ngClass]="{active: buttonActive[0]}"
+                [routerLinkActive]="['active']"
             >{{ langs.pagesWrapper.mainContacts }}</a>
             <a 
-                (click)="changeLink(1)"
+                [routerLink]="['payment']"
+                [routerLinkActive]="['active']"
+            >{{ langs.pagesWrapper.pay }}</a>
+            <a 
                 [routerLink]="['delivery']"
-                [ngClass]="{active: buttonActive[1]}"
+                [routerLinkActive]="['active']"
             >{{ langs.pagesWrapper.deliveryAndReturns }}</a>
             <a 
-                (click)="changeLink(2)"
                 [routerLink]="['answers']"
-                [ngClass]="{active: buttonActive[2]}"
+                [routerLinkActive]="['active']"
             >{{ langs.pagesWrapper.faqTitle }}</a>
             <a 
-                (click)="changeLink(3)"
                 [routerLink]="['guarantee']"
-                [ngClass]="{active: buttonActive[3]}"
+                [routerLinkActive]="['active']"
             >{{ langs.pagesWrapper.mainGuarantee }}</a>
             <a 
-                (click)="changeLink(4)"
                 [routerLink]="['documents']"
-                [ngClass]="{active: buttonActive[4]}"
+                [routerLinkActive]="['active']"
             >{{ langs.pagesWrapper.mainDocuments }}</a>
             <div class="faq-menu-footer">
                 <b>{{ langs.pagesWrapper.faqNotFindAns }}</b>

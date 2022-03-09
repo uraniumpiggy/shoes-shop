@@ -13,11 +13,13 @@ import { FaqDocumentsModule } from "./faq-documents/faq-documents.module";
 import { FaqFaqModule } from "./faq-faq/faq-faq.module";
 import { FaqGuaranteeModule } from "./faq-guarantee/faq-guarantee.module";
 import { RouterModule } from "@angular/router";
+import { FaqPaymentComponent } from './faq-payment/faq-payment.component';
 
 
 @NgModule({
     declarations: [
         FaqPageComponent,
+        FaqPaymentComponent,
     ],
     imports: [
         CommonModule,

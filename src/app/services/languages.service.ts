@@ -17,6 +17,7 @@ export interface PagesText {
     pay: string, 
     deliveryAndReturns: string,
     support: string,
+    faqMenuTitle: string,
 
     emptyCatalogText: string,
     modelVendorCode: string,
@@ -122,6 +123,7 @@ export interface PagesText {
     feedbackp3: string,
     feedbackp4: string,
 
+    faqPaymentP1: string,
 }
 
 
@@ -145,6 +147,7 @@ export class LanguagesService {
         pay: 'Payment',
         deliveryAndReturns: 'Delivery and returns',
         support: 'Support',
+        faqMenuTitle: "FAQ",
 
         emptyCatalogText: 'Oops, nothing here yet. Expect more stock soon.',
         modelVendorCode: 'Vendor code',
@@ -201,7 +204,7 @@ export class LanguagesService {
         volume, as well as reimburse all costs for sending the goods for re-checking.`,
 
         aboutReseller: "Hi, I've been in the shoes and apparel business for over 3 years and I'm glad to welcome you to my store website. This is where you can find original shoes at a great price, with express delivery worldwide. You can contact any questions using our contacts listed on our website, we also have a separate category of answers to questions (FAQ) ",
-        p1: "We're always in touch! We are ready to answer your questions daily from 11:00 to 22:00 (Moscow time).",
+        p1: "We're always in touch! We are ready to answer your questions daily from 10:00 to 23:30 (Moscow time).",
         p2: 'Our mail: support@resellpoint.cc',
         p3: 'Reception of parcels: 5th Donskoy proezd 15с7, Moscow. Opening hours 14:00 - 18:00 daily. Please call or email us in advance.',
         p4: 'Full name of the organization: Limited Liability Company “RESELLPOINT” / “RESELLPOINT” LLC',
@@ -258,6 +261,8 @@ export class LanguagesService {
         feedbackp2: "You can leave a review on our site, to do this, contact the site administration and we will publish everything, thanks!",
         feedbackp3: "To leave a review, email us ",
         feedbackp4: " with feedback and we will publish everything",
+
+        faqPaymentP1: "To purchase an item and pay for it, please contact the administrator.",
     }  
 
     translateToRU() {
@@ -277,6 +282,7 @@ export class LanguagesService {
             pay: 'Оплата',
             deliveryAndReturns: 'Доставка и возврат',
             support: 'Поддержка',
+            faqMenuTitle: "FAQ",
     
             emptyCatalogText: 'Упс, тут пока что ничего нет. Cовсем скоро ожидайте пополнение ассортимента.',
             modelVendorCode: 'Артикул',
@@ -334,7 +340,7 @@ export class LanguagesService {
             объеме, а также возместим все расходы на пересылку товара для перепроверки.`,
     
             aboutReseller: '«Здравствуйте,я занимаюсь обувью и одеждой уже на протяжении уже более 3 лет и я рад вас приветствовать на сайте моего магазина.Именно здесь вы можете найти оригинальную обувь по отличной цене,с экспресс доставкой по всему миру.Вы можете обратиться по любым вопросам использовав наши контакты указанные на нашем сайте,также у нас есть отдельная категория ответов на вопросы(FAQ)»',
-            p1: 'Мы всегда на связи! Готовы ответить на ваши вопросы ежедневно с 11:00 до 22:00 (время московское).',
+            p1: 'Мы всегда на связи! Готовы ответить на ваши вопросы ежедневно с 10:00 до 23:30 (время московское).',
             p2: 'Наша почта: support@resellpoint.cc',
             p3: 'Прием посылок: 5-ый Донской проезд 15с7, Москва. Время работы 14:00 - 18:00 ежедневно. Предварительно позвоните или напишите нам.',
             p4: 'Полное наименование организации: Общество с ограниченной ответственностью “РЕСЕЛЛПОИНТ” / “RESELLPOINT” LLC',
@@ -392,6 +398,8 @@ export class LanguagesService {
             feedbackp2: "Вы можете оставить отзыв на нашем сайте, для этого свяжитесь с администрацией сайта и мы все опубликуем, спасибо!",
             feedbackp3: "Для того чтобы оставить отзыв напишите нам на почту ",
             feedbackp4: " с отзывом и мы все опубликуем",
+
+            faqPaymentP1: "Для покупки товара и его дальнейшей оплаты обращайтесь к администратору."
         }
 
         this.pagesWrapper = newText
@@ -414,6 +422,7 @@ export class LanguagesService {
             pay: 'Payment',
             deliveryAndReturns: 'Delivery and returns',
             support: 'Support',
+            faqMenuTitle: "FAQ",
 
             emptyCatalogText: 'Oops, nothing here yet. Expect more stock soon.',
             modelVendorCode: 'Vendor code',
@@ -470,7 +479,7 @@ export class LanguagesService {
             volume, as well as reimburse all costs for sending the goods for re-checking.`,
 
             aboutReseller: "Hi, I've been in the shoes and apparel business for over 3 years and I'm glad to welcome you to my store website. This is where you can find original shoes at a great price, with express delivery worldwide. You can contact any questions using our contacts listed on our website, we also have a separate category of answers to questions (FAQ) ",
-            p1: "We're always in touch! We are ready to answer your questions daily from 11:00 to 22:00 (Moscow time).",
+            p1: "We're always in touch! We are ready to answer your questions daily from 10:00 to 23:30 (Moscow time).",
             p2: 'Our mail: support@resellpoint.cc',
             p3: 'Reception of parcels: 5th Donskoy proezd 15с7, Moscow. Opening hours 14:00 - 18:00 daily. Please call or email us in advance.',
             p4: 'Full name of the organization: Limited Liability Company “RESELLPOINT” / “RESELLPOINT” LLC',
@@ -527,6 +536,8 @@ export class LanguagesService {
             feedbackp2: "You can leave a review on our site, to do this, contact the site administration and we will publish everything, thanks!",
             feedbackp3: "To leave a review, email us ",
             feedbackp4: " with feedback and we will publish everything",
+
+            faqPaymentP1: "To purchase an item and pay for it, please contact the administrator.",
         }
 
         this.pagesWrapper = newText
@@ -549,6 +560,7 @@ export class LanguagesService {
             pay: 'Betaling',
             deliveryAndReturns: 'Bezorgen en retourneren',
             support: 'Ondersteuning',
+            faqMenuTitle: "FAQ",
     
             emptyCatalogText: 'Oeps, hier nog niets. Verwacht binnenkort meer voorraad.',
             modelVendorCode: 'Artikel',
@@ -605,7 +617,7 @@ export class LanguagesService {
             volume, evenals alle kosten vergoeden voor het verzenden van de goederen voor hercontrole.`,
     
             aboutReseller: `Hallo, ik ben al meer dan 3 jaar actief in de schoenen- en kledingbranche en ik ben blij u te mogen verwelkomen op mijn winkelwebsite. Hier vindt u originele schoenen voor een geweldige prijs, met wereldwijde expreslevering." U kunt met al uw vragen contact opnemen via onze contactpersonen die op onze website staan ​​vermeld, we hebben ook een aparte categorie met antwoorden op vragen (FAQ) "`,
-            p1: 'We hebben altijd contact! Wij staan dagelijks van 11:00 tot 22:00 uur (Moskou tijd) klaar om uw vragen te beantwoorden.',
+            p1: 'We hebben altijd contact! Wij staan dagelijks van 10:00 tot 23:30 uur (Moskou tijd) klaar om uw vragen te beantwoorden.',
             p2: 'Onze mail: support@resellpoint.cc',
             p3: 'Ontvangst van pakketten: 5e Donskoy proezd 15с7, Moskou. Dagelijks geopend van 14:00 - 18:00 uur. Bel of mail ons dan vooraf.',
             p4: 'Volledige naam van de organisatie: Limited Liability Company "RESELLPOINT" / "RESELLPOINT" LLC',
@@ -663,6 +675,8 @@ export class LanguagesService {
             feedbackp2: "U kunt een recensie achterlaten op onze site, hiervoor neemt u contact op met de sitebeheerder en wij zullen alles publiceren, bedankt!",
             feedbackp3: "E-mail ons om een beoordeling achter te laten",
             feedbackp4: "met feedback en we zullen alles publiceren",
+
+            faqPaymentP1: "Neem contact op met de beheerder om een item te kopen en te betalen.",
         }
 
         this.pagesWrapper = newText
@@ -686,6 +700,7 @@ export class LanguagesService {
             pay: 'Paiement',
             deliveryAndReturns: 'Livraison et retours',
             support: 'Soutien',
+            faqMenuTitle: "FAQ",
     
             emptyCatalogText: 'Oups, rien ici pour le moment. Attendez-vous à plus de stock bientôt.',
             modelVendorCode: 'Article',
@@ -801,6 +816,8 @@ export class LanguagesService {
             feedbackp2: "Vous pouvez laisser un avis sur notre site, pour cela, contactez l'administration du site et nous publierons tout, merci !",
             feedbackp3: "Pour laisser un avis, envoyez-nous un e-mail",
             feedbackp4: "avec des commentaires et nous publierons tout",
+
+            faqPaymentP1: "Pour acheter un article et le payer, veuillez contacter l'administrateur.",
         }
 
         this.pagesWrapper = newText
@@ -823,6 +840,7 @@ export class LanguagesService {
             pay: 'Pagamento',
             deliveryAndReturns: 'Consegna e Resi',
             support: 'Supporto',
+            faqMenuTitle: "FAQ",
     
             emptyCatalogText: 'Oops, ancora niente qui. Aspettati più stock presto.',
             modelVendorCode: 'Articolo',
@@ -880,7 +898,7 @@ export class LanguagesService {
             volume, nonché rimborsare tutti i costi per l'invio della merce per il nuovo controllo.`,
     
             aboutReseller: "Ciao, sono nel settore delle scarpe e dell'abbigliamento da oltre 3 anni e sono lieto di darti il benvenuto sul sito Web del mio negozio. Qui puoi trovare scarpe originali a un ottimo prezzo, con consegna espressa in tutto il mondo. Puoi contattare qualsiasi domanda utilizzando i nostri contatti elencati sul nostro sito Web, abbiamo anche una categoria separata di risposte alle domande (FAQ) ",
-            p1: 'Siamo sempre in contatto! Siamo pronti a rispondere alle tue domande tutti i giorni dalle 11:00 alle 22:00 (ora di Mosca).',
+            p1: 'Siamo sempre in contatto! Siamo pronti a rispondere alle tue domande tutti i giorni dalle 10:00 alle 23:30 (ora di Mosca).',
             p2: 'La nostra posta: support@resellpoint.cc',
             p3: `Ricezione dei pacchi: 5° Donskoy proezd 15с7, Mosca. Orario di apertura 14:00 - 18:00 tutti i giorni. Si prega di chiamare o inviare un'e-mail in anticipo.`,
             p4: `Nome completo dell'organizzazione: Società a responsabilità limitata “RESELLPOINT” / “RESELLPOINT” LLC`,
@@ -938,6 +956,8 @@ export class LanguagesService {
             feedbackp2: "Puoi lasciare una recensione sul nostro sito, per farlo contatta l'amministrazione del sito e pubblicheremo tutto, grazie!",
             feedbackp3: "Per lasciare una recensione, inviaci un'e-mail",
             feedbackp4: "con feedback e pubblicheremo tutto",
+
+            faqPaymentP1: "Per acquistare un articolo e pagarlo, contatta l'amministratore.",
         }
 
         this.pagesWrapper = newText

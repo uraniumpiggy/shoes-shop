@@ -175,7 +175,7 @@ export class AppComponent implements OnInit {
   }
 
   translateToIT() {
-    this.langs.translateToFR()
+    this.langs.translateToIT()
     this.pageText = this.langs.pagesWrapper
   }
 }
