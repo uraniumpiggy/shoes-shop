@@ -14,12 +14,12 @@ import { FaqFaqModule } from "./faq-faq/faq-faq.module";
 import { FaqGuaranteeModule } from "./faq-guarantee/faq-guarantee.module";
 import { RouterModule } from "@angular/router";
 import { FaqPaymentComponent } from './faq-payment/faq-payment.component';
+import { FaqPaymentModule } from "./faq-payment/faq-payment.module";
 
 
 @NgModule({
     declarations: [
         FaqPageComponent,
-        FaqPaymentComponent,
     ],
     imports: [
         CommonModule,
@@ -30,6 +30,7 @@ import { FaqPaymentComponent } from './faq-payment/faq-payment.component';
         FaqDocumentsModule,
         FaqFaqModule,
         FaqGuaranteeModule,
+        FaqPaymentModule,
     ],
     bootstrap: [
         FaqPageComponent,        

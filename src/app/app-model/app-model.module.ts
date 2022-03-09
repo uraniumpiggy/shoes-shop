@@ -16,6 +16,7 @@ import { FaqDocumentsModule } from "../faq-page/faq-documents/faq-documents.modu
 import { FaqFaqModule } from "../faq-page/faq-faq/faq-faq.module";
 import { FaqGuaranteeModule } from "../faq-page/faq-guarantee/faq-guarantee.module";
 import { ModelSizesModule } from "./model-sizes/model-size.module";
+import { FaqPaymentModule } from "../faq-page/faq-payment/faq-payment.module";
 
 @NgModule({
     declarations: [
@@ -33,6 +34,7 @@ import { ModelSizesModule } from "./model-sizes/model-size.module";
         FaqDocumentsModule,
         FaqFaqModule,
         FaqGuaranteeModule,
+        FaqPaymentModule,
         ModelSizesModule,
     ],
     bootstrap: [AppModelComponent],

@@ -107,7 +107,7 @@
     *ngIf="isAlertOpen" 
     (onClose)="closeAlertWindow($event)"
 >
-    <app-faq-contacts *ngIf="arrayIndex === 0 && !isSizesOpen"></app-faq-contacts>
+    <app-faq-payment *ngIf="arrayIndex === 0 && !isSizesOpen"></app-faq-payment>
     <app-faq-delivery *ngIf="arrayIndex === 1 && !isSizesOpen"></app-faq-delivery>
     <app-faq-guarantee *ngIf="arrayIndex === 2 && !isSizesOpen"></app-faq-guarantee>
     <app-faq-contacts *ngIf="arrayIndex === 3 && !isSizesOpen"></app-faq-contacts>
