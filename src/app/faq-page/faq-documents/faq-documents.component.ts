@@ -13,4 +13,20 @@ export class FaqDocumentsComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  showLicense() {
+    window.open('./assets/license.pdf')
+  }
+
+  showAgent() {
+    window.open('./assets/Agent.pdf')
+  }
+
+  showRules() {
+    window.open('./assets/Rules.pdf')
+  }
+
+  showPolitics() {
+    window.open('./assets/Politics.pdf')
+  }
+
 }

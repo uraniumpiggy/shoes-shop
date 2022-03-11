@@ -238,21 +238,28 @@ nav {
                     display: grid;
                     grid-template-columns: 1fr;
                     gap: 5px;
-        
-                    div {
-                        display: flex;
-                        justify-content: flex-start;
-                        align-items: center;
-                        flex: 50%;
-                    }
-        
-                    img {
-                        width: 35px;
-                        height: 35px;
-                        // background: rgba(0, 0, 0, 0.2);
-                        // border-radius: 5px;
-                        // padding: 5px;
-                        margin-right: 20px;
+
+                    a {
+                        text-decoration: none;
+                        color: #000;
+
+                        div {
+                            display: flex;
+                            justify-content: flex-start;
+                            align-items: center;
+                            flex: 50%;
+    
+                        }
+            
+                        img {
+                            width: 35px;
+                            height: 35px;
+                            // background: rgba(0, 0, 0, 0.2);
+                            // border-radius: 5px;
+                            // padding: 5px;
+                            margin-right: 20px;
+                        }
+
                     }
                 }
             }
