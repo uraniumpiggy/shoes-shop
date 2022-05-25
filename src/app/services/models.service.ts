@@ -455,6 +455,195 @@ export class ModelsService {
       },
       imgs: ['./assets/img34_1.jpeg','./assets/img34_2.jpeg','./assets/img34_3.jpeg','./assets/img34_4.jpeg','./assets/img34_5.jpeg']
     },
+    {
+      id: 35,
+      brand: 'Adidas',
+      model: 'Yeezy Boost 350 V2',
+      colors: "'Dazzling Blue'",
+      releaseDate: '27/02/2022',
+      sizePrice: {
+        "US 12": '',
+        "US 8": '',
+      },
+      imgs: ['./assets/img35_1.jpeg','./assets/img35_2.jpeg','./assets/img35_3.jpeg','./assets/img35_4.jpeg','./assets/img35_5.jpeg']
+    },
+    {
+      id: 36,
+      brand: 'Nike X Clot',
+      model: 'Air Max 1 2021',
+      colors: "'Kiss of Death'",
+      releaseDate: '28/02/2021',
+      sizePrice: {
+        "US 8": '',
+        "US 9.5": '',
+        "US 11": '',
+      },
+      imgs: ['./assets/img36_1.jpeg','./assets/img36_2.jpeg','./assets/img36_3.jpeg','./assets/img36_4.jpeg','./assets/img36_5.jpeg']
+    },
+    {
+      id: 37,
+      brand: 'Nike',
+      model: 'Air Jordan 1 Retro High OG',
+      colors: "'Patent Bred'",
+      releaseDate: '31/12/2021',
+      sizePrice: {
+        "US 11": '',
+      },
+      imgs: ['./assets/img37_1.jpeg','./assets/img37_2.jpeg','./assets/img37_3.jpeg','./assets/img37_4.jpeg','./assets/img37_5.jpeg']
+    },
+    {
+      id: 38,
+      brand: 'Nike',
+      model: 'Air Jordan 1 Mid',
+      colors: "'Sonics'",
+      releaseDate: '08/12/2021',
+      sizePrice: {
+        "US 9": '',
+      },
+      imgs: ['./assets/img38_1.webp']
+    },
+
+    {
+      id: 39,
+      brand: 'Nike X Off-White',
+      model: 'Air Rubber Dunk',
+      colors: "'University Blue'",
+      releaseDate: '02/10/2020',
+      sizePrice: {
+        "US 9": '',
+        "US 10.5": '',
+      },
+      imgs: ['./assets/img39_1.png']
+    },
+    {
+      id: 40,
+      brand: 'Nike',
+      model: 'Travis Scott x Air Max 270 React ENG',
+      colors: "'Cactus Trails'",
+      releaseDate: '29/05/2020',
+      sizePrice: {
+        "US 9": '',
+        "US 12": '',
+      },
+      imgs: ['./assets/img40_1.jpeg','./assets/img40_2.jpeg','./assets/img40_3.jpeg']
+    },
+    {
+      id: 41,
+      brand: 'Nike X Parra',
+      model: 'Dunk Low Pro SB',
+      colors: "'Abstract Art'",
+      releaseDate: '01/08/2021',
+      sizePrice: {
+        "US 8.5": '',
+        "US 10": '',
+        "US 11": '',
+      },
+      imgs: ['./assets/img41_1.jpeg','./assets/img41_2.jpeg','./assets/img41_3.jpeg','./assets/img41_4.jpeg','./assets/img41_5.jpeg']
+    },
+    {
+      id: 42,
+      brand: 'Nike',
+      model: 'Air Jordan 4 Retro',
+      colors: "'Taupe Haze'",
+      releaseDate: '28/02/2021',
+      sizePrice: {
+        "US 10": '',
+      },
+      imgs: ['./assets/img42_1.jpeg','./assets/img42_2.jpeg','./assets/img42_3.jpeg','./assets/img42_4.jpeg','./assets/img42_5.jpeg']
+    },
+
+    {
+      id: 43,
+      brand: 'Nike',
+      model: 'Air Jordan 1 Retro High OG',
+      colors: "'Hyper Royal'",
+      releaseDate: '18/04/2021',
+      sizePrice: {
+        "US 9": ''
+      },
+      imgs: ['./assets/img43_1.jpeg','./assets/img43_2.jpeg','./assets/img43_3.jpeg','./assets/img43_4.jpeg','./assets/img43_5.jpeg']
+    },
+    {
+      id: 44,
+      brand: 'Nike X Maison Chateau Rouge',
+      model: 'Air Jordan 1 Mid SE',
+      colors: "'Fearless'",
+      releaseDate: '01/12/2019',
+      sizePrice: {
+        "US 8.5": '',
+        "US 9": ''
+      },
+      imgs: ['./assets/img44_1.jpeg','./assets/img44_2.jpeg','./assets/img44_3.jpeg','./assets/img44_4.jpeg','./assets/img44_5.jpeg']
+    },
+    {
+      id: 45,
+      brand: 'Nike X Off-White',
+      model: 'Air Jordan 2 Retro Low SP',
+      colors: "'White Varsity Red'",
+      releaseDate: '12/11/2021',
+      sizePrice: {
+        "US 8": ''
+      },
+      imgs: ['./assets/img45_1.jpeg','./assets/img45_2.jpeg','./assets/img45_3.jpeg','./assets/img45_4.jpeg','./assets/img45_5.jpeg']
+    },
+    {
+      id: 46,
+      brand: 'Nike X Travis Scott',
+      model: 'Air Jordan 1 Retro High OG',
+      colors: "'Mocha'",
+      releaseDate: '06/06/2019',
+      sizePrice: {
+        "US 10.5": ''
+      },
+      imgs: ['./assets/img46_1.jpeg','./assets/img46_2.jpeg','./assets/img46_3.jpeg','./assets/img46_4.jpeg','./assets/img46_5.jpeg']
+    },
+
+    {
+      id: 47,
+      brand: 'Nike X Off-White',
+      model: 'Dunk Low',
+      colors: "'Pine Green'",
+      releaseDate: '21/12/2019',
+      sizePrice: {
+        "US 8.5": ''
+      },
+      imgs: ['./assets/img47_1.jpeg','./assets/img47_2.jpeg','./assets/img47_3.jpeg','./assets/img47_4.jpeg']
+    },
+    {
+      id: 48,
+      brand: 'Nike',
+      model: 'Dunk Low SB',
+      colors: "'Mummy'",
+      releaseDate: '29/10/2021',
+      sizePrice: {
+        "US 7.5": '',
+        "US 9": '',
+        "US 12": '',
+      },
+      imgs: ['./assets/img48_1.jpeg','./assets/img48_2.jpeg','./assets/img48_3.jpeg','./assets/img48_4.jpeg','./assets/img48_5.jpeg']
+    },
+    {
+      id: 49,
+      brand: 'Nike',
+      model: 'Air Jordan 4 Retro SP',
+      colors: "'30th Anniversary Union Desert Moss'",
+      releaseDate: '24/06/2021',
+      sizePrice: {
+        "US 10": ''
+      },
+      imgs: ['./assets/img49_1.webp','./assets/img49_2.webp']
+    },
+    {
+      id: 50,
+      brand: 'Nike X Off-White',
+      model: 'Air Force 1 Low',
+      colors: "'Volt'",
+      releaseDate: '20/12/2018',
+      sizePrice: {
+        "US 9.5": ''
+      },
+      imgs: ['./assets/img50_1.jpeg','./assets/img50_2.jpeg','./assets/img50_3.jpeg','./assets/img50_4.jpeg','./assets/img50_5.jpeg']
+    },
     
   ]
   sizesArray: string[] = ['US 3.5','US 4','US 4.5','US 5','US 5.5','US 6','US 6.5','US 7','US 7.5','US 8','US 8.5','US 9','US 9.5','US 10','US 10.5','US 11','US 11.5','US 12','US 12.5','US 13','US 13.5','US 14','US 14.5','US 15','US 15.5','US 16','US 16.5','US 17','US 17.5','US 18','US 18.5','US 19','US 19.5','US 20','US 20.5','US 21','US 21.5','US 22']
