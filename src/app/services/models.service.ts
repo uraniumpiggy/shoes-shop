@@ -22,6 +22,7 @@ export interface SizePrice {
   ["US 12.5"]?: string,
   ["US 13"]?: string,
   ["US 13.5"]?: string,
+  ["US 13.5w"]?: string,
   ["US 14"]?: string,
   ["US 14.5"]?: string,
   ["US 15"]?: string,
@@ -76,8 +77,13 @@ export class ModelsService {
       colors: "'Patta Waves Monarch'",
       releaseDate: '15/10/2021',
       sizePrice: {
+        "US 5": '',
         "US 6": '',
+        "US 8": '',
+        "US 9": '',
         "US 10": '',
+        "US 10.5": '',
+        "US 11": '',
       },
       imgs: ['./assets/img2_1.webp']
     },
@@ -88,9 +94,12 @@ export class ModelsService {
       colors: "'Patta Waves Noise Aqua'",
       releaseDate: '04/11/2021',
       sizePrice: {
+        "US 4": '',
         "US 7": '',
+        "US 8": '',
         "US 9": '',
         "US 9.5": '',
+        "US 10": '',
       },
       imgs: ['./assets/img3_1.webp']
     },
@@ -184,7 +193,9 @@ export class ModelsService {
       colors: "'Cool Grey'",
       releaseDate: '11/12/2021',
       sizePrice: {
-        "US 8": '',
+        "US 7": '',
+        "US 8.5": '',
+        "US 10": '',
         "US 11": '',
       },
       imgs: ['./assets/img11_1.jpeg','./assets/img11_2.jpeg','./assets/img11_3.jpeg','./assets/img11_4.jpeg','./assets/img11_5.jpeg']
@@ -219,6 +230,10 @@ export class ModelsService {
       releaseDate: '14/09/2021',
       sizePrice: {
         "US 8": '',
+        "US 8.5": '',
+        "US 9": '',
+        "US 9.5": '',
+        "US 10": '',
         "US 11": '',
       },
       imgs: ['./assets/img14_1.jpg','./assets/img14_2.jpg','./assets/img14_3.jpg','./assets/img14_4.jpg','./assets/img14_5.jpg']
@@ -278,9 +293,11 @@ export class ModelsService {
       colors: "'Dark Iris'",
       releaseDate: '30/04/2021',
       sizePrice: {
-        "US 7": '',
+        "US 6": '',
         "US 9": '',
+        "US 9.5": '',
         "US 10.5": '',
+        "US 13": ''
       },
       imgs: ['./assets/img19_1.jpeg','./assets/img19_2.jpeg','./assets/img19_3.jpeg','./assets/img19_4.jpeg','./assets/img19_5.jpeg']
     },
@@ -303,7 +320,7 @@ export class ModelsService {
       colors: "'Raised By Women'",
       releaseDate: '29/04/2021',
       sizePrice: {
-        "US 12": '',
+        "US 13.5w": '',
       },
       imgs: ['./assets/img21_1.jpeg','./assets/img21_2.jpeg','./assets/img21_3.jpeg','./assets/img21_4.jpeg','./assets/img21_5.jpeg']
     },
@@ -391,11 +408,11 @@ export class ModelsService {
     {
       id: 29,
       brand: 'Nike',
-      model: 'Air Jordan 1 Retro High OG GS',
+      model: 'Air Jordan 1 Retro High OG',
       colors: "'Volt Gold'",
       releaseDate: '10/01/2021',
       sizePrice: {
-        "US 10.5": '',
+        "US 9.5": '',
       },
       imgs: ['./assets/img29_1.jpeg','./assets/img29_2.jpeg','./assets/img29_3.jpeg','./assets/img29_4.jpeg','./assets/img29_5.jpeg']
     },
@@ -428,7 +445,9 @@ export class ModelsService {
       colors: "'University Blue'",
       releaseDate: '29/04/2021',
       sizePrice: {
-        "US 10": ''
+        "US 10": '',
+        "US 10.5": '',
+        "US 11": '',
       },
       imgs: ['./assets/img32_1.jpeg','./assets/img32_2.jpeg','./assets/img32_3.jpeg','./assets/img32_4.jpeg','./assets/img32_5.jpeg']
     },
