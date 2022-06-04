@@ -12,7 +12,7 @@ export class AppCatalogPageComponent implements OnInit {
   constructor(public langs: LanguagesService, private router: Router) { }
 
   ngOnInit(): void {
-    this.router.navigateByUrl('/catalog/shoes');
+    // this.router.navigateByUrl('/catalog/shoes');
   }
 
 }

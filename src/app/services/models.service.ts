@@ -64,9 +64,9 @@ export class ModelsService {
       colors: "'White Black'",
       releaseDate: '14/01/2021',
       sizePrice: {
-        "US 9": '',
-        "US 9.5": '',
-        "US 10": '',
+        "US 9": '180 €',
+        "US 9.5": '180 €',
+        "US 10": '180 €',
       },
       imgs: ['./assets/img1_1.jpg','./assets/img1_2.jpg','./assets/img1_3.jpg','./assets/img1_4.jpg']
     },
@@ -77,13 +77,13 @@ export class ModelsService {
       colors: "'Patta Waves Monarch'",
       releaseDate: '15/10/2021',
       sizePrice: {
-        "US 5": '',
-        "US 6": '',
-        "US 8": '',
-        "US 9": '',
-        "US 10": '',
-        "US 10.5": '',
-        "US 11": '',
+        "US 5": '240 €',
+        "US 6": '240 €',
+        "US 8": '240 €',
+        "US 9": '240 €',
+        "US 10": '240 €',
+        "US 10.5": '240 €',
+        "US 11": '240 €',
       },
       imgs: ['./assets/img2_1.webp']
     },
@@ -94,12 +94,12 @@ export class ModelsService {
       colors: "'Patta Waves Noise Aqua'",
       releaseDate: '04/11/2021',
       sizePrice: {
-        "US 4": '',
-        "US 7": '',
-        "US 8": '',
-        "US 9": '',
-        "US 9.5": '',
-        "US 10": '',
+        "US 4": '230 €',
+        "US 7": '230 €',
+        "US 8": '230 €',
+        "US 9": '230 €',
+        "US 9.5": '230 €',
+        "US 10": '230 €',
       },
       imgs: ['./assets/img3_1.webp']
     },
@@ -110,7 +110,7 @@ export class ModelsService {
       colors: "'Lemon Drop'",
       releaseDate: '20/05/2021',
       sizePrice: {
-        "US 12": ''
+        "US 12": '305 €'
       },
       imgs: ['./assets/img4_1.png']
     },
@@ -144,9 +144,9 @@ export class ModelsService {
       colors: "'Lightning'",
       releaseDate: '28/08/2021',
       sizePrice: {
-        "US 9": '',
-        "US 10": '',
-        "US 11": '',
+        "US 9": '235 €',
+        "US 10": '235 €',
+        "US 11": '235 €',
       },
       imgs: ['./assets/img7_1.jpeg','./assets/img7_2.jpeg','./assets/img7_3.jpeg','./assets/img7_4.jpeg']
     },
@@ -157,9 +157,9 @@ export class ModelsService {
       colors: "'Dark Mocha'",
       releaseDate: '30/10/2020',
       sizePrice: {
-        "US 9": '',
-        "US 9.5": '',
-        "US 10": '',
+        "US 9": '345 €',
+        "US 9.5": '345 €',
+        "US 10": '345 €',
       },
       imgs: ['./assets/img8_1.jpeg','./assets/img8_2.jpeg','./assets/img8_3.jpeg','./assets/img8_4.jpeg']
     },
@@ -170,7 +170,7 @@ export class ModelsService {
       colors: "'Tokyo Bio Hack'",
       releaseDate: '05/09/2020',
       sizePrice: {
-        "US 10": ''
+        "US 10": '320 €'
       },
       imgs: ['./assets/img9_1.jpeg','./assets/img9_2.jpeg','./assets/img9_3.jpeg','./assets/img9_4.jpeg']
     },
@@ -193,10 +193,10 @@ export class ModelsService {
       colors: "'Cool Grey'",
       releaseDate: '11/12/2021',
       sizePrice: {
-        "US 7": '',
-        "US 8.5": '',
-        "US 10": '',
-        "US 11": '',
+        "US 7": '190 €',
+        "US 8.5": '190 €',
+        "US 10": '190 €',
+        "US 11": '190 €',
       },
       imgs: ['./assets/img11_1.jpeg','./assets/img11_2.jpeg','./assets/img11_3.jpeg','./assets/img11_4.jpeg','./assets/img11_5.jpeg']
     },
@@ -218,7 +218,7 @@ export class ModelsService {
       colors: "'Light Smoke Grey'",
       releaseDate: '15/09/2021',
       sizePrice: {
-        "US 10": ''
+        "US 10": '230 €'
       },
       imgs: ['./assets/img13_1.jpeg','./assets/img13_2.jpeg','./assets/img13_3.jpeg','./assets/img13_4.jpeg','./assets/img13_5.jpeg']
     },
@@ -229,12 +229,12 @@ export class ModelsService {
       colors: "'Net Orange Blaze'",
       releaseDate: '14/09/2021',
       sizePrice: {
-        "US 8": '',
-        "US 8.5": '',
-        "US 9": '',
-        "US 9.5": '',
-        "US 10": '',
-        "US 11": '',
+        "US 8": '190 €',
+        "US 8.5": '190 €',
+        "US 9": '190 €',
+        "US 9.5": '190 €',
+        "US 10": '190 €',
+        "US 11": '190 €',
       },
       imgs: ['./assets/img14_1.jpg','./assets/img14_2.jpg','./assets/img14_3.jpg','./assets/img14_4.jpg','./assets/img14_5.jpg']
     },
@@ -258,8 +258,8 @@ export class ModelsService {
       colors: "'Blue'",
       releaseDate: '13/08/2021',
       sizePrice: {
-        "US 9.5": '',
-        "US 10.5": '',
+        "US 9.5": '870 €',
+        "US 10.5": '870 €',
       },
       imgs: ['./assets/img16_1.png']
     },
@@ -281,8 +281,8 @@ export class ModelsService {
       colors: "'Free.99 - White'",
       releaseDate: '07/05/2021',
       sizePrice: {
-        "US 7": '',
-        "US 11": '',
+        "US 7": '125 €',
+        "US 11": '125 €',
       },
       imgs: ['./assets/img18_1.jpeg','./assets/img18_2.jpeg','./assets/img18_3.jpeg','./assets/img18_4.jpeg','./assets/img18_5.jpeg']
     },
@@ -293,11 +293,11 @@ export class ModelsService {
       colors: "'Dark Iris'",
       releaseDate: '30/04/2021',
       sizePrice: {
-        "US 6": '',
-        "US 9": '',
-        "US 9.5": '',
-        "US 10.5": '',
-        "US 13": ''
+        "US 6": '250 €',
+        "US 9": '250 €',
+        "US 9.5": '250 €',
+        "US 10.5": '250 €',
+        "US 13": '250 €'
       },
       imgs: ['./assets/img19_1.jpeg','./assets/img19_2.jpeg','./assets/img19_3.jpeg','./assets/img19_4.jpeg','./assets/img19_5.jpeg']
     },
@@ -353,10 +353,10 @@ export class ModelsService {
       colors: "'White Oreo'",
       releaseDate: '03/07/2021',
       sizePrice: {
-        "US 8": '',
-        "US 9": '',
-        "US 10": '',
-        "US 10.5": '',
+        "US 8": '310 €',
+        "US 9": '310 €',
+        "US 10": '310 €',
+        "US 10.5": '310 €',
       },
       imgs: ['./assets/img24_1.jpeg','./assets/img24_2.jpeg','./assets/img24_3.jpeg','./assets/img24_4.jpeg','./assets/img24_5.jpeg']
     },
@@ -367,7 +367,7 @@ export class ModelsService {
       colors: "'Medium Curry'",
       releaseDate: '29/01/2021',
       sizePrice: {
-        "US 10": ''
+        "US 10": '320 €'
       },
       imgs: ['./assets/img25_1.jpeg','./assets/img25_2.jpeg','./assets/img25_3.jpeg','./assets/img25_4.jpeg','./assets/img25_5.jpeg']
     },
@@ -389,8 +389,8 @@ export class ModelsService {
       colors: "'University Blue'",
       releaseDate: '07/03/2021',
       sizePrice: {
-        "US 10": '',
-        "US 9": '',
+        "US 10": '330 €',
+        "US 9": '330 €',
       },
       imgs: ['./assets/img27_1.jpeg','./assets/img27_2.jpeg','./assets/img27_3.jpeg','./assets/img27_4.jpeg','./assets/img27_5.jpeg']
     },
@@ -412,7 +412,7 @@ export class ModelsService {
       colors: "'Volt Gold'",
       releaseDate: '10/01/2021',
       sizePrice: {
-        "US 9.5": '',
+        "US 9.5": '215 €',
       },
       imgs: ['./assets/img29_1.jpeg','./assets/img29_2.jpeg','./assets/img29_3.jpeg','./assets/img29_4.jpeg','./assets/img29_5.jpeg']
     },
@@ -445,9 +445,9 @@ export class ModelsService {
       colors: "'University Blue'",
       releaseDate: '29/04/2021',
       sizePrice: {
-        "US 10": '',
-        "US 10.5": '',
-        "US 11": '',
+        "US 10": '320 €',
+        "US 10.5": '320 €',
+        "US 11": '320 €',
       },
       imgs: ['./assets/img32_1.jpeg','./assets/img32_2.jpeg','./assets/img32_3.jpeg','./assets/img32_4.jpeg','./assets/img32_5.jpeg']
     },
@@ -506,7 +506,7 @@ export class ModelsService {
       colors: "'Patent Bred'",
       releaseDate: '31/12/2021',
       sizePrice: {
-        "US 11": '',
+        "US 11": '180 €',
       },
       imgs: ['./assets/img37_1.jpeg','./assets/img37_2.jpeg','./assets/img37_3.jpeg','./assets/img37_4.jpeg','./assets/img37_5.jpeg']
     },
@@ -553,9 +553,9 @@ export class ModelsService {
       colors: "'Abstract Art'",
       releaseDate: '01/08/2021',
       sizePrice: {
-        "US 8.5": '',
-        "US 10": '',
-        "US 11": '',
+        "US 8.5": '290 €',
+        "US 10": '290 €',
+        "US 11": '290 €',
       },
       imgs: ['./assets/img41_1.jpeg','./assets/img41_2.jpeg','./assets/img41_3.jpeg','./assets/img41_4.jpeg','./assets/img41_5.jpeg']
     },
@@ -612,7 +612,7 @@ export class ModelsService {
       colors: "'Mocha'",
       releaseDate: '06/06/2019',
       sizePrice: {
-        "US 10.5": ''
+        "US 10.5": '2200 €'
       },
       imgs: ['./assets/img46_1.jpeg','./assets/img46_2.jpeg','./assets/img46_3.jpeg','./assets/img46_4.jpeg','./assets/img46_5.jpeg']
     },

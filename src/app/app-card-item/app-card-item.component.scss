@@ -24,7 +24,7 @@
     .card-text {
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
+        justify-content: space-around;
         height: 50%;
 
         .card-brands {
@@ -55,5 +55,6 @@
         color: #000000;
         letter-spacing: 0.47px;
         text-align: center;
+        // margin-bottom: 7px;
     }
 }

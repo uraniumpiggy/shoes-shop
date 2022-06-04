@@ -17,12 +17,12 @@ import { ReviewsComponent } from './reviews/reviews.component';
 
 const routes: Routes = [
   {path: '', component: AppMainPageComponent},
+  {path: 'model/:id', component: AppModelComponent},
   {path: 'catalog', component: AppCatalogPageComponent, children: [
     {path: 'shoes', component: AppShoesComponent},
     {path: 'clothes', component: ClothesComponent},
     {path: 'accessories', component: AccessoriesComponent},  
   ]},
-  {path: 'model/:id', component: AppModelComponent},
   {path: 'faq', component: FaqPageComponent, children: [
     {path: 'contacts', component: FaqContactsComponent},
     {path: 'delivery', component: FaqDeliveryComponent},
