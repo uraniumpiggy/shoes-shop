@@ -1,3 +1,43 @@
 <div class="order-wrapper">
-    
+    <form class="order-form">
+        <div class="input-wrapper">
+            <mat-form-field appearance="fill">
+                <mat-label>Полное имя</mat-label>
+                <input matInput type="text">
+            </mat-form-field>
+        </div>
+
+        <div class="input-wrapper">
+            <mat-form-field appearance="fill" class="address-input">
+                <mat-label>Полный адрес</mat-label> 
+                <input 
+                    matInput 
+                    type="text" 
+                    [ngModel]="address" 
+                    (ngModelChange)="handleAddressChange($event)" 
+                    name="address"
+                    [matAutocomplete]="auto"
+                >
+                <mat-autocomplete #auto="matAutocomplete">
+                    <mat-option *ngFor="let option of addressHints" [value]="option">
+                        {{option}}
+                    </mat-option>
+                </mat-autocomplete>
+            </mat-form-field>
+        </div>
+
+        <div class="input-wrapper">
+            <mat-form-field appearance="fill">
+                <mat-label>Email</mat-label>
+                <input matInput type="email">
+            </mat-form-field>
+        </div>
+
+        <div class="input-wrapper">
+            <mat-form-field appearance="fill">
+                <mat-label>Номер телефона</mat-label>
+                <input matInput type="tel">
+            </mat-form-field>
+        </div>   
+    </form>
 </div>

@@ -1,0 +1,25 @@
+.order-wrapper {
+    padding: 20px 5%;
+}
+
+.order-from {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.address-input {
+    width: 600px !important;
+}
+
+::ng-deep .mat-focused .mat-form-field-label {
+    color: #0abab5 !important;
+}
+  
+::ng-deep.mat-form-field-underline {
+    background-color: #0abab5 !important;
+} 
+  
+::ng-deep.mat-form-field-ripple {
+   background-color: #0abab5 !important;
+}
