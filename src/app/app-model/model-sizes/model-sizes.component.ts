@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { LanguagesService } from 'src/app/services/languages.service';
 import { SizePrice } from 'src/app/services/models.service';
 
@@ -10,9 +11,12 @@ import { SizePrice } from 'src/app/services/models.service';
 export class ModelSizesComponent implements OnInit {
 
   @Input() sizes: SizePrice | any
-  sizesToView: string[] = [] 
+  @Input() modelId: number | undefined 
+  sizesToView: string[] = []
 
-  constructor(public langs: LanguagesService) { }
+  constructor(
+    public langs: LanguagesService, 
+    private router: Router) { }
 
   ngOnInit(): void {
     if (this.sizes !== undefined) {
@@ -20,6 +24,10 @@ export class ModelSizesComponent implements OnInit {
         this.sizesToView.push(size)
       }
     }
+  }
+
+  navigateToOrder() { 
+    this.router.navigate(['/order'], { queryParams: {id: this.modelId} })
   }
 
 }

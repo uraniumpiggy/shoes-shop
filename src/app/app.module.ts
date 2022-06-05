@@ -13,6 +13,7 @@ import { FaqPageModule } from './faq-page/faq-page.module';
 import { SearchGridComponent } from './search-grid/search-grid.component';
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 import { ReviewsComponent } from './reviews/reviews.component';
+import { OrderModule } from './order/order.module';
 
 @NgModule({
   declarations: [
@@ -30,6 +31,7 @@ import { ReviewsComponent } from './reviews/reviews.component';
     AppModelModule,
     FormsModule,
     FaqPageModule,
+    OrderModule
   ],
   providers: [{provide: LocationStrategy, useClass: HashLocationStrategy}],
   bootstrap: [AppComponent]

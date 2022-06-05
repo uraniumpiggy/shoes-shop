@@ -111,5 +111,5 @@
     <app-faq-delivery *ngIf="arrayIndex === 1 && !isSizesOpen"></app-faq-delivery>
     <app-faq-guarantee *ngIf="arrayIndex === 2 && !isSizesOpen"></app-faq-guarantee>
     <app-faq-contacts *ngIf="arrayIndex === 3 && !isSizesOpen"></app-faq-contacts>
-    <app-model-sizes *ngIf="isSizesOpen" [sizes]="modelData?.sizePrice"></app-model-sizes>
+    <app-model-sizes *ngIf="isSizesOpen" [sizes]="modelData?.sizePrice" [modelId]="modelData?.id"></app-model-sizes>
 </app-full-screen-banner>
