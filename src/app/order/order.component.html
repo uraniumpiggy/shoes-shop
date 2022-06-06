@@ -1,43 +1,73 @@
 <div class="order-wrapper">
+    <div class="order-title">Оформление заказа</div>
+    
     <form class="order-form">
-        <div class="input-wrapper">
-            <mat-form-field appearance="fill">
-                <mat-label>Полное имя</mat-label>
-                <input matInput type="text">
-            </mat-form-field>
+        <div class="order-form-section">
+            <div class="order-header">Контактная информация</div>
+    
+            <div class="order-contacts-grid">
+                <div class="input-wrapper">
+                    <mat-form-field appearance="fill">
+                        <mat-label>Полное имя</mat-label>
+                        <input matInput required type="text">
+                    </mat-form-field>
+                </div>
+        
+                <div class="input-wrapper">
+                    <mat-form-field appearance="fill">
+                        <mat-label>Email</mat-label>
+                        <input matInput required type="email">
+                    </mat-form-field>
+                </div>
+        
+                <div class="input-wrapper">
+                    <mat-form-field appearance="fill">
+                        <mat-label>Номер телефона</mat-label>
+                        <input matInput required type="tel">
+                    </mat-form-field>
+                </div> 
+            </div>
+    
+            <div class="order-header">Адрес доставки</div>
+    
+            <div class="input-wrapper">
+                <mat-form-field appearance="fill" class="address-input">
+                    <mat-label>Полный адрес</mat-label> 
+                    <input 
+                        matInput 
+                        type="text" 
+                        [ngModel]="address" 
+                        (ngModelChange)="handleAddressChange($event)" 
+                        name="address"
+                        [matAutocomplete]="auto"
+                        required
+                    >
+                    <mat-hint>Включая почтовый индекс</mat-hint>
+                    <mat-autocomplete #auto="matAutocomplete">
+                        <mat-option *ngFor="let option of addressHints" [value]="option">
+                            {{option}}
+                        </mat-option>
+                    </mat-autocomplete>
+                </mat-form-field>
+            </div>
+            <div class="order-submit-wrapper lg-button">
+                <p>Продолжить</p>
+            </div>  
         </div>
-
-        <div class="input-wrapper">
-            <mat-form-field appearance="fill" class="address-input">
-                <mat-label>Полный адрес</mat-label> 
-                <input 
-                    matInput 
-                    type="text" 
-                    [ngModel]="address" 
-                    (ngModelChange)="handleAddressChange($event)" 
-                    name="address"
-                    [matAutocomplete]="auto"
-                >
-                <mat-autocomplete #auto="matAutocomplete">
-                    <mat-option *ngFor="let option of addressHints" [value]="option">
-                        {{option}}
-                    </mat-option>
-                </mat-autocomplete>
-            </mat-form-field>
+        <div class="order-form-section">
+            <div class="order-image-wrapper">
+                <img [src]="modelImg" alt="model">
+                <div class="order-header">Описание модели</div>
+                <div class="order-descr-grid">
+                    <p>{{ model?.brand + ' ' + model?.model }}</p>
+                    <p>{{ model?.colors }}</p>
+                    <p>{{ model?.releaseDate }}</p>
+                </div>
+                <p>Размер: {{ size }} | Цена: {{ price }}</p>
+            </div>
         </div>
-
-        <div class="input-wrapper">
-            <mat-form-field appearance="fill">
-                <mat-label>Email</mat-label>
-                <input matInput type="email">
-            </mat-form-field>
-        </div>
-
-        <div class="input-wrapper">
-            <mat-form-field appearance="fill">
-                <mat-label>Номер телефона</mat-label>
-                <input matInput type="tel">
-            </mat-form-field>
-        </div>   
+        <div class="order-submit-wrapper xs-button">
+            <p>Продолжить</p>
+        </div> 
     </form>
 </div>

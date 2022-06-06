@@ -131,6 +131,8 @@ export interface PagesText {
     providedIn: 'root'
 })
 export class LanguagesService {
+    currentLanguage: string = 'en'
+
     pagesWrapper: PagesText = {
         catalog: 'Catalogue',
         reviews: 'Reviews',
@@ -266,6 +268,8 @@ export class LanguagesService {
     }  
 
     translateToRU() {
+        this.currentLanguage = 'ru'
+
         const newText: PagesText = {
             catalog: 'Каталог',
             reviews: 'Отзывы',
@@ -406,6 +410,8 @@ export class LanguagesService {
     }
 
     translateToUS() {
+        this.currentLanguage = 'en'
+
         const newText: PagesText = {
             catalog: 'Catalogue',
             reviews: 'Reviews',
@@ -544,6 +550,8 @@ export class LanguagesService {
     }
 
     translateToNL() {
+        this.currentLanguage = 'nl'
+
         const newText: PagesText = {
             catalog: 'Catalogus',
             reviews: 'Beoordelingen',
@@ -684,6 +692,8 @@ export class LanguagesService {
     }
 
     translateToFR() {
+        this.currentLanguage = 'fr'
+
         const newText: PagesText = {
             catalog: 'Catalogue',
             reviews: 'Avis',
@@ -824,6 +834,8 @@ export class LanguagesService {
     }
 
     translateToIT() {
+        this.currentLanguage = 'it'
+
         const newText: PagesText = {
             catalog: 'Catalogo',
             reviews: 'Recensioni',

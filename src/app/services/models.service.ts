@@ -682,7 +682,7 @@ export class ModelsService {
     return result
   }
 
-  getModelById(id: number): Model|undefined  {
+  getModelById(id: number): Model|undefined {
     for (let item of this.models) {
       if (item.id === id) {
         return item

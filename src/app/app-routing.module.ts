@@ -19,7 +19,7 @@ import { ReviewsComponent } from './reviews/reviews.component';
 const routes: Routes = [
   {path: '', component: AppMainPageComponent},
   {path: 'model/:id', component: AppModelComponent},
-  {path: 'order', component: OrderComponent},
+  {path: 'order/:id/:size', component: OrderComponent},
   {path: 'catalog', component: AppCatalogPageComponent, children: [
     {path: 'shoes', component: AppShoesComponent},
     {path: 'clothes', component: ClothesComponent},

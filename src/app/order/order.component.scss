@@ -1,15 +1,116 @@
+$gridMediaShift: 800px;
+
 .order-wrapper {
     padding: 20px 5%;
+
+    .order-title {
+        font-size: 30px;
+        text-transform: uppercase;
+        margin-bottom: 40px;
+
+        @media screen and (max-width: $gridMediaShift) {
+            & {
+                font-size: 24px;
+            }
+        }
+    }
+    
+    .order-form {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+
+        @media screen and (max-width: $gridMediaShift) {
+            & {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .order-form-section {
+            width: 100%;
+        }
+
+        .order-header {
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+        
+        .order-contacts-grid {
+            margin-top: 20px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+
+            @media screen and (max-width: 576px) {
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+            }
+        }
+    }
+    
+
+    .order-image-wrapper {
+        padding: 0 5%;
+
+        img {
+            width: 100%
+        }
+
+        .order-descr-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            text-align: center;
+        }
+    }
+
+    .order-submit-wrapper {
+        display: flex;
+        justify-content: center;
+
+        p {
+            display: block;
+            margin: 0 auto;
+            width: 33%;
+            cursor: pointer;
+            padding: 1em 2em;
+            font-size: 14px;
+            letter-spacing: 0;
+            text-align: center;
+            border: 1px solid #0ABAB5;
+            border-radius: 3px;
+            transition: all 0.3s;
+            background-color: #0ABAB5;
+            color: white;
+            margin-top: 20px;
+            text-decoration: none;
+        }
+
+        &.lg-button {
+            display: block;
+        }
+
+        &.xs-button {
+            display: none;
+        }
+
+        @media screen and (max-width: $gridMediaShift) {
+            &.lg-button {
+                display: none;
+            }
+            &.xs-button {
+                display: block;
+            }
+        }
+    }
 }
 
-.order-from {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
 
-.address-input {
-    width: 600px !important;
+
+
+
+
+::ng-deep .mat-form-field  {
+    width: 100% !important;
 }
 
 ::ng-deep .mat-focused .mat-form-field-label {

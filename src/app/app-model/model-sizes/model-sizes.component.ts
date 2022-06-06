@@ -13,6 +13,7 @@ export class ModelSizesComponent implements OnInit {
   @Input() sizes: SizePrice | any
   @Input() modelId: number | undefined 
   sizesToView: string[] = []
+  selectedSize: string = ''
 
   constructor(
     public langs: LanguagesService, 
@@ -26,8 +27,19 @@ export class ModelSizesComponent implements OnInit {
     }
   }
 
-  navigateToOrder() { 
-    this.router.navigate(['/order'], { queryParams: {id: this.modelId} })
+  navigateToOrder() {
+    if (this.selectedSize === '') {
+      return
+    } 
+    this.router.navigate([`/order/${this.modelId}/${this.selectedSize}`])
+  }
+
+  handleSelectSize(size: string) {
+    if (size === this.selectedSize) {
+      this.selectedSize = ''
+      return
+    }
+    this.selectedSize = size
   }
 
 }

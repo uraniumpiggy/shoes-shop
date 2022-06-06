@@ -4,7 +4,12 @@
             {{ langs.pagesWrapper.sizeHeader }}
         </div>
         <div class="sizesGrid">
-            <div class="size-grid-item" *ngFor="let size of sizesToView">
+            <div 
+                class="size-grid-item" 
+                *ngFor="let size of sizesToView" 
+                (click)="handleSelectSize(size)"
+                [class.active]="selectedSize === size"
+            >
                 <div class="size-grid-item-title"> {{ size }} </div>
                 <div class="size-grid-item-price">
                     <div *ngIf="sizes[size] === '' else price">{{ langs.pagesWrapper.sizeHeaderAdmin }}</div>

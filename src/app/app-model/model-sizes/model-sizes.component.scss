@@ -24,8 +24,15 @@
             align-items: center;
             justify-content: space-around;
             height: auto;
-            color: #fff;
-            background-color: #0abab5;
+            color: #000;
+            background-color: #f3f3f3;
+            cursor: pointer;
+            transition: .3s background-color, color;
+
+            &.active {
+                color: #fff;
+                background-color: #0abab5;
+            }
 
             .size-grid-item-price {
                 font-size: 13px;
