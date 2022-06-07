@@ -1,6 +1,9 @@
-import { HttpClient, HttpParams } from '@angular/common/http';
+import { HttpClient, HttpErrorResponse, HttpParams } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, Validators } from '@angular/forms';
+import { MatSnackBar } from '@angular/material/snack-bar';
 import { ActivatedRoute, Router } from '@angular/router';
+import { catchError, throwError, timeout } from 'rxjs';
 import { LanguagesService } from '../services/languages.service';
 import { Model, ModelsService } from '../services/models.service';
 import { SizePrice } from '../services/models.service';
@@ -26,11 +29,20 @@ export class OrderComponent implements OnInit {
   modelImg: string | undefined
   price: string | undefined
 
+  checkoutForm = this.formBuilder.group({
+    fullName: '',
+    email: ['', Validators.email],
+    phoneNumber: '',
+    fullAddress: '',
+  })
+
   constructor(private http: HttpClient, 
               public langs: LanguagesService, 
               private activatedRoute: ActivatedRoute,
               private modelServeice: ModelsService,
-              private router: Router) 
+              private router: Router,
+              private formBuilder: FormBuilder,
+              private snackBar: MatSnackBar) 
   {
     this.activatedRoute.params.subscribe(params => {
       const id: number = parseInt(params['id'])
@@ -47,8 +59,8 @@ export class OrderComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  handleAddressChange(value: string) {
-    this.address = value
+  handleAddressChange() {
+    this.address = this.checkoutForm.get('fullAddress')?.value
     if (!this.address.trim()) {
       return
     }
@@ -60,15 +72,34 @@ export class OrderComponent implements OnInit {
 
     this.http.get<AddressTips>('https://api.geoapify.com/v1/geocode/autocomplete', {
       params: params
-    })
-      .subscribe(response => {
+    }).pipe(
+      catchError((error: HttpErrorResponse) => {
+        this.addressHints = []
+        return throwError(() => {
+          new Error(error.message)
+        })
+      }),
+    )
+      .subscribe(
+        (response: AddressTips) => {
         if (response.features.length > 0) {
           this.addressHints = response.features.map((item) => {
             return item.properties.formatted
           })
         }
-    }, error => {
-      this.addressHints = []
-    })
+      }
+    )
+  }
+
+  handleSubmit() {
+    if (this.checkoutForm.value.fullName === '' ||
+        !this.checkoutForm.get('email')?.valid || 
+        this.checkoutForm.value.email === '' ||
+        this.checkoutForm.value.phoneNumber === '' ||
+        this.checkoutForm.value.fullAddress === '') 
+    {
+      this.snackBar.open('Неверно заполнена форма', 'Закрыть')
+    }
+    console.log(this.checkoutForm.value.fullName)
   }
 }

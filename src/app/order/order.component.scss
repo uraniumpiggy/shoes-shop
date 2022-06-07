@@ -53,13 +53,29 @@ $gridMediaShift: 800px;
         padding: 0 5%;
 
         img {
-            width: 100%
+            width: 100%;
+            margin-bottom: 10px;
         }
 
         .order-descr-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            text-align: center;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+
+            .order-descr-row {
+                display: flex;
+                justify-content: space-between;
+                border-bottom: 1px solid #000;
+                font-size: 14px;
+
+                p:first-child {
+                    text-align: left;
+                }
+
+                p:last-child {
+                    text-align: right;
+                }
+            }
         }
     }
 
@@ -67,10 +83,10 @@ $gridMediaShift: 800px;
         display: flex;
         justify-content: center;
 
-        p {
+        button {
             display: block;
             margin: 0 auto;
-            width: 33%;
+            min-width: 33%;
             cursor: pointer;
             padding: 1em 2em;
             font-size: 14px;
