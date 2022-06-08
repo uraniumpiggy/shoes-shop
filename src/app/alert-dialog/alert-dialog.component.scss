@@ -1,0 +1,15 @@
+.dialog-content {
+    font-size: 14px;
+    max-width: 500px;
+}
+
+.dialog-actions {
+    display: flex;
+    justify-content: flex-end;
+
+    button {
+        width: 100px;
+        background-color: #0ABAB5;
+        color: #fff;
+    }
+}

@@ -50,6 +50,9 @@ export class OrderComponent implements OnInit {
       this.size = params['size']
       this.model = this.modelServeice.getModelById(id)
       this.price = this.model?.sizePrice[this.size as keyof SizePrice]
+      if (this.price === '') {
+        this.price = 'Цену уточните у администратора'
+      }
       if (this.model === undefined || this.price === undefined) {
         this.router.navigate(['/'])
       }
