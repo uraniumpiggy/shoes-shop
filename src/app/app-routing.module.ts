@@ -14,12 +14,14 @@ import { FaqGuaranteeComponent } from './faq-page/faq-guarantee/faq-guarantee.co
 import { FaqPageComponent } from './faq-page/faq-page.component';
 import { FaqPaymentComponent } from './faq-page/faq-payment/faq-payment.component';
 import { OrderComponent } from './order/order.component';
+import { PaymentComponent } from './payment/payment.component';
 import { ReviewsComponent } from './reviews/reviews.component';
 
 const routes: Routes = [
   {path: '', component: AppMainPageComponent},
   {path: 'model/:id', component: AppModelComponent},
   {path: 'order/:id/:size', component: OrderComponent},
+  {path: 'payment', component: PaymentComponent},
   {path: 'catalog', component: AppCatalogPageComponent, children: [
     {path: 'shoes', component: AppShoesComponent},
     {path: 'clothes', component: ClothesComponent},

@@ -1,7 +1,7 @@
 import { HttpClient, HttpErrorResponse, HttpParams } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
-import { MatSnackBar } from '@angular/material/snack-bar';
+import { MatSnackBar, MatSnackBarConfig } from '@angular/material/snack-bar';
 import { ActivatedRoute, Router } from '@angular/router';
 import { catchError, throwError, timeout } from 'rxjs';
 import { LanguagesService } from '../services/languages.service';
@@ -42,8 +42,9 @@ export class OrderComponent implements OnInit {
               private modelServeice: ModelsService,
               private router: Router,
               private formBuilder: FormBuilder,
-              private snackBar: MatSnackBar) 
-  {
+              private snackBar: MatSnackBar) { }
+
+  ngOnInit(): void {
     this.activatedRoute.params.subscribe(params => {
       const id: number = parseInt(params['id'])
       this.size = params['size']
@@ -53,10 +54,7 @@ export class OrderComponent implements OnInit {
         this.router.navigate(['/'])
       }
       this.modelImg = this.model?.imgs[0]
-    })  
-  }
-
-  ngOnInit(): void {
+    }) 
   }
 
   handleAddressChange() {
@@ -98,8 +96,11 @@ export class OrderComponent implements OnInit {
         this.checkoutForm.value.phoneNumber === '' ||
         this.checkoutForm.value.fullAddress === '') 
     {
-      this.snackBar.open('Неверно заполнена форма', 'Закрыть')
+      let config = new MatSnackBarConfig()
+      config.duration = 5000
+      this.snackBar.open('Неверно заполнена форма', 'Закрыть', config)
+    } else {
+      this.router.navigate(['/payment'])
     }
-    console.log(this.checkoutForm.value.fullName)
   }
 }
