@@ -15,7 +15,6 @@ import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 import { ReviewsComponent } from './reviews/reviews.component';
 import { OrderModule } from './order/order.module';
 import { PaymentModule } from './payment/payment.module';
-import { AlertDialogModule } from './alert-dialog/alert-dialog.module';
 
 @NgModule({
   declarations: [
@@ -35,7 +34,6 @@ import { AlertDialogModule } from './alert-dialog/alert-dialog.module';
     FaqPageModule,
     OrderModule,
     PaymentModule,
-    AlertDialogModule
   ],
   providers: [{provide: LocationStrategy, useClass: HashLocationStrategy}],
   bootstrap: [AppComponent]

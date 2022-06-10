@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
+import { AlertDialogComponent } from '../alert-dialog/alert-dialog.component';
+import { LanguagesService } from '../services/languages.service';
 
 @Component({
   selector: 'app-payment',
@@ -7,9 +10,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PaymentComponent implements OnInit {
 
-  constructor() { }
+  constructor(private dialog: MatDialog,
+              public langs: LanguagesService) { }
 
   ngOnInit(): void {
+    this.dialog.open(AlertDialogComponent)
   }
 
 }

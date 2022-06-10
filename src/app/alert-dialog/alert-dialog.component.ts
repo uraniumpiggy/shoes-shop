@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { LanguagesService } from '../services/languages.service';
 
 @Component({
   selector: 'app-alert-dialog',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AlertDialogComponent implements OnInit {
 
-  constructor() { }
+  constructor(public langs: LanguagesService) { }
 
   ngOnInit(): void {
   }

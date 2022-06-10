@@ -101,7 +101,7 @@ export class OrderComponent implements OnInit {
     {
       let config = new MatSnackBarConfig()
       config.duration = 5000
-      this.snackBar.open('Неверно заполнена форма', 'Закрыть', config)
+      this.snackBar.open(this.langs.pagesWrapper.orderAlertText, this.langs.pagesWrapper.orderAlertClose, config)
     } else {
       this.router.navigate(['/payment'])
     }

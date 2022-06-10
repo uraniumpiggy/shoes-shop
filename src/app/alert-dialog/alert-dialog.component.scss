@@ -1,6 +1,18 @@
 .dialog-content {
     font-size: 14px;
     max-width: 500px;
+
+    a {
+        text-decoration: none;
+    }
+
+    a:link {
+        color: #0ABAB5;
+    }
+
+    a:visited {
+        color: #0ABAB5;
+    }
 }
 
 .dialog-actions {

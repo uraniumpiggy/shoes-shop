@@ -1,7 +1,5 @@
 import { animate, style, transition, trigger } from '@angular/animations';
 import { ChangeDetectorRef, Component, ElementRef, OnInit, Renderer2, ViewChild } from '@angular/core';
-import { MatDialog } from '@angular/material/dialog';
-import { AlertDialogComponent } from './alert-dialog/alert-dialog.component';
 import { LanguagesService, PagesText } from './services/languages.service';
 import { Model, ModelsService } from './services/models.service';
 
@@ -66,7 +64,6 @@ export class AppComponent implements OnInit {
               private modelsService: ModelsService, 
               private renderer: Renderer2, 
               private langs: LanguagesService,
-              public dialog: MatDialog
               ) {
     this.renderer.listen('window', 'click', (e: Event) => {
       if (this.isTranslateOpen) {
@@ -79,8 +76,6 @@ export class AppComponent implements OnInit {
   }
 
   ngOnInit(): void {
-      this.dialog.open(AlertDialogComponent)
-
       let userLang: string = (navigator.language).toLowerCase()
 
       if (userLang.includes("ru")) {

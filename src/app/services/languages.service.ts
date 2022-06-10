@@ -124,6 +124,39 @@ export interface PagesText {
     feedbackp4: string,
 
     faqPaymentP1: string,
+
+    orderPageHeader: string,
+    orderContacts: string,
+    orderFullName: string,
+    orderPhoneNumber: string,
+    orderAddressHeader: string,
+    orderAddress: string,
+    orderPostalCode: string,
+    orderModelDescription: string,
+    orderModelName: string,
+    orderSizeAndPrice: string,
+    orderAlertText: string,
+    orderAlertClose: string,
+    orderContinue: string,
+
+    paymentAlertHeader: string,
+    paymentAlertP1: string,
+    paymentAlertP2: string,
+    paymentAlertP3: string,
+    paymentAlertP4: string,
+    paymentAlertP5: string,
+    paymentAlertA: string,
+
+    paymentDescriptionP1: string,
+    paymentDescriptionA1: string,
+    paymentDescriptionP2: string,
+    paymentDescriptionP3: string,
+    paymentDescriptionP4: string,
+    paymentKoronaPay: string,
+    paymentCountry: string,
+    paymentCountry2: string,
+    paymentLink1: string,
+    paymentLink2: string,
 }
 
 
@@ -133,7 +166,7 @@ export interface PagesText {
 export class LanguagesService {
     currentLanguage: string = 'en'
 
-    pagesWrapper: PagesText = {
+    initalText: PagesText = {
         catalog: 'Catalogue',
         reviews: 'Reviews',
         guarantees: 'Guarantees',
@@ -265,7 +298,42 @@ export class LanguagesService {
         feedbackp4: " with feedback and we will publish everything",
 
         faqPaymentP1: "To purchase an item and pay for it, please contact the administrator.",
+
+        orderPageHeader: "Order Processing",
+        orderContacts: "Contact Information",
+        orderFullName: "Full Name",
+        orderPhoneNumber: "Phone number",
+        orderAddressHeader: "Shipping address",
+        orderAddress: "Full address",
+        orderPostalCode: "Please also include a postal code",
+        orderModelDescription: "Model Description",
+        orderModelName: "Model name",
+        orderSizeAndPrice: "Size and Price",
+        orderAlertText: "Invalid form",
+        orderAlertClose: "Close",
+        orderContinue: "Continue",
+
+        paymentAlertHeader: "Important announcement",
+        paymentAlertP1: "Dear friends!",
+        paymentAlertP2: "We want to inform you that secure transactions through the Vinted system are currently not possible due to the location of our warehouses in Russia. We are also working as usual, delivery within Europe is working in full.",
+        paymentAlertP3: "Your money will be safe and your payment will be protected.",
+        paymentAlertP4: "PayPal payment is also unavailable due to its temporary closure in Russia.",
+        paymentAlertP5: "For details, please contact the",
+        paymentAlertA: "administrator.",
+
+        paymentDescriptionP1: "For questions and problems with payment, you can always contact",
+        paymentDescriptionA1: "support",
+        paymentDescriptionP2: "We will always be happy to help you.",
+        paymentDescriptionP3: "Contact administrator after payment.",
+        paymentDescriptionP4: "Your shoes are reserved for 4 hours, after this period the shoes will be on sale again.",
+        paymentKoronaPay: "To make a payment you will need to pass identity verification to secure your payment which you can cancel, it won't take long.",
+        paymentCountry: "Country",
+        paymentCountry2: "Russia",
+        paymentLink1: "Download KoronaPay app",
+        paymentLink2: "KoronaPay service website",
     }  
+
+    pagesWrapper: PagesText = this.initalText
 
     translateToRU() {
         this.currentLanguage = 'ru'
@@ -403,7 +471,40 @@ export class LanguagesService {
             feedbackp3: "Для того чтобы оставить отзыв напишите нам на почту ",
             feedbackp4: " с отзывом и мы все опубликуем",
 
-            faqPaymentP1: "Для покупки товара и его дальнейшей оплаты обращайтесь к администратору."
+            faqPaymentP1: "Для покупки товара и его дальнейшей оплаты обращайтесь к администратору.",
+
+            orderPageHeader: "Оформление заказа",
+            orderContacts: "Контактная информация",
+            orderFullName: "Полное имя",
+            orderPhoneNumber: "Номер телефона",
+            orderAddressHeader: "Адрес доставки",
+            orderAddress: "Полный адрес",
+            orderPostalCode: "Укажите также почтовый индекс",
+            orderModelDescription: "Описание модели",
+            orderModelName: "Название модели",
+            orderSizeAndPrice: "Размер и цена",
+            orderAlertText: "Неверно заполнена форма",
+            orderAlertClose: "Закрыть",
+            orderContinue: "Продолжить",
+
+            paymentAlertHeader: "Важное объявление",
+            paymentAlertP1: "Дорогие друзья!",
+            paymentAlertP2: "Хотим вам сообщить о том, что безопасные сделки через систему «Vinted» на данный момент невозможны из-за нахождения наших складов на территории России. Мы также работаем в прежнем режиме, доставка по Европе работает в полном объёме.",
+            paymentAlertP3: "Ваши деньги будут в безопасности и ваш платёж будет защищен.",
+            paymentAlertP4: "Оплата сервисом PayPal также недоступна из-за временного закрытия его в России.",
+            paymentAlertP5: "За подробной информацией обращайтесь к",
+            paymentAlertA: "администратору",
+
+            paymentDescriptionP1: "По вопросам и проблемам с оплатой Вы всегда можете обратиться в",
+            paymentDescriptionA1: "поддержку",
+            paymentDescriptionP2: "Мы всегда будем рады вам помочь.",
+            paymentDescriptionP3: "После оплаты свяжитесь с администратором.",
+            paymentDescriptionP4: "Ваша обувь зарезервирована на 4 часа, по истечении данного срока обувь снова будет в продаже.",
+            paymentKoronaPay: "Для совершения платежа вам будет необходимо пройти верификацию личности для безопасности вашего платежа который вы можете отменить,это не займёт много времени.",
+            paymentCountry: "Страна",
+            paymentCountry2: "Россия",
+            paymentLink1: "Скачать приложение KoronaPay",
+            paymentLink2: "Сайт сервиса KoronaPay",
         }
 
         this.pagesWrapper = newText
@@ -412,141 +513,7 @@ export class LanguagesService {
     translateToUS() {
         this.currentLanguage = 'en'
 
-        const newText: PagesText = {
-            catalog: 'Catalogue',
-            reviews: 'Reviews',
-            guarantees: 'Guarantees',
-            contacts: 'Contacts',
-            shoues: 'Shoes',
-            clothes: 'Clothes',
-            accessories: 'Accessories',
-            menuText1: 'Never miss an important event.',
-            menuText2: 'Follow our social media networks.',
-            searchPlaceholder: 'Enter model name',
-            platform: 'Platform',
-            howItWorks: 'How it works',
-            pay: 'Payment',
-            deliveryAndReturns: 'Delivery and returns',
-            support: 'Support',
-            faqMenuTitle: "FAQ",
-
-            emptyCatalogText: 'Oops, nothing here yet. Expect more stock soon.',
-            modelVendorCode: 'Vendor code',
-            modelModel: 'Model',
-            modelBrand: 'Brand',
-            modelColoring: 'Coloring',
-            modelReliaseDate: 'Release Date',
-            modelPayButton: 'Buy',
-            modelYouWillLike: 'You will like it',
-            learnMore: 'Learn more',
-
-            mainTitle: 'Most secure marketplace',
-            mainSubtitle: 'Original limited edition shoes, clothes and accessories',
-            mainCatalogButton: 'View catalog',
-            mainNewCarouselTitle: 'New',
-            mainTeaserTitle: 'The safest platform to buy and sell rare clothes, shoes and accessories.',
-            mainTesserLine1: 'Only original products',
-            mainTesserLine2: 'Fast delivery worldwide',
-            mainTesserLine3: 'Safety and risk free',
-            mainHaveAQuestion: 'Any questions?',
-
-            mainHowItWorks: 'How the site works',
-            mainGuarantee: 'Originality Guarantees',
-            mainAnswers: 'Answers to frequently asked questions',
-            mainContacts: 'Contact Information',
-            mainDocuments: 'Official Documents',
-            mainMobileWeHaveAns: 'We probably already have the answer to your question:',
-            mainMobileFAQ: 'View F.A.Q.',
-            mainMail: 'If you have any questions or requests, you can always email us',
-            mainOr: 'or',
-            mainSocialMedia: 'in Instagram or Vkontakte',
-            faqTitle: 'F. A. Q.',
-            faqNotFindAns: "Didn't find what you were looking for?",
-            faqContactViaEmail: 'Email us',
-
-            faqDocTitle: 'Offer',
-            faqDocLink1: 'Agency Agreement',
-            faqDocLink2: 'License Agreement',
-            faqDocLink3: 'Sale Rules',
-            faqDocLink4: 'Personal data processing policy',
-
-            faqDocGuaranteeP1: `All items purchased from resell point are original and new. Every item passes through our office, where
-            tested by two independent teams for authenticity and no signs of wear. After a successful
-            passing all checks, we attach a special “resell point verified” seal to each item, which
-            is a guarantee of the originality of the goods.`,
-            faqDocGuaranteeP2: `All things are checked by true professionals - the team `,
-            faqDocGuaranteeP3: `. We are very meticulous about our
-            work so that you can be sure you are purchasing a genuine product.`,
-            faqDocGuaranteeP4: `If you think you have received a counterfeit product, please contact us immediately. We
-            we consider each appeal individually, if the product has a “resell point” seal
-            verified". If you doubt the authenticity of the received goods, you can send it back to us at
-            double-checking with an explanation of what exactly, in your opinion, indicates the non-original goods. If
-            a second check will show that the product is really fake - we will refund your purchase price in full
-            volume, as well as reimburse all costs for sending the goods for re-checking.`,
-
-            aboutReseller: "Hi, I've been in the shoes and apparel business for over 3 years and I'm glad to welcome you to my store website. This is where you can find original shoes at a great price, with express delivery worldwide. You can contact any questions using our contacts listed on our website, we also have a separate category of answers to questions (FAQ) ",
-            p1: "We're always in touch! We are ready to answer your questions daily from 10:00 to 23:30 (Moscow time).",
-            p2: 'Our mail: support@resellpoint.cc',
-            p3: 'Reception of parcels: 5th Donskoy proezd 15с7, Moscow. Opening hours 14:00 - 18:00 daily. Please call or email us in advance.',
-            p4: 'Full name of the organization: Limited Liability Company “RESELLPOINT” / “RESELLPOINT” LLC',
-            p5: 'Address of PVZ SDEK: Moscow, st. Gagarinsky district, 2k1 (PVZ code: MSK362)',
-            p6: 'BIN: 1187847219892',
-            p7: 'TIN: 7811702969',
-            p8: 'checkpoint: 781101901',
-            p9: 'Legal address: St. Petersburg, Khrustalnaya st., 14. Telephone +7 (495) 006-92-39',
-            filtersLabel: "Filters",
-            hideFilters: "Hide filters",
-            resetFilters: 'Reset filters',
-            filterSize: 'Size',
-            filterModels: 'Models',
-            filterShowRes: 'Show results',
-            filtersSearch: 'Search',
-
-            delAndReturns1: "The delivery process consists of 4 stages",
-            delAndReturns2: "- Order acceptance;",
-            delAndReturns3: "- Order processing (check integrity and originality);",
-            delAndReturns4: "- Sending order;",
-            delAndReturns5: "- Providing the buyer with a tracking number for tracking the parcel, as well as a declaration.",
-            delAndReturns6: "Delivery time is calculated individually and depends on your country, check with the site administration.",
-            delAndReturns7: "Shipping is worldwide, with some exceptions.",
-            delAndReturns8: "ResellPoint is solely responsible for your order and its safety.",
-
-            faqAnsHeader1: "1. Where should I ship my item after purchase confirmation?",
-            faqAns1p1: "The package must be sent by CDEK courier service to the pickup point at:",
-            faqAns1p2: "Moscow, Gagarinsky district st., 2k1 (PVZ code: MSK362) +7 (495) 006-92-39",
-            faqAns1p3: "If you live in another country, please contact the site administration and follow their instructions.",
-            faqAns1p4: "Also, you can bring the item to the office on your own to our office at the address: Moscow, Varshavskoye shosse 1с1. Business center “W PLAZA”, red brick building. You can leave the item at any time at the reception of the business center. Please , put a sheet with your e-mail and lot number in the box.",
-            faqAns1p5: "If you're shipping sneakers, please remember to take care of the packaging so that the box doesn't get damaged in transit.",
-            faqAns1p6: "If you are in Moscow, you can bring the sneakers to our office in person. To do this, write to us at support@resellpoint.cc with the note 'I want to personally deliver the sneakers.' In a reply email, we will send you the address and time in which we can accept your goods.",
-            faqAnsHeader2: "2. I think they sent me a fake, what should I do?",
-            faqAns2p1: "If you are sure that the item you bought on the platform is non-original, you can write to us at support@resellpoint.cc and send the sneakers back to our office. We maintain a database with photos of all sneakers sold, and after Once we are sure it is the exact shoe we sent you, we will re-evaluate it for originality.",
-            faqAnsHeader3: "3. What regions do you ship to?",
-            faqAns3p1: "Shipping is worldwide with no restrictions.",
-            faqAnsHeader4: "4. Will there be an app for phones?",
-            faqAns4p1: "Yes, work on the application is already underway, but at the moment the service is only available in the site format at https://resellpoint.cc/",
-            faqAnsHeader5: "5. How long will the delivery take?",
-            faqAns5p1: "Check with the administrator for the number of delivery days",
-
-            linkInst1: 'Shop on Instagram',
-            linkInst2: 'Instagram for shopping',
-            linkInstVk3: 'Sneakers News',
-            linkInst4: 'Personal page',
-            linkInst5: 'Personal page',
-
-            sizeHeader: 'Available sizes',
-            sizeHeaderAdmin: 'Check with admin for pricing',
-            avaluableSizes: 'Contact administrator to purchase.',
-
-            feedbackHeader: "Customer Feedback",
-            feedbackp1: "Dear friends, Resell Point has been working for you for more than one year. We value our reputation and always work for the sake of customers. We can always agree on the price, installments and delivery issues. We give you a full guarantee of the protection of your package and a guarantee originality, all sneakers are checked for originality and are bought only in official branded stores.",
-            feedbackp2: "You can leave a review on our site, to do this, contact the site administration and we will publish everything, thanks!",
-            feedbackp3: "To leave a review, email us ",
-            feedbackp4: " with feedback and we will publish everything",
-
-            faqPaymentP1: "To purchase an item and pay for it, please contact the administrator.",
-        }
-
-        this.pagesWrapper = newText
+        this.pagesWrapper = this.initalText
     }
 
     translateToNL() {
@@ -685,6 +652,39 @@ export class LanguagesService {
             feedbackp4: "met feedback en we zullen alles publiceren",
 
             faqPaymentP1: "Neem contact op met de beheerder om een item te kopen en te betalen.",
+
+            orderPageHeader: "Orderverwerking",
+            orderContacts: "Contactgegevens",
+            orderFullName: "Volledige naam",
+            orderPhoneNumber: "Telefoonnummer",
+            orderAddressHeader: "Verzendadres",
+            orderAddress: "Volledig adres",
+            orderPostalCode: "Gelieve ook een postcode te vermelden",
+            orderModelDescription: "Modelbeschrijving",
+            orderModelName: "Modelnaam",
+            orderSizeAndPrice: "Grootte en prijs",
+            orderAlertText: "Ongeldig formulier",
+            orderAlertClose: "Sluiten",
+            orderContinue: "Continua",
+
+            paymentAlertHeader: "Belangrijke mededeling",
+            paymentAlertP1: "Beste vrienden!",
+            paymentAlertP2: "We willen je informeren dat veilige transacties via het Vinted-systeem momenteel niet mogelijk zijn vanwege de locatie van onze magazijnen in Rusland. We werken ook zoals gewoonlijk, levering binnen Europa werkt volledig.",
+            paymentAlertP3: "Uw geld is veilig en uw betaling is beschermd.",
+            paymentAlertP4: "PayPal-betaling is ook niet beschikbaar vanwege de tijdelijke sluiting in Rusland.",
+            paymentAlertP5: "Neem voor details contact op met de",
+            paymentAlertA: "beheerder.",
+
+            paymentDescriptionP1: "Voor vragen en problemen met betalen kun je altijd contact opnemen met",
+            paymentDescriptionA1: "support",
+            paymentDescriptionP2: "We zullen u altijd graag helpen.",
+            paymentDescriptionP3: "Neem contact op met beheerder na betaling.",
+            paymentDescriptionP4: "Uw schoenen zijn gereserveerd voor 4 uur, na deze periode zijn de schoenen weer in de uitverkoop.",
+            paymentKoronaPay: "Om een betaling uit te voeren, moet je identiteitsverificatie doorstaan om je betaling te beveiligen, die je kunt annuleren, het duurt niet lang.",
+            paymentCountry: "Land",
+            paymentCountry2: "Rusland",
+            paymentLink1: "Download KoronaPay-app",
+            paymentLink2: "KoronaPay-servicewebsite",
         }
 
         this.pagesWrapper = newText
@@ -828,6 +828,39 @@ export class LanguagesService {
             feedbackp4: "avec des commentaires et nous publierons tout",
 
             faqPaymentP1: "Pour acheter un article et le payer, veuillez contacter l'administrateur.",
+
+            orderPageHeader: "Traitement de la commande",
+            orderContacts: "Coordonnées",
+            orderFullName: "Nom complet",
+            orderPhoneNumber: "Numéro de téléphone",
+            orderAddressHeader: "Adresse de livraison",
+            orderAddress: "Adresse complète",
+            orderPostalCode: "Veuillez également inclure un code postal",
+            orderModelDescription: "Description du modèle",
+            orderModelName: "Nom du modèle",
+            orderSizeAndPrice: "Taille et prix",
+            orderAlertText: "Formulaire invalide",
+            orderAlertClose: "Fermer",
+            orderContinue: "Continuer",
+
+            paymentAlertHeader: "Annonce importante",
+            paymentAlertP1: "Chers amis !",
+            paymentAlertP2: "Nous souhaitons vous informer que les transactions sécurisées via le système Vinted ne sont actuellement pas possibles en raison de l'emplacement de nos entrepôts en Russie. Nous travaillons également comme d'habitude, la livraison en Europe fonctionne intégralement.",
+            paymentAlertP3: "Votre argent sera en sécurité et votre paiement sera protégé.",
+            paymentAlertP4: "Le paiement PayPal est également indisponible en raison de sa fermeture temporaire en Russie.",
+            paymentAlertP5: "Pour plus de détails, veuillez contacter",
+            paymentAlertA: "l'administrateur.",
+
+            paymentDescriptionP1: "Pour les questions et les problèmes de paiement, vous pouvez toujours contacter",
+            paymentDescriptionA1: "le support",
+            paymentDescriptionP2: "Nous serons toujours heureux de vous aider.",
+            paymentDescriptionP3: "Contacter l'administrateur après le paiement.",
+            paymentDescriptionP4: "Vos chaussures sont réservées pendant 4 heures, passé ce délai les chaussures seront à nouveau en vente.",
+            paymentKoronaPay: "Pour effectuer un paiement, vous devrez passer une vérification d'identité pour sécuriser votre paiement que vous pouvez annuler, cela ne prendra pas longtemps.",
+            paymentCountry: "Pays",
+            paymentCountry2: "Russie",
+            paymentLink1: "Télécharger l'application KoronaPay",
+            paymentLink2: "Site Web du service KoronaPay",
         }
 
         this.pagesWrapper = newText
@@ -970,6 +1003,39 @@ export class LanguagesService {
             feedbackp4: "con feedback e pubblicheremo tutto",
 
             faqPaymentP1: "Per acquistare un articolo e pagarlo, contatta l'amministratore.",
+
+            orderPageHeader: "Elaborazione dell'ordine",
+            orderContacts: "Informazioni di contatto",
+            orderFullName: "Nome completo",
+            orderPhoneNumber: "Numero di telefono",
+            orderAddressHeader: "Indirizzo di spedizione",
+            orderAddress: "Indirizzo completo",
+            orderPostalCode: "Includi anche un codice postale",
+            orderModelDescription: "Descrizione del modello",
+            orderModelName: "Nome modello",
+            orderSizeAndPrice: "Taglia e prezzo",
+            orderAlertText: "Modulo non valido",
+            orderAlertClose: "Chiudi",
+            orderContinue: "Continuer",
+
+            paymentAlertHeader: "Annuncio importante",
+            paymentAlertP1: "Cari amici!",
+            paymentAlertP2: "Vogliamo informarti che le transazioni sicure attraverso il sistema Vinted non sono attualmente possibili a causa dell'ubicazione dei nostri magazzini in Russia. Stiamo anche lavorando come al solito, la consegna in Europa sta funzionando completamente.",
+            paymentAlertP3: "I tuoi soldi saranno al sicuro e il tuo pagamento sarà protetto.",
+            paymentAlertP4: "Anche il pagamento PayPal non è disponibile a causa della sua chiusura temporanea in Russia.",
+            paymentAlertP5: "Per i dettagli, si prega di contattare",
+            paymentAlertA: "l'amministratore.",
+
+            paymentDescriptionP1: "Per domande e problemi con il pagamento, puoi sempre contattare",
+            paymentDescriptionA1: "l'assistenza",
+            paymentDescriptionP2: "Saremo sempre felici di aiutarti.",
+            paymentDescriptionP3: "Contatta l'amministratore dopo il pagamento.",
+            paymentDescriptionP4: "Le tue scarpe sono riservate per 4 ore, dopo questo periodo le scarpe saranno nuovamente in vendita.",
+            paymentKoronaPay: "Per effettuare un pagamento dovrai superare la verifica dell'identità per garantire il pagamento che puoi annullare, non ci vorrà molto.",
+            paymentCountry: "Paese",
+            paymentCountry2: "Russia",
+            paymentLink1: "Scarica l'app KoronaPay",
+            paymentLink2: "Sito web del servizio KoronaPay",
         }
 
         this.pagesWrapper = newText

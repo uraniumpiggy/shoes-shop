@@ -1,14 +1,14 @@
 <div class="order-wrapper">
-    <div class="order-title">Оформление заказа</div>
+    <div class="order-title">{{ langs.pagesWrapper.orderPageHeader }}</div>
     
     <form class="order-form" [formGroup]="checkoutForm" (ngSubmit)="handleSubmit()">
         <div class="order-form-section">
-            <div class="order-header">Контактная информация</div>
+            <div class="order-header">{{ langs.pagesWrapper.orderContacts }}</div>
     
             <div class="order-contacts-grid">
                 <div class="input-wrapper">
                     <mat-form-field appearance="fill">
-                        <mat-label>Полное имя</mat-label>
+                        <mat-label>{{ langs.pagesWrapper.orderFullName }}</mat-label>
                         <input matInput formControlName="fullName" type="text">
                     </mat-form-field>
                 </div>
@@ -22,17 +22,17 @@
         
                 <div class="input-wrapper">
                     <mat-form-field appearance="fill">
-                        <mat-label>Номер телефона</mat-label>
+                        <mat-label>{{ langs.pagesWrapper.orderPhoneNumber }}</mat-label>
                         <input matInput formControlName="phoneNumber" type="tel">
                     </mat-form-field>
                 </div> 
             </div>
     
-            <div class="order-header">Адрес доставки</div>
+            <div class="order-header">{{ langs.pagesWrapper.orderAddressHeader }}</div>
     
             <div class="input-wrapper">
                 <mat-form-field appearance="fill" class="address-input">
-                    <mat-label>Полный адрес</mat-label> 
+                    <mat-label>{{ langs.pagesWrapper.orderAddress }}</mat-label> 
                     <input 
                         matInput 
                         type="text" 
@@ -40,7 +40,7 @@
                         formControlName="fullAddress"
                         [matAutocomplete]="auto"
                     >
-                    <mat-hint>Включая почтовый индекс</mat-hint>
+                    <mat-hint>{{ langs.pagesWrapper.orderPostalCode }}</mat-hint>
                     <mat-autocomplete #auto="matAutocomplete">
                         <mat-option *ngFor="let option of addressHints" [value]="option">
                             {{option}}
@@ -49,24 +49,24 @@
                 </mat-form-field>
             </div>
             <div class="order-submit-wrapper lg-button">
-                <button type="submit">Продолжить</button>
+                <button type="submit">{{ langs.pagesWrapper.orderContinue }}</button>
             </div>  
         </div>
         <div class="order-form-section">
             <div class="order-image-wrapper">
                 <img [src]="modelImg" alt="model">
-                <div class="order-header">Описание модели</div>
+                <div class="order-header">{{ langs.pagesWrapper.orderModelDescription }}</div>
                 <div class="order-descr-grid">
                     <div class="order-descr-row">
-                        <p>Название модели</p>
+                        <p>{{ langs.pagesWrapper.orderModelName }}</p>
                         <p>{{ model?.brand + ' ' + model?.model + ' ' + model?.colors }}</p>
                     </div>
                     <div class="order-descr-row">
-                        <p>Дата выпуска</p>
+                        <p>{{ langs.pagesWrapper.modelReliaseDate }}</p>
                         <p>{{ model?.releaseDate }}</p>
                     </div>
                     <div class="order-descr-row">
-                        <p>Размер и цена</p>
+                        <p>{{ langs.pagesWrapper.orderSizeAndPrice }}</p>
                         <p>{{ size + ' | ' + price }}</p>
                     </div>
                 </div>
