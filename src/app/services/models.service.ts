@@ -663,6 +663,22 @@ export class ModelsService {
       },
       imgs: ['./assets/img50_1.jpeg','./assets/img50_2.jpeg','./assets/img50_3.jpeg','./assets/img50_4.jpeg','./assets/img50_5.jpeg']
     },
+    {
+      id: 51,
+      brand: 'Nike',
+      model: 'Air Jordan 4',
+      colors: "'Military Black'",
+      releaseDate: '25/06/2022',
+      sizePrice: {
+        "US 8": '305 €',
+        "US 9": '305 €',
+        "US 9.5": '305 €',
+        "US 10": '305 €',
+        "US 10.5": '305 €',
+        "US 11": '305 €'
+      },
+      imgs: ['./assets/img51_1.jpg','./assets/img51_2.jpg','./assets/img51_3.jpg','./assets/img51_4.jpg','./assets/img51_5.jpg']
+    },
     
   ]
   sizesArray: string[] = ['US 3.5','US 4','US 4.5','US 5','US 5.5','US 6','US 6.5','US 7','US 7.5','US 8','US 8.5','US 9','US 9.5','US 10','US 10.5','US 11','US 11.5','US 12','US 12.5','US 13','US 13.5','US 13.5w','US 14','US 14.5','US 15','US 15.5','US 16','US 16.5','US 17','US 17.5','US 18','US 18.5','US 19','US 19.5','US 20','US 20.5','US 21','US 21.5','US 22']
